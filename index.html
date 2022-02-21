@@ -1,0 +1,4627 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta
+            name="description"
+            content="Documentation for the Kittn API"
+        >
+    <title>Hello-buenos</title>
+
+    <style media="screen">
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s, .highlight .sa, .highlight .dl {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf, .highlight .fm {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv, .highlight .vm {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #f92672;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <style media="print">
+      * {
+        -webkit-transition:none!important;
+        transition:none!important;
+      }
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #586e75;
+}
+.highlight .err {
+  color: #002b36;
+  background-color: #dc322f;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
+  color: #657b83;
+}
+.highlight .cp {
+  color: #b58900;
+}
+.highlight .nt {
+  color: #b58900;
+}
+.highlight .o, .highlight .ow {
+  color: #93a1a1;
+}
+.highlight .p, .highlight .pi {
+  color: #93a1a1;
+}
+.highlight .gi {
+  color: #859900;
+}
+.highlight .gd {
+  color: #dc322f;
+}
+.highlight .gh {
+  color: #268bd2;
+  background-color: #002b36;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: #6c71c4;
+}
+.highlight .kc {
+  color: #cb4b16;
+}
+.highlight .kt {
+  color: #cb4b16;
+}
+.highlight .kd {
+  color: #cb4b16;
+}
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: #859900;
+}
+.highlight .sa {
+  color: #6c71c4;
+}
+.highlight .sr {
+  color: #2aa198;
+}
+.highlight .si {
+  color: #d33682;
+}
+.highlight .se {
+  color: #d33682;
+}
+.highlight .nn {
+  color: #b58900;
+}
+.highlight .nc {
+  color: #b58900;
+}
+.highlight .no {
+  color: #b58900;
+}
+.highlight .na {
+  color: #268bd2;
+}
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
+  color: #859900;
+}
+.highlight .ss {
+  color: #859900;
+}
+    </style>
+    <link href="stylesheets/screen-a7e00327.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print-953e3353.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all-b12a2749.js"></script>
+
+    <script>
+      $(function() { setupCodeCopy(); });
+    </script>
+  </head>
+
+  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar-cad8cdcb.png" alt="" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo-2228b5f3.png" class="logo" alt="" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="shell">shell</a>
+              <a href="#" data-language-name="ruby">ruby</a>
+              <a href="#" data-language-name="python">python</a>
+              <a href="#" data-language-name="javascript">javascript</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#c605454713" class="toc-h1 toc-link" data-title="배포방법">배포방법</a>
+          </li>
+          <li>
+            <a href="#f34ea6c88c" class="toc-h1 toc-link" data-title="파일구조 및 설명">파일구조 및 설명</a>
+          </li>
+          <li>
+            <a href="#850742a27b" class="toc-h1 toc-link" data-title="컬렉션 정보">컬렉션 정보</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#u_info" class="toc-h2 toc-link" data-title="u_info">u_info</a>
+                  </li>
+                  <li>
+                    <a href="#users" class="toc-h2 toc-link" data-title="users">users</a>
+                  </li>
+                  <li>
+                    <a href="#email_verification" class="toc-h2 toc-link" data-title="email_verification">email_verification</a>
+                  </li>
+                  <li>
+                    <a href="#h_post_log" class="toc-h2 toc-link" data-title="h_post_log">h_post_log</a>
+                  </li>
+                  <li>
+                    <a href="#h_profile_log" class="toc-h2 toc-link" data-title="h_profile_log">h_profile_log</a>
+                  </li>
+                  <li>
+                    <a href="#s_stat_word_-day-month-week" class="toc-h2 toc-link" data-title="s_stat_word_** (** = day / month / week)">s_stat_word_** (** = day / month / week)</a>
+                  </li>
+                  <li>
+                    <a href="#s_stat_location_-day-month-week" class="toc-h2 toc-link" data-title="s_stat_location_** (** = day / month / week)">s_stat_location_** (** = day / month / week)</a>
+                  </li>
+                  <li>
+                    <a href="#s_stat_location_world_-day-week-month" class="toc-h2 toc-link" data-title="s_stat_location_world_** (** = day / week / month )">s_stat_location_world_** (** = day / week / month )</a>
+                  </li>
+                  <li>
+                    <a href="#t_-en-fr-ru-it-de-ko-ja-pt-id-nl-pl-es-sv" class="toc-h2 toc-link" data-title="t_** (** = en / fr / ru / it / de / ko / ja / pt / id / nl / pl / es / sv)">t_** (** = en / fr / ru / it / de / ko / ja / pt / id / nl / pl / es / sv)</a>
+                  </li>
+                  <li>
+                    <a href="#c_caction" class="toc-h2 toc-link" data-title="c_caction">c_caction</a>
+                  </li>
+                  <li>
+                    <a href="#c_channel" class="toc-h2 toc-link" data-title="c_channel">c_channel</a>
+                  </li>
+                  <li>
+                    <a href="#c_channel-channelid-thread" class="toc-h2 toc-link" data-title="c_channel/{channelID}/thread">c_channel/{channelID}/thread</a>
+                  </li>
+                  <li>
+                    <a href="#c_channel_invite" class="toc-h2 toc-link" data-title="c_channel_invite">c_channel_invite</a>
+                  </li>
+                  <li>
+                    <a href="#c_channel_join" class="toc-h2 toc-link" data-title="c_channel_join">c_channel_join</a>
+                  </li>
+                  <li>
+                    <a href="#channel_participation" class="toc-h2 toc-link" data-title="channel_participation">channel_participation</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-proxy_create" class="toc-h1 toc-link" data-title="API (proxy_create)">API (proxy_create)</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#chatcreatechannel" class="toc-h2 toc-link" data-title="chatCreateChannel()">chatCreateChannel()</a>
+                  </li>
+                  <li>
+                    <a href="#makecreatepost" class="toc-h2 toc-link" data-title="makeCreatePost()">makeCreatePost()</a>
+                  </li>
+                  <li>
+                    <a href="#makecreatepostlog" class="toc-h2 toc-link" data-title="makeCreatePostLog()">makeCreatePostLog()</a>
+                  </li>
+                  <li>
+                    <a href="#makecreateprofilelog" class="toc-h2 toc-link" data-title="makeCreateProfileLog()">makeCreateProfileLog()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagecreatecustomtokenforuser" class="toc-h2 toc-link" data-title="mypageCreateCustomTokenForUser()">mypageCreateCustomTokenForUser()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagecreategroup" class="toc-h2 toc-link" data-title="mypageCreateGroup()">mypageCreateGroup()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagecreateinfo" class="toc-h2 toc-link" data-title="mypageCreateInfo()">mypageCreateInfo()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagecreatepurchase" class="toc-h2 toc-link" data-title="mypageCreatePurchase()">mypageCreatePurchase()</a>
+                  </li>
+                  <li>
+                    <a href="#utilcreatecomment" class="toc-h2 toc-link" data-title="utilCreateComment()">utilCreateComment()</a>
+                  </li>
+                  <li>
+                    <a href="#utilcreatehistorybymove" class="toc-h2 toc-link" data-title="utilCreateHistoryByMove()">utilCreateHistoryByMove()</a>
+                  </li>
+                  <li>
+                    <a href="#utilcreatetoken" class="toc-h2 toc-link" data-title="utilCreateToken()">utilCreateToken()</a>
+                  </li>
+                  <li>
+                    <a href="#utilcreateverificationtoken" class="toc-h2 toc-link" data-title="utilCreateVerificationToken()">utilCreateVerificationToken()</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-proxy_readlist" class="toc-h1 toc-link" data-title="API (proxy_readList)">API (proxy_readList)</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#chatreadchannellist" class="toc-h2 toc-link" data-title="chatReadChannelList()">chatReadChannelList()</a>
+                  </li>
+                  <li>
+                    <a href="#chatreadchannelinvitelist" class="toc-h2 toc-link" data-title="chatReadChannelInviteList()">chatReadChannelInviteList()</a>
+                  </li>
+                  <li>
+                    <a href="#chatreadchanneljoinlist" class="toc-h2 toc-link" data-title="chatReadChannelJoinList()">chatReadChannelJoinList()</a>
+                  </li>
+                  <li>
+                    <a href="#chatreadopenchannellist" class="toc-h2 toc-link" data-title="chatReadOpenChannelList()">chatReadOpenChannelList()</a>
+                  </li>
+                  <li>
+                    <a href="#chatreaduserlistforinvite" class="toc-h2 toc-link" data-title="chatReadUserListForInvite()">chatReadUserListForInvite()</a>
+                  </li>
+                  <li>
+                    <a href="#homereadinterestlist" class="toc-h2 toc-link" data-title="homeReadInterestList()">homeReadInterestList()</a>
+                  </li>
+                  <li>
+                    <a href="#homereadinterestlistbyfilter" class="toc-h2 toc-link" data-title="homeReadInterestListByFilter()">homeReadInterestListByFilter()</a>
+                  </li>
+                  <li>
+                    <a href="#homereadpostlistnew" class="toc-h2 toc-link" data-title="homeReadPostListNew()">homeReadPostListNew()</a>
+                  </li>
+                  <li>
+                    <a href="#homereadrecommendlistbygroup" class="toc-h2 toc-link" data-title="homeReadRecommendListByGroup()">homeReadRecommendListByGroup()</a>
+                  </li>
+                  <li>
+                    <a href="#homereadrecommendlistbyopenchat" class="toc-h2 toc-link" data-title="homeReadRecommendListByOpenchat()">homeReadRecommendListByOpenchat()</a>
+                  </li>
+                  <li>
+                    <a href="#homereadrecommendlistbypost" class="toc-h2 toc-link" data-title="homeReadRecommendListByPost()">homeReadRecommendListByPost()</a>
+                  </li>
+                  <li>
+                    <a href="#homereadrecommendlistbyuser" class="toc-h2 toc-link" data-title="homeReadRecommendListByUser()">homeReadRecommendListByUser()</a>
+                  </li>
+                  <li>
+                    <a href="#homereadrecommendsubscribelist" class="toc-h2 toc-link" data-title="homeReadRecommendSubscribeList()">homeReadRecommendSubscribeList()</a>
+                  </li>
+                  <li>
+                    <a href="#marketreadfollowhashtagpostlist" class="toc-h2 toc-link" data-title="marketReadFollowHashtagPostList()">marketReadFollowHashtagPostList()</a>
+                  </li>
+                  <li>
+                    <a href="#marketreadpostlistnew" class="toc-h2 toc-link" data-title="marketReadPostListNew()">marketReadPostListNew()</a>
+                  </li>
+                  <li>
+                    <a href="#marketreadrecommendpostlist" class="toc-h2 toc-link" data-title="marketReadRecommendPostList()">marketReadRecommendPostList()</a>
+                  </li>
+                  <li>
+                    <a href="#marketreadrecommenduserlist" class="toc-h2 toc-link" data-title="marketReadRecommendUserList()">marketReadRecommendUserList()</a>
+                  </li>
+                  <li>
+                    <a href="#marketreadrecommendlistbyuser" class="toc-h2 toc-link" data-title="marketReadRecommendListByUser()">marketReadRecommendListByUser()</a>
+                  </li>
+                  <li>
+                    <a href="#marketreadtophashtaglist" class="toc-h2 toc-link" data-title="marketReadTopHashtagList()">marketReadTopHashtagList()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagereadblockaccountlist" class="toc-h2 toc-link" data-title="mypageReadBlockAccountList()">mypageReadBlockAccountList()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagereadcommentlist" class="toc-h2 toc-link" data-title="mypageReadCommentList()">mypageReadCommentList()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagereademotionlist" class="toc-h2 toc-link" data-title="mypageReadEmotionList()">mypageReadEmotionList()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagereadfactionlist" class="toc-h2 toc-link" data-title="mypageReadFactionList()">mypageReadFactionList()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagereadfinancelist" class="toc-h2 toc-link" data-title="mypageReadFinanceList()">mypageReadFinanceList()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagereadfollowerlist" class="toc-h2 toc-link" data-title="mypageReadFollowerList()">mypageReadFollowerList()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagereadfollowinglist" class="toc-h2 toc-link" data-title="mypageReadFollowingList()">mypageReadFollowingList()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagereadfollowinglistbyfollowing" class="toc-h2 toc-link" data-title="mypageReadFollowingListByFollowing">mypageReadFollowingListByFollowing</a>
+                  </li>
+                  <li>
+                    <a href="#mypagereadgrouplist" class="toc-h2 toc-link" data-title="mypageReadGroupList()">mypageReadGroupList()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagereadinfolist" class="toc-h2 toc-link" data-title="mypageReadInfoList()">mypageReadInfoList()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagereadinsightlist" class="toc-h2 toc-link" data-title="mypageReadInsightList()">mypageReadInsightList()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagereadinterestlist" class="toc-h2 toc-link" data-title="mypageReadInterestList()">mypageReadInterestList()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagereadinvitelistbylocation" class="toc-h2 toc-link" data-title="mypageReadInviteListByLocation()">mypageReadInviteListByLocation()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagereadpactionlist" class="toc-h2 toc-link" data-title="mypageReadPactionList()">mypageReadPactionList()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagereadpostlist" class="toc-h2 toc-link" data-title="mypageReadPostList()">mypageReadPostList()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagereadpostlistbypage" class="toc-h2 toc-link" data-title="mypageReadPostListByPage()">mypageReadPostListByPage()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagereadpurchaselist" class="toc-h2 toc-link" data-title="mypageReadPurchaseList()">mypageReadPurchaseList()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagereadpostloginsightlistbyreach" class="toc-h2 toc-link" data-title="mypageReadPostLogInsightListByReach()">mypageReadPostLogInsightListByReach()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagereadpostloginsightlistbyage" class="toc-h2 toc-link" data-title="mypageReadPostLogInsightListByAge()">mypageReadPostLogInsightListByAge()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagereadpostloginsightlistbyagewithgender" class="toc-h2 toc-link" data-title="mypageReadPostLogInsightListByAgeWithGender()">mypageReadPostLogInsightListByAgeWithGender()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagereadpostloginsightlistbygender" class="toc-h2 toc-link" data-title="mypageReadPostLogInsightListByGender()">mypageReadPostLogInsightListByGender()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagereadpostloginsightlistbyview" class="toc-h2 toc-link" data-title="mypageReadPostLogInsightListByView()">mypageReadPostLogInsightListByView()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagereadprofileloginsightlistbyview" class="toc-h2 toc-link" data-title="mypageReadProfileLogInsightListByView()">mypageReadProfileLogInsightListByView()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagereadpostloginsightlistbyinflowweekly" class="toc-h2 toc-link" data-title="mypageReadPostLogInsightListByInflowWeekly()">mypageReadPostLogInsightListByInflowWeekly()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagereadpostloginsightlistbyinflowmonthly" class="toc-h2 toc-link" data-title="mypageReadPostLogInsightListByInflowMonthly()">mypageReadPostLogInsightListByInflowMonthly()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagereadpostloginsightlistbyinflowyearly" class="toc-h2 toc-link" data-title="mypageReadPostLogInsightListByInflowYearly()">mypageReadPostLogInsightListByInflowYearly()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagereadpostloginsightlistbyplaceweekly" class="toc-h2 toc-link" data-title="mypageReadPostLogInsightListByPlaceWeekly()">mypageReadPostLogInsightListByPlaceWeekly()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagereadpostloginsightlistbyplacemonthly" class="toc-h2 toc-link" data-title="mypageReadPostLogInsightListByPlaceMonthly()">mypageReadPostLogInsightListByPlaceMonthly()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagereadpostloginsightlistbyplaceyearly" class="toc-h2 toc-link" data-title="mypageReadPostLogInsightListByPlaceYearly()">mypageReadPostLogInsightListByPlaceYearly()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagereadinsightlistbylike" class="toc-h2 toc-link" data-title="mypageReadInsightListByLike()">mypageReadInsightListByLike()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagereadpostlogratelistbyplace" class="toc-h2 toc-link" data-title="mypageReadPostLogRateListByPlace()">mypageReadPostLogRateListByPlace()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagereadpostlogratelistbyinflow" class="toc-h2 toc-link" data-title="mypageReadPostLogRateListByInflow()">mypageReadPostLogRateListByInflow()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagereadpostlogratelistbyage" class="toc-h2 toc-link" data-title="mypageReadPostLogRateListByAge()">mypageReadPostLogRateListByAge()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagereadpostlogratelistbyagewithgender" class="toc-h2 toc-link" data-title="mypageReadPostLogRateListByAgeWithGender()">mypageReadPostLogRateListByAgeWithGender()</a>
+                  </li>
+                  <li>
+                    <a href="#utilreadcodelist" class="toc-h2 toc-link" data-title="utilReadCodeList()">utilReadCodeList()</a>
+                  </li>
+                  <li>
+                    <a href="#utilreadcommentlikelist" class="toc-h2 toc-link" data-title="utilReadCommentLikeList()">utilReadCommentLikeList()</a>
+                  </li>
+                  <li>
+                    <a href="#utilreadcommentlist" class="toc-h2 toc-link" data-title="utilReadCommentList()">utilReadCommentList()</a>
+                  </li>
+                  <li>
+                    <a href="#utilreadfactionlist" class="toc-h2 toc-link" data-title="utilReadFactionList()">utilReadFactionList()</a>
+                  </li>
+                  <li>
+                    <a href="#utilreadfollowerlist" class="toc-h2 toc-link" data-title="utilReadFollowerList()">utilReadFollowerList()</a>
+                  </li>
+                  <li>
+                    <a href="#utilreadfollowmutuallist" class="toc-h2 toc-link" data-title="utilReadFollowMutualList()">utilReadFollowMutualList()</a>
+                  </li>
+                  <li>
+                    <a href="#utilreadgroupjoinlist" class="toc-h2 toc-link" data-title="utilReadGroupJoinList()">utilReadGroupJoinList()</a>
+                  </li>
+                  <li>
+                    <a href="#utilreadgroupmanagerlist" class="toc-h2 toc-link" data-title="utilReadGroupManagerList()">utilReadGroupManagerList()</a>
+                  </li>
+                  <li>
+                    <a href="#utilreadinsightlist" class="toc-h2 toc-link" data-title="utilReadInsightList()">utilReadInsightList()</a>
+                  </li>
+                  <li>
+                    <a href="#utilreadlocationlist" class="toc-h2 toc-link" data-title="utilReadLocationList()">utilReadLocationList()</a>
+                  </li>
+                  <li>
+                    <a href="#utilreadplacelist" class="toc-h2 toc-link" data-title="utilReadPlaceList()">utilReadPlaceList()</a>
+                  </li>
+                  <li>
+                    <a href="#utilreadpostlikelist" class="toc-h2 toc-link" data-title="utilReadPostLikeList()">utilReadPostLikeList()</a>
+                  </li>
+                  <li>
+                    <a href="#utilreadpostangrylist" class="toc-h2 toc-link" data-title="utilReadPostAngryList()">utilReadPostAngryList()</a>
+                  </li>
+                  <li>
+                    <a href="#utilreadpostwowlist" class="toc-h2 toc-link" data-title="utilReadPostWowList()">utilReadPostWowList()</a>
+                  </li>
+                  <li>
+                    <a href="#utilreadpostlistbygroup" class="toc-h2 toc-link" data-title="utilReadPostListByGroup()">utilReadPostListByGroup()</a>
+                  </li>
+                  <li>
+                    <a href="#utilreadpostlistbygroupofuser" class="toc-h2 toc-link" data-title="utilReadPostListByGroupOfUser()">utilReadPostListByGroupOfUser()</a>
+                  </li>
+                  <li>
+                    <a href="#utilreadpostlistbyuser" class="toc-h2 toc-link" data-title="utilReadPostListByUser()">utilReadPostListByUser()</a>
+                  </li>
+                  <li>
+                    <a href="#utilreadpurchaseitemlist" class="toc-h2 toc-link" data-title="utilReadPurchaseItemList()">utilReadPurchaseItemList()</a>
+                  </li>
+                  <li>
+                    <a href="#utilreaduserlist" class="toc-h2 toc-link" data-title="utilReadUserList()">utilReadUserList()</a>
+                  </li>
+                  <li>
+                    <a href="#utilreadplacelistbyidx" class="toc-h2 toc-link" data-title="utilReadPlaceListByIdx()">utilReadPlaceListByIdx()</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-proxy_read" class="toc-h1 toc-link" data-title="API (proxy_read)">API (proxy_read)</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#mypagereadgroupmanage" class="toc-h2 toc-link" data-title="mypageReadGroupManage()">mypageReadGroupManage()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagereadinfo" class="toc-h2 toc-link" data-title="mypageReadInfo()">mypageReadInfo()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagereadsetting" class="toc-h2 toc-link" data-title="mypageReadSetting()">mypageReadSetting()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagereadrecommend" class="toc-h2 toc-link" data-title="mypageReadRecommend()">mypageReadRecommend()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagereadtutorialurl" class="toc-h2 toc-link" data-title="mypageReadTutorialUrl()">mypageReadTutorialUrl()</a>
+                  </li>
+                  <li>
+                    <a href="#utilreadbetweenuser" class="toc-h2 toc-link" data-title="utilReadBetweenUser()">utilReadBetweenUser()</a>
+                  </li>
+                  <li>
+                    <a href="#utilreadchannel" class="toc-h2 toc-link" data-title="utilReadChannel()">utilReadChannel()</a>
+                  </li>
+                  <li>
+                    <a href="#utilreadchannelbyonetoone" class="toc-h2 toc-link" data-title="utilReadChannelByOneToOne()">utilReadChannelByOneToOne()</a>
+                  </li>
+                  <li>
+                    <a href="#utilreadgroup" class="toc-h2 toc-link" data-title="utilReadGroup()">utilReadGroup()</a>
+                  </li>
+                  <li>
+                    <a href="#utilreadplace" class="toc-h2 toc-link" data-title="utilReadPlace()">utilReadPlace()</a>
+                  </li>
+                  <li>
+                    <a href="#utilreadpost" class="toc-h2 toc-link" data-title="utilReadPost()">utilReadPost()</a>
+                  </li>
+                  <li>
+                    <a href="#utilreadpostcnt" class="toc-h2 toc-link" data-title="utilReadPostCnt()">utilReadPostCnt()</a>
+                  </li>
+                  <li>
+                    <a href="#utilreadtranslatesupport" class="toc-h2 toc-link" data-title="utilReadTranslateSupport()">utilReadTranslateSupport()</a>
+                  </li>
+                  <li>
+                    <a href="#utilreaduser" class="toc-h2 toc-link" data-title="utilReadUser()">utilReadUser()</a>
+                  </li>
+                  <li>
+                    <a href="#utilreaduserexist" class="toc-h2 toc-link" data-title="utilReadUserExist()">utilReadUserExist()</a>
+                  </li>
+                  <li>
+                    <a href="#utilreadhid" class="toc-h2 toc-link" data-title="utilReadHid()">utilReadHid()</a>
+                  </li>
+                  <li>
+                    <a href="#utilreadsharecnt" class="toc-h2 toc-link" data-title="utilReadShareCnt()">utilReadShareCnt()</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-proxy_search" class="toc-h1 toc-link" data-title="API (proxy_search)">API (proxy_search)</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#searchchatlist" class="toc-h2 toc-link" data-title="searchChatList()">searchChatList()</a>
+                  </li>
+                  <li>
+                    <a href="#searchchatlistbyhashtag" class="toc-h2 toc-link" data-title="searchChatListByHashtag()">searchChatListByHashtag()</a>
+                  </li>
+                  <li>
+                    <a href="#searchgrouplist" class="toc-h2 toc-link" data-title="searchGroupList()">searchGroupList()</a>
+                  </li>
+                  <li>
+                    <a href="#searchgrouplistbyhashtag" class="toc-h2 toc-link" data-title="searchGroupListByHashtag()">searchGroupListByHashtag()</a>
+                  </li>
+                  <li>
+                    <a href="#searchhashtaglist" class="toc-h2 toc-link" data-title="searchHashtagList()">searchHashtagList()</a>
+                  </li>
+                  <li>
+                    <a href="#searchkeywordlist" class="toc-h2 toc-link" data-title="searchKeywordList()">searchKeywordList()</a>
+                  </li>
+                  <li>
+                    <a href="#searchpostlist" class="toc-h2 toc-link" data-title="searchPostList()">searchPostList()</a>
+                  </li>
+                  <li>
+                    <a href="#searchpostlistbyhashtag" class="toc-h2 toc-link" data-title="searchPostListByHashtag()">searchPostListByHashtag()</a>
+                  </li>
+                  <li>
+                    <a href="#searchpostlistbykeyword" class="toc-h2 toc-link" data-title="searchPostListByKeyword()">searchPostListByKeyword()</a>
+                  </li>
+                  <li>
+                    <a href="#searchpostlistbylocation" class="toc-h2 toc-link" data-title="searchPostListByLocation()">searchPostListByLocation()</a>
+                  </li>
+                  <li>
+                    <a href="#searchstatbyworldwide" class="toc-h2 toc-link" data-title="searchStatByWorldwide()">searchStatByWorldwide()</a>
+                  </li>
+                  <li>
+                    <a href="#searchstatbyworldwidetemp" class="toc-h2 toc-link" data-title="searchStatByWorldwideTemp()">searchStatByWorldwideTemp()</a>
+                  </li>
+                  <li>
+                    <a href="#searchuserlist" class="toc-h2 toc-link" data-title="searchUserList()">searchUserList()</a>
+                  </li>
+                  <li>
+                    <a href="#searchuserlistbyhashtag" class="toc-h2 toc-link" data-title="searchUserListByHashtag()">searchUserListByHashtag()</a>
+                  </li>
+                  <li>
+                    <a href="#searchuserlistbyhid" class="toc-h2 toc-link" data-title="searchUserListByHid()">searchUserListByHid()</a>
+                  </li>
+                  <li>
+                    <a href="#searchstatlistbylocation" class="toc-h2 toc-link" data-title="searchStatListByLocation()">searchStatListByLocation()</a>
+                  </li>
+                  <li>
+                    <a href="#searchstatlistbyword" class="toc-h2 toc-link" data-title="searchStatListByWord()">searchStatListByWord()</a>
+                  </li>
+                  <li>
+                    <a href="#searchstatpostlist" class="toc-h2 toc-link" data-title="searchStatPostList()">searchStatPostList()</a>
+                  </li>
+                  <li>
+                    <a href="#searchstatpostlistbydate" class="toc-h2 toc-link" data-title="searchStatPostListByDate()">searchStatPostListByDate()</a>
+                  </li>
+                  <li>
+                    <a href="#searchstatlistbyrankkeyword" class="toc-h2 toc-link" data-title="searchStatListByRankKeyword()">searchStatListByRankKeyword()</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-proxy_set" class="toc-h1 toc-link" data-title="API (proxy_set)">API (proxy_set)</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#chatsetadduser" class="toc-h2 toc-link" data-title="chatSetAddUser()">chatSetAddUser()</a>
+                  </li>
+                  <li>
+                    <a href="#chatsetchannel" class="toc-h2 toc-link" data-title="chatSetChannel()">chatSetChannel()</a>
+                  </li>
+                  <li>
+                    <a href="#chatsetchannelinvite" class="toc-h2 toc-link" data-title="chatSetChannelInvite()">chatSetChannelInvite()</a>
+                  </li>
+                  <li>
+                    <a href="#chatsetchanneljoin" class="toc-h2 toc-link" data-title="chatSetChannelJoin()">chatSetChannelJoin()</a>
+                  </li>
+                  <li>
+                    <a href="#chatsetchannellike" class="toc-h2 toc-link" data-title="chatSetChannelLike()">chatSetChannelLike()</a>
+                  </li>
+                  <li>
+                    <a href="#chatsetchannelmute" class="toc-h2 toc-link" data-title="chatSetChannelMute()">chatSetChannelMute()</a>
+                  </li>
+                  <li>
+                    <a href="#chatsetchannelpin" class="toc-h2 toc-link" data-title="chatSetChannelPin()">chatSetChannelPin()</a>
+                  </li>
+                  <li>
+                    <a href="#chatsetchanneltitle" class="toc-h2 toc-link" data-title="chatSetChannelTitle()">chatSetChannelTitle()</a>
+                  </li>
+                  <li>
+                    <a href="#chatsetchannelwallpaper" class="toc-h2 toc-link" data-title="chatSetChannelWallpaper()">chatSetChannelWallpaper()</a>
+                  </li>
+                  <li>
+                    <a href="#chatsetdeleteuser" class="toc-h2 toc-link" data-title="chatSetDeleteUser()">chatSetDeleteUser()</a>
+                  </li>
+                  <li>
+                    <a href="#makesetpost" class="toc-h2 toc-link" data-title="makeSetPost()">makeSetPost()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagesetcanceldeleteinfo" class="toc-h2 toc-link" data-title="mypageSetCancelDeleteInfo()">mypageSetCancelDeleteInfo()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagesetdeleteinfo" class="toc-h2 toc-link" data-title="mypageSetDeleteInfo()">mypageSetDeleteInfo()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagesetexchange" class="toc-h2 toc-link" data-title="mypageSetExchange()">mypageSetExchange()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagesetexpirepurchase" class="toc-h2 toc-link" data-title="mypageSetExpirePurchase()">mypageSetExpirePurchase()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagesetfinance" class="toc-h2 toc-link" data-title="mypageSetFinance()">mypageSetFinance()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagesetgroup" class="toc-h2 toc-link" data-title="mypageSetGroup()">mypageSetGroup()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagesetgroupmanagerequest" class="toc-h2 toc-link" data-title="mypageSetGroupManageRequest()">mypageSetGroupManageRequest()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagesetgroupmanagechange" class="toc-h2 toc-link" data-title="mypageSetGroupManageChange()">mypageSetGroupManageChange()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagesetinfo" class="toc-h2 toc-link" data-title="mypageSetInfo()">mypageSetInfo()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagesetpaypalinfo" class="toc-h2 toc-link" data-title="mypageSetPaypalInfo()">mypageSetPaypalInfo()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagesetpwforemail" class="toc-h2 toc-link" data-title="mypageSetPwForEmail()">mypageSetPwForEmail()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagesetsetting" class="toc-h2 toc-link" data-title="mypageSetSetting()">mypageSetSetting()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagesetrecommend" class="toc-h2 toc-link" data-title="mypageSetRecommend()">mypageSetRecommend()</a>
+                  </li>
+                  <li>
+                    <a href="#mypagesetmergeinfo" class="toc-h2 toc-link" data-title="mypageSetMergeInfo()">mypageSetMergeInfo()</a>
+                  </li>
+                  <li>
+                    <a href="#utilsetblock" class="toc-h2 toc-link" data-title="utilSetBlock()">utilSetBlock()</a>
+                  </li>
+                  <li>
+                    <a href="#utilsetcaction" class="toc-h2 toc-link" data-title="utilSetCaction()">utilSetCaction()</a>
+                  </li>
+                  <li>
+                    <a href="#utilsetcomment" class="toc-h2 toc-link" data-title="utilSetComment()">utilSetComment()</a>
+                  </li>
+                  <li>
+                    <a href="#utilsetdeletecomment" class="toc-h2 toc-link" data-title="utilSetDeleteComment()">utilSetDeleteComment()</a>
+                  </li>
+                  <li>
+                    <a href="#utilsetdeletesell" class="toc-h2 toc-link" data-title="utilSetDeleteSell()">utilSetDeleteSell()</a>
+                  </li>
+                  <li>
+                    <a href="#utilsetdevice" class="toc-h2 toc-link" data-title="utilSetDevice()">utilSetDevice()</a>
+                  </li>
+                  <li>
+                    <a href="#utilsetfollow" class="toc-h2 toc-link" data-title="utilSetFollow()">utilSetFollow()</a>
+                  </li>
+                  <li>
+                    <a href="#utilsetfollowconfirmall" class="toc-h2 toc-link" data-title="utilSetFollowConfirmAll()">utilSetFollowConfirmAll()</a>
+                  </li>
+                  <li>
+                    <a href="#utilsetgroupjoin" class="toc-h2 toc-link" data-title="utilSetGroupJoin()">utilSetGroupJoin()</a>
+                  </li>
+                  <li>
+                    <a href="#utilsetdeletegroupuser" class="toc-h2 toc-link" data-title="utilSetDeleteGroupUser()">utilSetDeleteGroupUser()</a>
+                  </li>
+                  <li>
+                    <a href="#utilsetgroupjoinconfirmall" class="toc-h2 toc-link" data-title="utilSetGroupJoinConfirmAll()">utilSetGroupJoinConfirmAll()</a>
+                  </li>
+                  <li>
+                    <a href="#utilsetpaction" class="toc-h2 toc-link" data-title="utilSetPaction()">utilSetPaction()</a>
+                  </li>
+                  <li>
+                    <a href="#utilsetplace" class="toc-h2 toc-link" data-title="utilSetPlace()">utilSetPlace()</a>
+                  </li>
+                  <li>
+                    <a href="#utilsetplacelist" class="toc-h2 toc-link" data-title="utilSetPlaceList()">utilSetPlaceList()</a>
+                  </li>
+                  <li>
+                    <a href="#utilsetreport" class="toc-h2 toc-link" data-title="utilSetReport()">utilSetReport()</a>
+                  </li>
+                  <li>
+                    <a href="#utilsetsell" class="toc-h2 toc-link" data-title="utilSetSell()">utilSetSell()</a>
+                  </li>
+                  <li>
+                    <a href="#utilsetsubscribe" class="toc-h2 toc-link" data-title="utilSetSubscribe()">utilSetSubscribe()</a>
+                  </li>
+                  <li>
+                    <a href="#utilsetsupport" class="toc-h2 toc-link" data-title="utilSetSupport()">utilSetSupport()</a>
+                  </li>
+                  <li>
+                    <a href="#utilsetunblock" class="toc-h2 toc-link" data-title="utilSetUnblock()">utilSetUnblock()</a>
+                  </li>
+                  <li>
+                    <a href="#utilsetunsubscribe" class="toc-h2 toc-link" data-title="utilSetUnsubscribe()">utilSetUnsubscribe()</a>
+                  </li>
+                  <li>
+                    <a href="#utilsetuseremailverification" class="toc-h2 toc-link" data-title="utilSetUserEmailVerification()">utilSetUserEmailVerification()</a>
+                  </li>
+                  <li>
+                    <a href="#utilsetuserhide" class="toc-h2 toc-link" data-title="utilSetUserHide()">utilSetUserHide()</a>
+                  </li>
+                  <li>
+                    <a href="#utilsetdeleteverificationtoken" class="toc-h2 toc-link" data-title="utilSetDeleteVerificationToken()">utilSetDeleteVerificationToken()</a>
+                  </li>
+                  <li>
+                    <a href="#utilsetverificationtoken" class="toc-h2 toc-link" data-title="utilSetVerificationToken()">utilSetVerificationToken()</a>
+                  </li>
+                  <li>
+                    <a href="#utilsetfilterage" class="toc-h2 toc-link" data-title="utilSetFilterAge()">utilSetFilterAge()</a>
+                  </li>
+                  <li>
+                    <a href="#utilsetpw" class="toc-h2 toc-link" data-title="utilSetPw()">utilSetPw()</a>
+                  </li>
+                  <li>
+                    <a href="#utilsetsharecnt" class="toc-h2 toc-link" data-title="utilSetShareCnt()">utilSetShareCnt()</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+          </li>
+      </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='c605454713'>배포방법</h1><div class="highlight"><pre class="highlight shell"><code>yarn <span class="nb">install
+</span>firebase login // 파이어베이스 로그인
+firebase <span class="nb">logout</span> // 파이어베이스 로그아웃
+firebase login <span class="nt">--reauth</span> // 파이어베이스 재인증
+firebase use hello-buenos // pro 데이터베이스 선택
+firebase use hello-dev-beb37 // dev 데이터베이스 선택
+yarn deployd // dev 서버 배포
+yarn deployp // pro 서버 배포
+yarn testd index.test.js // index.test.js 단위테스트 <span class="o">(</span>dev 서버<span class="o">)</span>
+yarn testp index.test.js // index.test.js 단위테스트 <span class="o">(</span>pro 서버<span class="o">)</span>
+</code></pre></div>
+<p><a href="https://github.com/hongjinhyeo-k/hello-buenos-server-pnp">백엔드 코드(private)</a></br></p>
+
+<p>firestore production server 프로젝트명: hello-buenos</br>
+firestore development server 프로젝트명: hello-dev-beb37</br></p>
+<h4 id='8d773e42f2'>개발서버 배포시 (클라이언트 미연결)</h4>
+<ul>
+<li>firebase use hello-buenos</li>
+<li>yarn deployd</li>
+</ul>
+<h4 id='709f2874e2'>프로서버 배포시</h4>
+<ul>
+<li>firebase use hello-dev-beb37</li>
+<li>yarn deployp</li>
+</ul>
+<h4 id='db1cea88c6'>함수 단일 배포시</h4>
+<ul>
+<li>cross-env NODE_ENV=production firebase deploy --only functions:함수명</li>
+</ul>
+
+<aside class="notice">
+실행시 디렉토리 위치: hello-buenos-server-pnp/functions</br>
+</aside>
+<div class="highlight"><pre class="highlight shell"><code><span class="c"># [channel-related collection]</span>
+c_collection, c_channel, c_channel_invite, c_channel_join, channel_participation
+<span class="c"># [history-related collection]</span>
+h_block, h_lastcall, h_paction, h_post_delete, h_post_log, h_profile_log, h_send_email, h_translate, h_unblock, h_user_hide
+<span class="c"># [merchandise-purchase collection]</span>
+m_purchase_item
+<span class="c"># [user to user report collection]</span>
+m_code
+<span class="c"># [channel notification collection]</span>
+notifications
+<span class="c"># [statistics-related collection]</span>
+s_hashtag, s_hashtag_up, s_history, s_keyword, s_stat_location_day, s_stat_location_month, s_stat_location_week, s_stat_location_world_day s_stat_location_world_month, s_stat_location_world_week, s_stat_word_day, s_stat_word_month, s_stat_word_week, s_word
+<span class="c"># [translate-related collection]</span>
+t_history, t_en, t_fr, f_ru, f_it, t_de, t_ko, t_ja, t_pt, t_id, t_nl, t_pl, t_es, t_sv
+<span class="c"># [user-related collection]</span>
+u_comment, u_finance, u_follow, u_group, u_group_join, u_group_manage, u_info, u_place, u_post, u_purchase
+,u_recommend, u_report, u_setting, <span class="nb">users</span>
+<span class="c"># [user-channel-action collection]</span>
+u_caction
+<span class="c"># [user-post-action collection]</span>
+u_paction
+<span class="c"># [user-finance-action collection]</span>
+u_faction
+</code></pre></div>
+<p><img src="images/firebase-98de1914.png" style="width:70%, height:20%"></img></p>
+<h1 id='f34ea6c88c'>파일구조 및 설명</h1><div class="highlight"><pre class="highlight shell"><code>├── functions
+│   ├── .vscode
+│   ├── .yarn
+│   ├── data
+│   ├── node_modules
+│   ├── src
+│   │   ├── __test__
+│   │   ├── chat
+│   │   ├── common
+│   │   ├── config
+│   │   ├── data
+│   │   ├── home
+│   │   ├── make
+│   │   ├── market
+│   │   ├── mypage
+│   │   ├── proxy
+│   │   ├── search
+│   │   ├── trigger
+│   │   ├── util
+│   │   └── index.js
+│   │
+│   │
+│   │
+│   ├── .editorconfig
+│   ├── .eslintrc.js
+│   ├── .gitignore
+│   ├── .prettierrc
+│   ├── .yarnrc.yml
+│   ├── babel.config.js
+│   ├── index.js
+│   ├── jest.config.js
+│   ├── jest.setup.js
+│   ├── package.json
+│   └── yarn.lock
+│
+│
+├── public
+│   └── index.html
+│
+├── .firebaserc
+├── .gitignore
+├── firebase.json
+├── firestore.indexes.json
+├── firestore.rules
+└── storage.rules
+</code></pre></div>
+<ul>
+<li>functions/<code>data</code> : 엑셀파일, 관리자 모드 실행 코드</li>
+<li>functions/src/<code>__test__</code>: 테스트 코드 (jest 라이브러리 사용)</li>
+<li>functions/src/<code>chat</code> : 채널(채팅방) 기능</li>
+<li>functions/src/<code>common</code> : endponumber설정, crud, 번역, 공통유틸</li>
+<li>functions/src/<code>config</code> : api(GMAIL, FIREBASE, AZURE, AWS) key</li>
+<li>functions/src/<code>data</code> : 국가명 번역, 국가정보, 조사 필터(한국어, 영어), AWS S3 튜토리얼 주소 데이터</li>
+<li>functions/src/<code>home</code> : 홈 로딩시 실행코드</li>
+<li>functions/src/<code>make</code> : create 기능</li>
+<li>functions/src/<code>market</code> : market 카테고리</li>
+<li>functions/src/<code>mypage</code> : 회원정보 crud 기능</li>
+<li>functions/src/<code>proxy</code> : 함수 호출</li>
+<li>functions/src/<code>search</code> : 검색 및 통계</li>
+<li>functions/src/<code>trigger</code> : 스케쥴러 및 채팅방 생성시 일괄 번역 처리</li>
+<li>functions/src/<code>util</code> : 기타 crud 코드</li>
+<li>functions/src/<code>index.js</code> : 모듈 동적 로드</li>
+<li>functions/<code>.editorconfig</code> : 코딩컨벤션 정의</li>
+<li>functions/<code>.eslintrc.js</code> : 문법 포맷팅</li>
+<li>functions/<code>.gitignore</code> : 깃 커밋 제외 (zero-install 사용) pnp 플러그인, 배포 에러 발생 / node_modules 공통 사용</li>
+<li>functions/<code>.prettierrc</code> : 문법 포맷팅</li>
+<li>functions/<code>.yarnrc.yml</code> : pnp 플러그인 사용 설정 (nodeLinker 추가)</li>
+<li>functions/<code>babel.config.js</code> : 개발 및 배포 서버 분기 처리</li>
+<li>functions/<code>index.js</code> : 배포시 자동 생성</li>
+<li>functions/<code>jest.config.js</code> : package.json으로부터 분리하여 관리 (제스트 설정)</li>
+<li>functions/<code>jest.setup.js</code> : 테스트 코드 실행시 타임아웃 에러 방지 setTimeout 8000m/s 설정</li>
+<li>functions/<code>package.json</code> : 라이브러리 관리 (node version 16)</li>
+<li><code>.firebaserc</code> : 데이터베이스 구성</li>
+<li><code>firebase.json</code> : 파이어베이스 에뮬레이터 정보 및 배포 전 코드 오류 검출</li>
+<li><code>firestore.indexes.json</code> : 파이버에스 색인 정보</li>
+<li><code>firestore.rules</code> : 파이어베이스 보안 설정</li>
+<li><code>storage.rules</code>: 스토리지 보안 설정 (스토리지 미사용, 정적데이터 AWS S3 관리)</li>
+</ul>
+
+<aside class="notice">
+파이어베이스 보안 설정시 테스트 구동이 가능한 파이어베이스 콘솔환경에서 설정 권장. </br>
+▶ 파이어베이스 콘솔 -> 파이어스토어 데이터베이스 -> 규칙 
+</aside>
+<h1 id='850742a27b'>컬렉션 정보</h1><h2 id='u_info'>u_info</h2>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>depth</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>is_verification</td>
+<td>1</td>
+<td>boolean</td>
+<td>이메일 인증 여부</td>
+</tr>
+<tr>
+<td>account_type</td>
+<td>1</td>
+<td>string</td>
+<td>과금 유저 구분 (&#39;pro&#39; / &#39;basic&#39;)</td>
+</tr>
+<tr>
+<td>total_filesize</td>
+<td>1</td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td>current_filesize</td>
+<td>1</td>
+<td>number</td>
+<td>사용 파일 용량</td>
+</tr>
+<tr>
+<td>total_character</td>
+<td>1</td>
+<td>number</td>
+<td>기본 제공 글자수</td>
+</tr>
+<tr>
+<td>current_character</td>
+<td>1</td>
+<td>number</td>
+<td>사용 글자수</td>
+</tr>
+<tr>
+<td>current_dia</td>
+<td>1</td>
+<td>number</td>
+<td>기본 제공 다이아</td>
+</tr>
+<tr>
+<td>hid_list</td>
+<td>1</td>
+<td>object[]</td>
+<td>hid 변경 이력</td>
+</tr>
+<tr>
+<td>hid_list.hid</td>
+<td>3</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>hid_list.hid_set_dt</td>
+<td>3</td>
+<td>object</td>
+<td></td>
+</tr>
+<tr>
+<td>hid_list.hid_set_dt._nanoseconds</td>
+<td>4</td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td>hid_list.hid_set_dt._seconds</td>
+<td>4</td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td>hid_set_dt</td>
+<td>1</td>
+<td>timestamp</td>
+<td></td>
+</tr>
+<tr>
+<td>id</td>
+<td>1</td>
+<td>string</td>
+<td>u_info 아이디</td>
+</tr>
+<tr>
+<td>email</td>
+<td>1</td>
+<td>string</td>
+<td>이메일</td>
+</tr>
+<tr>
+<td>uuid</td>
+<td>1</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>hid</td>
+<td>1</td>
+<td>string</td>
+<td>헬로부에노스 유저 아이디</td>
+</tr>
+<tr>
+<td>hnm</td>
+<td>1</td>
+<td>string</td>
+<td>유저 이름</td>
+</tr>
+<tr>
+<td>country_cd</td>
+<td>1</td>
+<td>string</td>
+<td>국가 코드</td>
+</tr>
+<tr>
+<td>country_nm</td>
+<td>1</td>
+<td>string</td>
+<td>국가명</td>
+</tr>
+<tr>
+<td>city</td>
+<td>1</td>
+<td>string</td>
+<td>도시 이름</td>
+</tr>
+<tr>
+<td>photo_url</td>
+<td>1</td>
+<td>string</td>
+<td>사진 url</td>
+</tr>
+<tr>
+<td>phone</td>
+<td>1</td>
+<td>string</td>
+<td>핸드폰 번호</td>
+</tr>
+<tr>
+<td>pw</td>
+<td>1</td>
+<td>string</td>
+<td>비밀번호</td>
+</tr>
+<tr>
+<td>bio</td>
+<td>1</td>
+<td>string</td>
+<td>자기소개</td>
+</tr>
+<tr>
+<td>bio_en</td>
+<td>1</td>
+<td>string</td>
+<td>자기소개_영어</td>
+</tr>
+<tr>
+<td>bio_fr</td>
+<td>1</td>
+<td>string</td>
+<td>자기소개_프랑스어</td>
+</tr>
+<tr>
+<td>bio_ru</td>
+<td>1</td>
+<td>string</td>
+<td>자기소개_러시아어</td>
+</tr>
+<tr>
+<td>bio_it</td>
+<td>1</td>
+<td>string</td>
+<td>자기소개_이탈리아어</td>
+</tr>
+<tr>
+<td>bio_de</td>
+<td>1</td>
+<td>string</td>
+<td>자기소개_독일어</td>
+</tr>
+<tr>
+<td>bio_ko</td>
+<td>1</td>
+<td>string</td>
+<td>자기소개_한국어</td>
+</tr>
+<tr>
+<td>bio_ja</td>
+<td>1</td>
+<td>string</td>
+<td>자기소개_일본어</td>
+</tr>
+<tr>
+<td>bio_pt</td>
+<td>1</td>
+<td>string</td>
+<td>자기소개_프랑스어</td>
+</tr>
+<tr>
+<td>bio_id</td>
+<td>1</td>
+<td>string</td>
+<td>자기소개_인도네시아어</td>
+</tr>
+<tr>
+<td>bio_nl</td>
+<td>1</td>
+<td>string</td>
+<td>자기소개_네덜란드어</td>
+</tr>
+<tr>
+<td>bio_pl</td>
+<td>1</td>
+<td>string</td>
+<td>자기소개_폴란드어</td>
+</tr>
+<tr>
+<td>bio_es</td>
+<td>1</td>
+<td>string</td>
+<td>자기소개_스페인어</td>
+</tr>
+<tr>
+<td>bio_sv</td>
+<td>1</td>
+<td>string</td>
+<td>자기소개_스웨덴어</td>
+</tr>
+<tr>
+<td>gender</td>
+<td>1</td>
+<td>string</td>
+<td>성별</td>
+</tr>
+<tr>
+<td>birthday</td>
+<td>1</td>
+<td>string</td>
+<td>생일</td>
+</tr>
+<tr>
+<td>url_link_list</td>
+<td>1</td>
+<td>object[]</td>
+<td>url_link</td>
+</tr>
+<tr>
+<td>url_link_list.photo_url</td>
+<td>3</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>url_link_list.url</td>
+<td>3</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>place_link</td>
+<td>1</td>
+<td>object</td>
+<td>place_link</td>
+</tr>
+<tr>
+<td>place_link.al</td>
+<td>2</td>
+<td>null</td>
+<td>null</td>
+</tr>
+<tr>
+<td>place_link.cc</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>place_link.hid</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>place_link.topic</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>banner</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+</tr>
+<tr>
+<td>banner_type</td>
+<td>2</td>
+<td>string</td>
+<td>&#39;image/jpeg&#39;, &#39;image/gif&#39;, &#39;image/png&#39;, &#39;video/mp4&#39;</td>
+</tr>
+<tr>
+<td>banner_url</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>dynamic_url</td>
+<td>1</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>qr_url</td>
+<td>1</td>
+<td>string</td>
+<td>qr 주소</td>
+</tr>
+<tr>
+<td>follower_cnt</td>
+<td>1</td>
+<td>number</td>
+<td>팔로워 수</td>
+</tr>
+<tr>
+<td>following_cnt</td>
+<td>1</td>
+<td>number</td>
+<td>팔로잉 수</td>
+</tr>
+<tr>
+<td>post_cnt</td>
+<td>1</td>
+<td>number</td>
+<td>유저가 올린 게시글 수</td>
+</tr>
+<tr>
+<td>rate</td>
+<td>1</td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td>location</td>
+<td>1</td>
+<td>object</td>
+<td>지도 위치</td>
+</tr>
+<tr>
+<td>location.latitude</td>
+<td>2</td>
+<td>number</td>
+<td>위도</td>
+</tr>
+<tr>
+<td>location.longitude</td>
+<td>2</td>
+<td>number</td>
+<td>경도</td>
+</tr>
+<tr>
+<td>userID</td>
+<td>1</td>
+<td>string</td>
+<td>uid와 동일</td>
+</tr>
+<tr>
+<td>firstName</td>
+<td>1</td>
+<td>string</td>
+<td>이름</td>
+</tr>
+<tr>
+<td>lastName</td>
+<td>1</td>
+<td>string</td>
+<td>성</td>
+</tr>
+<tr>
+<td>profilePictureURL</td>
+<td>1</td>
+<td>string</td>
+<td>프로필 사진 url</td>
+</tr>
+<tr>
+<td>signUpLocation</td>
+<td>1</td>
+<td>object</td>
+<td>회원가입시 위치정보</td>
+</tr>
+<tr>
+<td>signUpLocation.latitude</td>
+<td>2</td>
+<td>number</td>
+<td>회원가입시 위치정보 (위도)</td>
+</tr>
+<tr>
+<td>signUpLocation.longitude</td>
+<td>2</td>
+<td>number</td>
+<td>회원가입시 위치정보 (경도)</td>
+</tr>
+<tr>
+<td>appIdentifier</td>
+<td>1</td>
+<td>string</td>
+<td>&#39;hello-android&#39; or &#39;hello-ios&#39;</td>
+</tr>
+<tr>
+<td>translate_day_cnt</td>
+<td>1</td>
+<td></td>
+<td>번역 일수</td>
+</tr>
+<tr>
+<td>translate_day_dt</td>
+<td>1</td>
+<td>object</td>
+<td>번역 일수 설정일</td>
+</tr>
+<tr>
+<td>_nanoseconds</td>
+<td>2</td>
+<td>number</td>
+<td>나노초</td>
+</tr>
+<tr>
+<td>_seconds</td>
+<td>2</td>
+<td>number</td>
+<td>초</td>
+</tr>
+<tr>
+<td>channel_id</td>
+<td>1</td>
+<td>string</td>
+<td>type=&#39;page&#39; 채널 아이디 (가입시 생성)</td>
+</tr>
+<tr>
+<td>device_os</td>
+<td>1</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>device_token</td>
+<td>1</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>device_udt</td>
+<td>1</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>subscribe_cnt</td>
+<td>1</td>
+<td>number</td>
+<td>해당 유저를 구독하는 구독자 수</td>
+</tr>
+<tr>
+<td>s_keyword_list</td>
+<td>1</td>
+<td>string[]</td>
+<td>키워드 리스트</td>
+</tr>
+<tr>
+<td>s_tag_list</td>
+<td>1</td>
+<td>string[]</td>
+<td>태그 리스트</td>
+</tr>
+<tr>
+<td>is_visible</td>
+<td>1</td>
+<td>boolean</td>
+<td>soft delete field</td>
+</tr>
+<tr>
+<td>cdt</td>
+<td>1</td>
+<td>timestamp</td>
+<td>create date time</td>
+</tr>
+<tr>
+<td>udt</td>
+<td>1</td>
+<td>timestamp</td>
+<td>update date time</td>
+</tr>
+</tbody></table>
+<h2 id='users'>users</h2>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>depth</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>appIdentifier</td>
+<td>1</td>
+<td>string</td>
+<td>플랫폼 구분자</td>
+</tr>
+<tr>
+<td>createdAt</td>
+<td>1</td>
+<td>timestamp</td>
+<td>생성일</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>1</td>
+<td>timestamp</td>
+<td>생성일</td>
+</tr>
+<tr>
+<td>email</td>
+<td>1</td>
+<td>string</td>
+<td>이메일</td>
+</tr>
+<tr>
+<td>firstName</td>
+<td>1</td>
+<td>string</td>
+<td>이름</td>
+</tr>
+<tr>
+<td>lastNmae</td>
+<td>1</td>
+<td>string</td>
+<td>성</td>
+</tr>
+<tr>
+<td>id</td>
+<td>1</td>
+<td>string</td>
+<td>유저 아이디</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>1</td>
+<td>string</td>
+<td>u_info 아이디</td>
+</tr>
+<tr>
+<td>userID</td>
+<td>1</td>
+<td>string</td>
+<td>u_info 아이디</td>
+</tr>
+<tr>
+<td>location</td>
+<td>1</td>
+<td>object</td>
+<td>지도</td>
+</tr>
+<tr>
+<td>location.latitude</td>
+<td>2</td>
+<td>number</td>
+<td>위도</td>
+</tr>
+<tr>
+<td>location.longitude</td>
+<td>2</td>
+<td>number</td>
+<td>경도</td>
+</tr>
+<tr>
+<td>phone</td>
+<td>1</td>
+<td>string</td>
+<td>전화번호</td>
+</tr>
+<tr>
+<td>profilePictureURL</td>
+<td>1</td>
+<td>string</td>
+<td>프로필 사진 url</td>
+</tr>
+<tr>
+<td>signUpLocation</td>
+<td>1</td>
+<td>object</td>
+<td>가입 위치</td>
+</tr>
+<tr>
+<td>signUpLocation.latitude</td>
+<td>2</td>
+<td>number</td>
+<td>가입 위치 위도</td>
+</tr>
+<tr>
+<td>signUpLocation.longitude</td>
+<td>2</td>
+<td>number</td>
+<td>가입 위치 경도</td>
+</tr>
+<tr>
+<td>is_visible</td>
+<td>1</td>
+<td>boolean</td>
+<td>soft delete field</td>
+</tr>
+<tr>
+<td>cdt</td>
+<td>1</td>
+<td>timestamp</td>
+<td>create date time</td>
+</tr>
+<tr>
+<td>udt</td>
+<td>1</td>
+<td>timestamp</td>
+<td>update date time</td>
+</tr>
+</tbody></table>
+<h2 id='email_verification'>email_verification</h2>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>depth</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>1</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>email</td>
+<td>1</td>
+<td>string</td>
+<td>유저 이메일</td>
+</tr>
+<tr>
+<td>status</td>
+<td>1</td>
+<td>string</td>
+<td>&#39;awaiting&#39;: 인증대기, &#39;done&#39;: 인증완료</td>
+</tr>
+<tr>
+<td>six_number_token</td>
+<td>1</td>
+<td>string</td>
+<td>6자리 토큰번호</td>
+</tr>
+<tr>
+<td>is_visible</td>
+<td>1</td>
+<td>boolean</td>
+<td>soft delete field</td>
+</tr>
+<tr>
+<td>cdt</td>
+<td>1</td>
+<td>timestamp</td>
+<td>create date time</td>
+</tr>
+<tr>
+<td>udt</td>
+<td>1</td>
+<td>timestamp</td>
+<td>update date time</td>
+</tr>
+</tbody></table>
+<h2 id='h_post_log'>h_post_log</h2>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>depth</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>1</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>pid</td>
+<td>1</td>
+<td>string</td>
+<td>u_post 아이디</td>
+</tr>
+<tr>
+<td>writer</td>
+<td>1</td>
+<td>string</td>
+<td>u_post.puid</td>
+</tr>
+<tr>
+<td>visit_uid_list</td>
+<td>1</td>
+<td>object[]</td>
+<td>방문 정보</td>
+</tr>
+<tr>
+<td>visit_uid_list.visit_uid</td>
+<td>3</td>
+<td>string</td>
+<td>포스트를 조회한 유저 아이디</td>
+</tr>
+<tr>
+<td>visit_uid_list.age</td>
+<td>3</td>
+<td>string</td>
+<td>포스트를 조회한 유저의 생년월일</td>
+</tr>
+<tr>
+<td>visit_uid_list.gender</td>
+<td>3</td>
+<td>string</td>
+<td>포스트를 조회한 사람의 성별</td>
+</tr>
+<tr>
+<td>visit_uid_list.type</td>
+<td>3</td>
+<td>string</td>
+<td>포스트 조회 경로 (&#39;place&#39;, &#39;front&#39;, &#39;share_internal&#39;, &#39;share_external&#39;)</td>
+</tr>
+<tr>
+<td>visit_uid_list.visit_cnt</td>
+<td>3</td>
+<td>number</td>
+<td>방문 횟수</td>
+</tr>
+<tr>
+<td>visit_uid_list.visit_date</td>
+<td>3</td>
+<td>timestamp</td>
+<td>최근 방문일자, revisit_date의 마지막 인덱스의 시간과 동일</td>
+</tr>
+<tr>
+<td>visit_uid_list.revisit_date</td>
+<td>3</td>
+<td>timestamp[]</td>
+<td>조회 기록, 조회자가 해당 포스트를 조회할 때 조회한 시간 추가</td>
+</tr>
+<tr>
+<td>is_visible</td>
+<td>1</td>
+<td>boolean</td>
+<td>soft delete field</td>
+</tr>
+<tr>
+<td>cdt</td>
+<td>1</td>
+<td>timestamp</td>
+<td>create date time</td>
+</tr>
+<tr>
+<td>udt</td>
+<td>1</td>
+<td>timestamp</td>
+<td>update date time</td>
+</tr>
+</tbody></table>
+<h2 id='h_profile_log'>h_profile_log</h2>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>depth</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>uid</td>
+<td>1</td>
+<td></td>
+<td>유저 아이디</td>
+</tr>
+<tr>
+<td>visit_uid_list</td>
+<td>1</td>
+<td>object[]</td>
+<td>프로필 방문 정보</td>
+</tr>
+<tr>
+<td>visit_uid_list.visit_uid</td>
+<td>3</td>
+<td>string</td>
+<td>프로필 조회 아이디</td>
+</tr>
+<tr>
+<td>visit_uid_list.visit_cnt</td>
+<td>3</td>
+<td>number</td>
+<td>방문 횟수 (최초 조회시에는 생성되지 않으며 두번째 조회시부터 2부터 시작하여 카운트가 증가)</td>
+</tr>
+<tr>
+<td>visit_uid_list.visit_date</td>
+<td>3</td>
+<td>timestamp</td>
+<td>최근 방문일자 최근 방문일자, revisit_date의 마지막 인덱스의 시간과 동일</td>
+</tr>
+<tr>
+<td>visit_uid_list.revisit_date</td>
+<td>3</td>
+<td>timestamp</td>
+<td>조회기록(시간) 조회 시간기록, 조회자가 해당 프로필을 조회할 때마다 조회한 시간이 추가</td>
+</tr>
+<tr>
+<td>is_visible</td>
+<td>1</td>
+<td>boolean</td>
+<td>soft delete field</td>
+</tr>
+<tr>
+<td>cdt</td>
+<td>1</td>
+<td>timestamp</td>
+<td>create date time</td>
+</tr>
+<tr>
+<td>udt</td>
+<td>1</td>
+<td>timestamp</td>
+<td>update date time</td>
+</tr>
+</tbody></table>
+<h2 id='s_stat_word_-day-month-week'>s_stat_word_** (** = day / month / week)</h2>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>depth</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>1</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>country_cd</td>
+<td>1</td>
+<td>string</td>
+<td>해당 단어를 호출한 각 국가별 코드</td>
+</tr>
+<tr>
+<td>country_name</td>
+<td>1</td>
+<td>string</td>
+<td>국가코드를 국가명으로 변환하여 표기</td>
+</tr>
+<tr>
+<td>age</td>
+<td>1</td>
+<td>string</td>
+<td>해당 단어를 사용한 연령대</td>
+</tr>
+<tr>
+<td>rank_list</td>
+<td>1</td>
+<td>object[]</td>
+<td>hashtag/keyword 순위</td>
+</tr>
+<tr>
+<td>rank_list.cnt</td>
+<td>3</td>
+<td>number</td>
+<td>word의 호출 횟수</td>
+</tr>
+<tr>
+<td>rank_list.pct</td>
+<td>3</td>
+<td>number</td>
+<td>cnt / total_cnt * 100</td>
+</tr>
+<tr>
+<td>rank_list.word</td>
+<td>3</td>
+<td>string</td>
+<td>#hashtag, keyword</td>
+</tr>
+<tr>
+<td>total_cnt</td>
+<td>1</td>
+<td>number</td>
+<td>각 단어의 카운트 총합</td>
+</tr>
+<tr>
+<td>is_visible</td>
+<td>1</td>
+<td>boolean</td>
+<td>soft delete field</td>
+</tr>
+<tr>
+<td>cdt</td>
+<td>1</td>
+<td>timestamp</td>
+<td>create date time</td>
+</tr>
+<tr>
+<td>udt</td>
+<td>1</td>
+<td>timestamp</td>
+<td>update date time</td>
+</tr>
+</tbody></table>
+<h2 id='s_stat_location_-day-month-week'>s_stat_location_** (** = day / month / week)</h2>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>depth</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>1</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>country_cd</td>
+<td>1</td>
+<td>string</td>
+<td>해당 단어를 사용한 유저의 국가 코드</td>
+</tr>
+<tr>
+<td>country_name</td>
+<td>1</td>
+<td>string</td>
+<td>국가코드를 국가명으로 변환하여 표기</td>
+</tr>
+<tr>
+<td>total_cnt</td>
+<td>1</td>
+<td>number</td>
+<td>각 단어의 카운트 총합</td>
+</tr>
+<tr>
+<td>rank_list</td>
+<td>1</td>
+<td>object[]</td>
+<td>hashtag/keyword 순위</td>
+</tr>
+<tr>
+<td>rank_list.country_list</td>
+<td>3</td>
+<td>object[]</td>
+<td>해당 단어를 사용한 유저의 국가리스트</td>
+</tr>
+<tr>
+<td>rank_list.country_list.cnt</td>
+<td>5</td>
+<td>number</td>
+<td>국가 카운트</td>
+</tr>
+<tr>
+<td>rank_list.country_list.country_pct</td>
+<td>5</td>
+<td>number</td>
+<td>국가가 차지하는 비율 (country_list[i].cnt * 100 / 각 객체의 cnt 총합)</td>
+</tr>
+<tr>
+<td>rank_list.country_total_cnt</td>
+<td>3</td>
+<td>number</td>
+<td>해당 단어의 국가별 사용빈도 총합</td>
+</tr>
+<tr>
+<td>rank_list.pct</td>
+<td>3</td>
+<td>number</td>
+<td>카운트 비율</td>
+</tr>
+<tr>
+<td>rank_list.word</td>
+<td>3</td>
+<td>sting</td>
+<td>hashtag, keyword</td>
+</tr>
+<tr>
+<td>is_visible</td>
+<td>1</td>
+<td>boolean</td>
+<td>soft delete field</td>
+</tr>
+<tr>
+<td>cdt</td>
+<td>1</td>
+<td>timestamp</td>
+<td>create date time</td>
+</tr>
+<tr>
+<td>udt</td>
+<td>1</td>
+<td>timestamp</td>
+<td>update date time</td>
+</tr>
+</tbody></table>
+<h2 id='s_stat_location_world_-day-week-month'>s_stat_location_world_** (** = day / week / month )</h2>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>depth</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>1</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>age</td>
+<td>1</td>
+<td>string</td>
+<td>연령대 &#39;10&#39;, &#39;20&#39;, &#39;30&#39;, &#39;40&#39;, &#39;50&#39;, &#39;60&#39;, &#39;all&#39;</td>
+</tr>
+<tr>
+<td>rank_list</td>
+<td>1</td>
+<td>object[]</td>
+<td>hashtag/keyword 순위</td>
+</tr>
+<tr>
+<td>rank_list.country_cd</td>
+<td>3</td>
+<td>string</td>
+<td>국가 코드</td>
+</tr>
+<tr>
+<td>rank_list.country_name</td>
+<td>3</td>
+<td>string</td>
+<td>국가명</td>
+</tr>
+<tr>
+<td>rank_list.city</td>
+<td>3</td>
+<td>string</td>
+<td>도시명</td>
+</tr>
+<tr>
+<td>rank_list.pct</td>
+<td>3</td>
+<td>number</td>
+<td>카운트 비율</td>
+</tr>
+<tr>
+<td>rank_list.cnt</td>
+<td>3</td>
+<td>number</td>
+<td>카운트</td>
+</tr>
+<tr>
+<td>rank_list.total_cnt</td>
+<td>3</td>
+<td>number</td>
+<td>총합 카운트</td>
+</tr>
+<tr>
+<td>rank_list.updown</td>
+<td>3</td>
+<td>string</td>
+<td>순위 변동 (&#39;-&#39;: 변동없음, &#39;New&#39;: 신규)</td>
+</tr>
+<tr>
+<td>rank_list.word</td>
+<td>3</td>
+<td>string</td>
+<td>#hashtag, keyword</td>
+</tr>
+<tr>
+<td>rank_list.word_en</td>
+<td>3</td>
+<td>string</td>
+<td>영어 번역</td>
+</tr>
+<tr>
+<td>rank_list.cdt</td>
+<td>3</td>
+<td>timestamp</td>
+<td>rank_list 생성일</td>
+</tr>
+<tr>
+<td>is_visible</td>
+<td>1</td>
+<td>boolean</td>
+<td>soft delete field</td>
+</tr>
+<tr>
+<td>cdt</td>
+<td>1</td>
+<td>timestamp</td>
+<td>create date time</td>
+</tr>
+<tr>
+<td>udt</td>
+<td>1</td>
+<td>timestamp</td>
+<td>update date time</td>
+</tr>
+</tbody></table>
+<h2 id='t_-en-fr-ru-it-de-ko-ja-pt-id-nl-pl-es-sv'>t_** (** = en / fr / ru / it / de / ko / ja / pt / id / nl / pl / es / sv)</h2>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>depth</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>translate</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+</tr>
+<tr>
+<td>translate.detect_lang</td>
+<td>2</td>
+<td>string</td>
+<td>감지 언어</td>
+</tr>
+<tr>
+<td>translate.en</td>
+<td>2</td>
+<td>string</td>
+<td>영어</td>
+</tr>
+<tr>
+<td>translate.fr</td>
+<td>2</td>
+<td>string</td>
+<td>프랑스어</td>
+</tr>
+<tr>
+<td>translate.ru</td>
+<td>2</td>
+<td>string</td>
+<td>러시아어</td>
+</tr>
+<tr>
+<td>translate.it</td>
+<td>2</td>
+<td>string</td>
+<td>이탈리아어</td>
+</tr>
+<tr>
+<td>translate.de</td>
+<td>2</td>
+<td>string</td>
+<td>독일어</td>
+</tr>
+<tr>
+<td>translate.ko</td>
+<td>2</td>
+<td>string</td>
+<td>한국어</td>
+</tr>
+<tr>
+<td>translate.ja</td>
+<td>2</td>
+<td>string</td>
+<td>일본어</td>
+</tr>
+<tr>
+<td>translate.pt</td>
+<td>2</td>
+<td>string</td>
+<td>포르투갈어(브라질)</td>
+</tr>
+<tr>
+<td>translate.id</td>
+<td>2</td>
+<td>string</td>
+<td>인도네시아어</td>
+</tr>
+<tr>
+<td>translate.nl</td>
+<td>2</td>
+<td>string</td>
+<td>네덜란드어</td>
+</tr>
+<tr>
+<td>translate.pl</td>
+<td>2</td>
+<td>string</td>
+<td>폴란드어</td>
+</tr>
+<tr>
+<td>translate.es</td>
+<td>2</td>
+<td>string</td>
+<td>스페인어</td>
+</tr>
+<tr>
+<td>translate.sv</td>
+<td>2</td>
+<td>string</td>
+<td>스웨덴어</td>
+</tr>
+<tr>
+<td>is_visible</td>
+<td>1</td>
+<td>boolean</td>
+<td>soft delete field</td>
+</tr>
+<tr>
+<td>cdt</td>
+<td>1</td>
+<td>timestamp</td>
+<td>create date time</td>
+</tr>
+<tr>
+<td>udt</td>
+<td>1</td>
+<td>timestamp</td>
+<td>update date time</td>
+</tr>
+</tbody></table>
+<h2 id='c_caction'>c_caction</h2>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>depth</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>1</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>cid</td>
+<td>1</td>
+<td>string</td>
+<td>u_channel 아이디</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>1</td>
+<td>string</td>
+<td>u_info 아이디</td>
+</tr>
+<tr>
+<td>is_mute</td>
+<td>1</td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>is_pin</td>
+<td>1</td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>is_like</td>
+<td>1</td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>is_visible</td>
+<td>1</td>
+<td>boolean</td>
+<td>soft delete field</td>
+</tr>
+<tr>
+<td>cdt</td>
+<td>1</td>
+<td>timestamp</td>
+<td>create date time</td>
+</tr>
+<tr>
+<td>udt</td>
+<td>1</td>
+<td>timestamp</td>
+<td>update date time</td>
+</tr>
+</tbody></table>
+<h2 id='c_channel'>c_channel</h2>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>depth</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>channelID</td>
+<td>1</td>
+<td>string</td>
+<td>c_channel 아이디</td>
+</tr>
+<tr>
+<td>country_cd</td>
+<td>1</td>
+<td>string</td>
+<td>국가코드</td>
+</tr>
+<tr>
+<td>creator</td>
+<td>1</td>
+<td>object</td>
+<td>채널 생성 유저 정보(방장)</td>
+</tr>
+<tr>
+<td>creator.country_cd</td>
+<td>2</td>
+<td>string</td>
+<td>방장 국가 코드</td>
+</tr>
+<tr>
+<td>creator.hid</td>
+<td>2</td>
+<td>string</td>
+<td>방장 닉네임</td>
+</tr>
+<tr>
+<td>creator.hnm</td>
+<td>2</td>
+<td>string</td>
+<td>방장 이름</td>
+</tr>
+<tr>
+<td>creator.photo_url</td>
+<td>2</td>
+<td>string</td>
+<td>방장 photo_url</td>
+</tr>
+<tr>
+<td>creator.uid</td>
+<td>2</td>
+<td>string</td>
+<td>방장 아이디</td>
+</tr>
+<tr>
+<td>creatorID</td>
+<td>1</td>
+<td>string</td>
+<td>방장 아이디</td>
+</tr>
+<tr>
+<td>creator_id</td>
+<td>1</td>
+<td>string</td>
+<td>방장 아이디</td>
+</tr>
+<tr>
+<td>dynamic_url</td>
+<td>1</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>lastMessage</td>
+<td>1</td>
+<td>string</td>
+<td>마지막 메시지</td>
+</tr>
+<tr>
+<td>lastMessageDate</td>
+<td>1</td>
+<td>timestamp</td>
+<td>마지막 메시지 발신일</td>
+</tr>
+<tr>
+<td>lastMessageHid</td>
+<td>1</td>
+<td>string</td>
+<td>메시지 발신자 닉네임</td>
+</tr>
+<tr>
+<td>lastMessageProfileUrl</td>
+<td>1</td>
+<td>string</td>
+<td>메시지 발신자 프로필 url</td>
+</tr>
+<tr>
+<td>lastMessageUid</td>
+<td>1</td>
+<td>string</td>
+<td>메시지 발신자 유저 아이디</td>
+</tr>
+<tr>
+<td>name</td>
+<td>1</td>
+<td>string</td>
+<td>채널 제목</td>
+</tr>
+<tr>
+<td>qr_url</td>
+<td>1</td>
+<td>string</td>
+<td>qr_url</td>
+</tr>
+<tr>
+<td>said_list</td>
+<td>1</td>
+<td>string[]</td>
+<td>방장 리스트</td>
+</tr>
+<tr>
+<td>type</td>
+<td>1</td>
+<td>string</td>
+<td>page, group, open, community, onetoone, hello</td>
+</tr>
+<tr>
+<td>uid_list</td>
+<td>1</td>
+<td>string[]</td>
+<td>참여 유저 아이디 리스트</td>
+</tr>
+<tr>
+<td>user_cnt</td>
+<td>1</td>
+<td>number</td>
+<td>참여 유저 수</td>
+</tr>
+<tr>
+<td>user_list</td>
+<td>1</td>
+<td>object[]</td>
+<td>참여 유저 정보 리스트</td>
+</tr>
+<tr>
+<td>user_list.country_cd</td>
+<td>3</td>
+<td>string</td>
+<td>유저 국가 코드</td>
+</tr>
+<tr>
+<td>user_list.hid</td>
+<td>3</td>
+<td>string</td>
+<td>유저 닉네임</td>
+</tr>
+<tr>
+<td>user_list.hnm</td>
+<td>3</td>
+<td>string</td>
+<td>유저 이름</td>
+</tr>
+<tr>
+<td>user_list.photo_url</td>
+<td>3</td>
+<td>string</td>
+<td>유저 photo_url</td>
+</tr>
+<tr>
+<td>user_list.anonymous_nm</td>
+<td>3</td>
+<td>string</td>
+<td>익명 이름</td>
+</tr>
+<tr>
+<td>user_list.anonymous_photo_url</td>
+<td>3</td>
+<td>string</td>
+<td>익명 photo_url</td>
+</tr>
+<tr>
+<td>user_list.uid</td>
+<td>3</td>
+<td>string</td>
+<td>유저 아이디</td>
+</tr>
+<tr>
+<td>is_visible</td>
+<td>1</td>
+<td>boolean</td>
+<td>soft delete field</td>
+</tr>
+<tr>
+<td>cdt</td>
+<td>1</td>
+<td>timestamp</td>
+<td>create date time</td>
+</tr>
+<tr>
+<td>udt</td>
+<td>1</td>
+<td>timestamp</td>
+<td>update date time</td>
+</tr>
+</tbody></table>
+<h2 id='c_channel-channelid-thread'>c_channel/{channelID}/thread</h2><h2 id='c_channel_invite'>c_channel_invite</h2><h2 id='c_channel_join'>c_channel_join</h2><h2 id='channel_participation'>channel_participation</h2><h1 id='api-proxy_create'>API (proxy_create)</h1><h2 id='chatcreatechannel'>chatCreateChannel()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 채널 생성
+ * @param {object} data { uid_list: [] }
+ * @returns {object} { id: '', is_success: {boolean}, data: {object} }
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 필수 데이터를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>Fail</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">id</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
+  <span class="nx">is</span><span class="p">:</span> <span class="nx">success</span><span class="p">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>Success</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">id</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
+  <span class="nx">is_success</span><span class="p">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+
+</code></pre></div><h3 id='request-parameters'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td></td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>chatCreateChannel</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid_list</td>
+<td>2</td>
+<td>string[]</td>
+<td>required</td>
+<td></td>
+<td>유저 아이디를 담고 있는 배열</td>
+</tr>
+</tbody></table>
+<h3 id='response-format'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>id</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td>채널 아이디</td>
+</tr>
+<tr>
+<td>is_success</td>
+<td>2</td>
+<td>boolean</td>
+<td>true</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='makecreatepost'>makeCreatePost()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * u_post 생성
+ * @param {object} data
+ * @returns {object} { id: '', is_success: true || false}
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 필수 데이터를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>Fail</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">id</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
+  <span class="nx">is</span><span class="p">:</span> <span class="nx">success</span><span class="p">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>Success</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">id</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
+  <span class="nx">is_success</span><span class="p">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+
+</code></pre></div><h3 id='request-parameters-2'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>유저 아이디</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-2'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>id</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td>u_post 아이디</td>
+</tr>
+<tr>
+<td>is_success</td>
+<td>2</td>
+<td>boolean</td>
+<td>true</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='makecreatepostlog'>makeCreatePostLog()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 포스트 로그 컬렉션 생성 (h_post_log)
+ * @param {object} data 
+ { 
+   type: {string}, 
+   pid: {string}, 
+   uid: {string}, 
+   puid: {string}, 
+   gender?: {string},
+   age?: {string} 
+ }
+ * @returns {object}
+ *
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (pid, uid, puid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>Error (type을 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="nx">message</span><span class="p">:</span> <span class="dl">'</span><span class="s1">post-log/data.type is null</span><span class="dl">'</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>Fail</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">id</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
+  <span class="nx">is</span><span class="p">:</span> <span class="nx">success</span><span class="p">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-3'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>makeCreatePostLog</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>pid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>포스트 아이디</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>유저 아이디</td>
+</tr>
+<tr>
+<td>puid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>포스트를 작성한 유저 아이디</td>
+</tr>
+<tr>
+<td>type</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>&#39;post&#39; / &#39;front&#39; / &#39;share_internal&#39; / &#39;share_external&#39;</td>
+</tr>
+<tr>
+<td>gender</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td>&#39;male&#39; / &#39;female&#39;</td>
+</tr>
+<tr>
+<td>age</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td>&#39;yyyy-mm-dd&#39;</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-3'>Response Format (도큐먼트 최초 생성 시)</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>is_success</td>
+<td>2</td>
+<td>boolean</td>
+<td>true</td>
+<td></td>
+</tr>
+<tr>
+<td>message</td>
+<td>2</td>
+<td>string</td>
+<td>post-log/create-document</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='response-format-4'>Response Format (도큐먼트가 존재할 경우)</h3>
+<ul>
+<li>visit_uid_list에 존재하는 객체들의 visit_uid 필드와 uid 필드가 일치할 경우 (중복인 경우)</li>
+</ul>
+
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>is_success</td>
+<td>2</td>
+<td>boolean</td>
+<td>true</td>
+<td></td>
+</tr>
+<tr>
+<td>message</td>
+<td>2</td>
+<td>string</td>
+<td>post-log/set-field</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='response-format-5'>Response Format (도큐먼트가 존재할 경우)</h3>
+<ul>
+<li>visit_uid_list에 존재하는 객체들의 visit_uid 필드와 uid 필드가 일치하지 않는 경우 (중복이 아닌 경우)</li>
+</ul>
+
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>is_success</td>
+<td>2</td>
+<td>boolean</td>
+<td>true</td>
+<td></td>
+</tr>
+<tr>
+<td>message</td>
+<td>2</td>
+<td>string</td>
+<td>post-log/update-field</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='makecreateprofilelog'>makeCreateProfileLog()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 프로필 로그 컬렉션 생성 (h_profile_log)
+ * @param {obejct} data { uid: {string}, visitor: {string} }
+ * @returns {object}
+ *
+ * - 도큐먼트가 존재할 경우
+ *
+ *    visit_uid_list에 존재하는 객체들의 visit_uid 필드와 uid 필드가 일치할 경우 (중복인 경우)
+ *    { is_success: true, message: 'profile-log/set-field' }
+ *
+ *    visit_uid_list에 존재하는 객체들의 visit_uid 필드와 uid 필드가 일치하지 않는 경우 (중복이 아닌 경우)
+ *    { is_success: true, message: "profile-log/update-field" }
+ *
+ * - 도큐먼트가 존재하지 않을 경우 (도큐먼트 최초 생성 시)
+ * { is_success: true, message: 'profile-log/create-document' }
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (uid, visitor를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>Fail</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_success</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="nx">message</span><span class="p">:</span> <span class="dl">'</span><span class="s1">profile-log/unvalid</span><span class="dl">'</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-4'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>makeCreateProfileLog</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>유저 아이디</td>
+</tr>
+<tr>
+<td>visitor</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>프로필 방문한 유저 아이디</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-6'>Response Format (도큐먼트 최초 생성 시)</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>is_success</td>
+<td>2</td>
+<td>boolean</td>
+<td>trie</td>
+<td></td>
+</tr>
+<tr>
+<td>message</td>
+<td>2</td>
+<td>string</td>
+<td>profile-log/create-document</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='response-format-7'>Response Format (도큐먼트가 존재할 경우)</h3>
+<ul>
+<li>visit_uid_list에 존재하는 객체들의 visit_uid 필드와 uid 필드가 일치할 경우 (중복인 경우)</li>
+</ul>
+
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>is_success</td>
+<td>2</td>
+<td>boolean</td>
+<td>trie</td>
+<td></td>
+</tr>
+<tr>
+<td>message</td>
+<td>2</td>
+<td>string</td>
+<td>profile-log/set-field</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='response-format-8'>Response Format (도큐먼트가 존재할 경우)</h3>
+<ul>
+<li>visit_uid_list에 존재하는 객체들의 visit_uid 필드와 uid 필드가 일치하지 않는 경우 (중복이 아닌 경우)</li>
+</ul>
+
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>is_success</td>
+<td>2</td>
+<td>boolean</td>
+<td>trie</td>
+<td></td>
+</tr>
+<tr>
+<td>message</td>
+<td>2</td>
+<td>string</td>
+<td>profile-log/update-field</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='mypagecreatecustomtokenforuser'>mypageCreateCustomTokenForUser()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * Firebase customToken 생성
+ * @param {object} data { uid: '' }
+ * @returns {object} { ct: '', is_success: true || false }
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (uid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-5'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageCreateCustomTokenForUser</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>유저 아이디</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-9'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>reulst</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ct</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td>토큰값</td>
+</tr>
+<tr>
+<td>is_success</td>
+<td>2</td>
+<td>boolean</td>
+<td>true</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='mypagecreategroup'>mypageCreateGroup()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 그룹 생성
+ * @param {object} data { admin_uid: '' }
+ * @returns {object} { id: '', is_success: {boolean} }
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (admin_uid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>Fail</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">id</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
+  <span class="nx">is_success</span><span class="p">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-6'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageCreateGroup</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>admin_uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>채널 관리자 권한을 가진 유저 아이디</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-10'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>id</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td>u_group 아이디</td>
+</tr>
+<tr>
+<td>is_success</td>
+<td>2</td>
+<td>boolean</td>
+<td>true</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='mypagecreateinfo'>mypageCreateInfo()</h2><h3 id='request-parameters-7'>Request Parameters</h3><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 회원가입 (회원정보 생성)
+ * @param {object} data
+ * @returns {object} { id: '', is_success: true || false }
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Fail</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">id</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
+  <span class="nx">is_success</span><span class="p">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</code></pre></div>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageCreateInfo</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>is_verification</td>
+<td>2</td>
+<td>boolean</td>
+<td></td>
+<td>false</td>
+<td>이메일 인증 여부</td>
+</tr>
+<tr>
+<td>account_type</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td>basic</td>
+<td>과금 유저 구분 (&#39;pro&#39; / &#39;basic&#39;)</td>
+</tr>
+<tr>
+<td>total_filesize</td>
+<td>2</td>
+<td>number</td>
+<td></td>
+<td>20971520</td>
+<td>20 MB = 20971520 Bytes</td>
+</tr>
+<tr>
+<td>current_filesize</td>
+<td>2</td>
+<td>number</td>
+<td></td>
+<td>0</td>
+<td>사용 파일 용량</td>
+</tr>
+<tr>
+<td>total_character</td>
+<td>2</td>
+<td>number</td>
+<td></td>
+<td>15000</td>
+<td>기본 제공 글자수</td>
+</tr>
+<tr>
+<td>current_character</td>
+<td>2</td>
+<td>number</td>
+<td></td>
+<td>0</td>
+<td>사용 글자수</td>
+</tr>
+<tr>
+<td>current_dia</td>
+<td>2</td>
+<td>number</td>
+<td></td>
+<td>30</td>
+<td>기본 제공 다이아</td>
+</tr>
+<tr>
+<td>hid_list</td>
+<td>2</td>
+<td>string[]</td>
+<td></td>
+<td>[]</td>
+<td>hid 변경 이력</td>
+</tr>
+<tr>
+<td>id</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td>u_info 아이디</td>
+</tr>
+<tr>
+<td>email</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td>이메일</td>
+</tr>
+<tr>
+<td>uuid</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>hid</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td>헬로부에노스 유저 아이디</td>
+</tr>
+<tr>
+<td>hnm</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td>유저 이름</td>
+</tr>
+<tr>
+<td>country_cd</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td>국가 코드</td>
+</tr>
+<tr>
+<td>country_nm</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td>국가명</td>
+</tr>
+<tr>
+<td>city</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td>도시 이름</td>
+</tr>
+<tr>
+<td>photo_url</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td>사진 url</td>
+</tr>
+<tr>
+<td>phone</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td>핸드폰 번호</td>
+</tr>
+<tr>
+<td>pw</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td>비밀번호</td>
+</tr>
+<tr>
+<td>bio</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td>자기소개</td>
+</tr>
+<tr>
+<td>gender</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td>성별</td>
+</tr>
+<tr>
+<td>birthday</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td>생일</td>
+</tr>
+<tr>
+<td>url_link_list</td>
+<td>2</td>
+<td>object[]</td>
+<td></td>
+<td></td>
+<td>url_link</td>
+</tr>
+<tr>
+<td>place_link</td>
+<td>2</td>
+<td>object</td>
+<td></td>
+<td></td>
+<td>place_link</td>
+</tr>
+<tr>
+<td>banner</td>
+<td>2</td>
+<td>object</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>banner_type</td>
+<td>3</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td>&#39;image/jpeg&#39;, &#39;image/gif&#39;, &#39;image/png&#39;, &#39;video/mp4&#39;</td>
+</tr>
+<tr>
+<td>banner_url</td>
+<td>3</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>qr_url</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td>qr 주소</td>
+</tr>
+<tr>
+<td>follower_cnt</td>
+<td>2</td>
+<td>number</td>
+<td></td>
+<td></td>
+<td>팔로워 수</td>
+</tr>
+<tr>
+<td>following_cnt</td>
+<td>2</td>
+<td>number</td>
+<td></td>
+<td></td>
+<td>팔로잉 수</td>
+</tr>
+<tr>
+<td>post_cnt</td>
+<td>2</td>
+<td>number</td>
+<td></td>
+<td></td>
+<td>유저가 올린 게시글 수</td>
+</tr>
+<tr>
+<td>rate</td>
+<td>2</td>
+<td>number</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>location</td>
+<td>2</td>
+<td>object</td>
+<td></td>
+<td></td>
+<td>지도 위치</td>
+</tr>
+<tr>
+<td>location.latitude</td>
+<td>3</td>
+<td>number</td>
+<td></td>
+<td></td>
+<td>위도</td>
+</tr>
+<tr>
+<td>location.longitude</td>
+<td>3</td>
+<td>number</td>
+<td></td>
+<td></td>
+<td>경도</td>
+</tr>
+<tr>
+<td>userID</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td>uid와 동일</td>
+</tr>
+<tr>
+<td>firstName</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td>이름</td>
+</tr>
+<tr>
+<td>lastName</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td>성</td>
+</tr>
+<tr>
+<td>profilePictureURL</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td>프로필 사진 url</td>
+</tr>
+<tr>
+<td>signUpLocation</td>
+<td>2</td>
+<td>object</td>
+<td></td>
+<td></td>
+<td>로그인 위치</td>
+</tr>
+<tr>
+<td>signUpLocation.latitude</td>
+<td>3</td>
+<td>number</td>
+<td></td>
+<td></td>
+<td>로그인 위치 위도</td>
+</tr>
+<tr>
+<td>signUpLocation.longitude</td>
+<td>3</td>
+<td>number</td>
+<td></td>
+<td></td>
+<td>로그인 위치 경도</td>
+</tr>
+<tr>
+<td>appIdentifier</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td>&#39;hello-ios&#39; or &#39;hello-android&#39;</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-11'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>id</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td>u_info 아이디</td>
+</tr>
+<tr>
+<td>is_success</td>
+<td>2</td>
+<td>boolean</td>
+<td>true</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='mypagecreatepurchase'>mypageCreatePurchase()</h2><h3 id='request-parameters-8'>Request Parameters</h3><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * account, storage, character, translate 구매
+ * @param {object} data     
+ { 
+   uid: '', 
+   type: {'account' || 'storage' || 'character' || 'translate' }, 
+   price_type: '', 
+   price: {number} 
+ }
+ * @returns {object}        
+ { 
+   id: '', 
+   is_success: {boolean} 
+ } 
+ * @description u_info의 account_type가 'pro'일 경우 u_recommend의 is_recommend: true
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="c1">// uid, type, price_type, price를 입력받지 못했을 때</span>
+<span class="c1">// u_info에 uid가 존재하지 않을 때</span>
+<span class="c1">// type이 'account'일 때</span>
+<span class="c1">// price_type이 'dia'이면서 u_info.current_dia보다 price의 값이 클 때</span>
+<span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>Fail</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">id</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
+  <span class="nx">is_success</span><span class="p">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</code></pre></div>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageCreatePurchase</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>유저 아이디</td>
+</tr>
+<tr>
+<td>type</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_info의 account_type 필드</td>
+</tr>
+<tr>
+<td>price_type</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>&#39;dia&#39;</td>
+</tr>
+<tr>
+<td>price</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>상품 가격</td>
+</tr>
+<tr>
+<td>account_type</td>
+<td>2</td>
+<td>string</td>
+<td>required?</td>
+<td></td>
+<td>account_type이 &#39;basic&#39;, &#39;type&#39;일 경우</td>
+</tr>
+<tr>
+<td>status</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td>ing</td>
+<td></td>
+</tr>
+<tr>
+<td>status_dt</td>
+<td>2</td>
+<td>timestamp</td>
+<td></td>
+<td>현재 시간</td>
+<td></td>
+</tr>
+<tr>
+<td>start_dt</td>
+<td>2</td>
+<td>timestamp</td>
+<td></td>
+<td>햔제 시간</td>
+<td></td>
+</tr>
+<tr>
+<td>upgrade_storage</td>
+<td>2</td>
+<td>number</td>
+<td></td>
+<td></td>
+<td>추가 스토리지 용량</td>
+</tr>
+<tr>
+<td>upgrade_character</td>
+<td>2</td>
+<td>number</td>
+<td></td>
+<td></td>
+<td>추가 캐릭터 용량</td>
+</tr>
+<tr>
+<td>translate_day_cnt</td>
+<td>2</td>
+<td>number</td>
+<td></td>
+<td></td>
+<td>번역 일수</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-12'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>id</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td>u_purchase의 아이디</td>
+</tr>
+<tr>
+<td>is_success</td>
+<td>2</td>
+<td>boolean</td>
+<td>true</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='utilcreatecomment'>utilCreateComment()</h2><h3 id='request-parameters-9'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>pid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>comment</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>hid</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>hnm</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>country_cd</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>photo_url</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>puid</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ptitle</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>pdesc</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>is_delete</td>
+<td>2</td>
+<td>boolean</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='response-format-13'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='utilcreatehistorybymove'>utilCreateHistoryByMove()</h2><h3 id='request-parameters-10'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='response-format-14'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='utilcreatetoken'>utilCreateToken()</h2><h3 id='request-parameters-11'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='response-format-15'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='utilcreateverificationtoken'>utilCreateVerificationToken()</h2><h3 id='request-parameters-12'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='response-format-16'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h1 id='api-proxy_readlist'>API (proxy_readList)</h1>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>앱에서 함수 호출 방식 사용</strong> <a href="'https://firebase.google.com/docs/functions/callable?hl=ko'">Firebase 공식문서</a></p>
+<h2 id='chatreadchannellist'>chatReadChannelList()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * c_channel 도큐먼트 리스트 조회
+ * @param {object} data { uid: '', f1: 'friend', f2: {'hello' || 'open' || 'group' || 'page' || 'community'}}
+ * @returns {object[]}
+ * @description
+ * [ Chat의 종류 ]
+ *    1) community : 1:1 +  2명 이상의 chat
+ *    2) page : profile의 room ( 나의 room + 참여한 Room )
+ *    3) group : 가입한 group의 room chat
+ *    4) open : open chat
+ *    5) hello : hello에서 보내는 공지사항 등
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 필수 데이터를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>Success</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code>
+</code></pre></div><h3 id='request-parameters-13'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>chatReadChannelList</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>유저 아이디</td>
+<td>유저 아이디</td>
+</tr>
+<tr>
+<td>f1</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>friend</td>
+<td></td>
+</tr>
+<tr>
+<td>f2</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>hello, open, group, page, community</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='response-format-17'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='chatreadchannelinvitelist'>chatReadChannelInviteList()</h2><h3 id='request-parameters-14'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='response-format-18'>Response Format</h3><h2 id='chatreadchanneljoinlist'>chatReadChannelJoinList()</h2><h2 id='chatreadopenchannellist'>chatReadOpenChannelList()</h2><h2 id='chatreaduserlistforinvite'>chatReadUserListForInvite()</h2><h2 id='homereadinterestlist'>homeReadInterestList()</h2><h2 id='homereadinterestlistbyfilter'>homeReadInterestListByFilter()</h2><h2 id='homereadpostlistnew'>homeReadPostListNew()</h2><h2 id='homereadrecommendlistbygroup'>homeReadRecommendListByGroup()</h2><h2 id='homereadrecommendlistbyopenchat'>homeReadRecommendListByOpenchat()</h2><h2 id='homereadrecommendlistbypost'>homeReadRecommendListByPost()</h2><h2 id='homereadrecommendlistbyuser'>homeReadRecommendListByUser()</h2><h2 id='homereadrecommendsubscribelist'>homeReadRecommendSubscribeList()</h2><h2 id='marketreadfollowhashtagpostlist'>marketReadFollowHashtagPostList()</h2><h2 id='marketreadpostlistnew'>marketReadPostListNew()</h2><h2 id='marketreadrecommendpostlist'>marketReadRecommendPostList()</h2><h2 id='marketreadrecommenduserlist'>marketReadRecommendUserList()</h2><h2 id='marketreadrecommendlistbyuser'>marketReadRecommendListByUser()</h2><h2 id='marketreadtophashtaglist'>marketReadTopHashtagList()</h2><h2 id='mypagereadblockaccountlist'>mypageReadBlockAccountList()</h2><h2 id='mypagereadcommentlist'>mypageReadCommentList()</h2><h2 id='mypagereademotionlist'>mypageReadEmotionList()</h2><h2 id='mypagereadfactionlist'>mypageReadFactionList()</h2><h2 id='mypagereadfinancelist'>mypageReadFinanceList()</h2><h2 id='mypagereadfollowerlist'>mypageReadFollowerList()</h2><h2 id='mypagereadfollowinglist'>mypageReadFollowingList()</h2><h2 id='mypagereadfollowinglistbyfollowing'>mypageReadFollowingListByFollowing</h2><h2 id='mypagereadgrouplist'>mypageReadGroupList()</h2><h2 id='mypagereadinfolist'>mypageReadInfoList()</h2><h2 id='mypagereadinsightlist'>mypageReadInsightList()</h2><h2 id='mypagereadinterestlist'>mypageReadInterestList()</h2><h2 id='mypagereadinvitelistbylocation'>mypageReadInviteListByLocation()</h2><h2 id='mypagereadpactionlist'>mypageReadPactionList()</h2><h2 id='mypagereadpostlist'>mypageReadPostList()</h2><h2 id='mypagereadpostlistbypage'>mypageReadPostListByPage()</h2><h2 id='mypagereadpurchaselist'>mypageReadPurchaseList()</h2><h2 id='mypagereadpostloginsightlistbyreach'>mypageReadPostLogInsightListByReach()</h2><h2 id='mypagereadpostloginsightlistbyage'>mypageReadPostLogInsightListByAge()</h2><h2 id='mypagereadpostloginsightlistbyagewithgender'>mypageReadPostLogInsightListByAgeWithGender()</h2><h2 id='mypagereadpostloginsightlistbygender'>mypageReadPostLogInsightListByGender()</h2><h2 id='mypagereadpostloginsightlistbyview'>mypageReadPostLogInsightListByView()</h2><h2 id='mypagereadprofileloginsightlistbyview'>mypageReadProfileLogInsightListByView()</h2><h2 id='mypagereadpostloginsightlistbyinflowweekly'>mypageReadPostLogInsightListByInflowWeekly()</h2><h2 id='mypagereadpostloginsightlistbyinflowmonthly'>mypageReadPostLogInsightListByInflowMonthly()</h2><h2 id='mypagereadpostloginsightlistbyinflowyearly'>mypageReadPostLogInsightListByInflowYearly()</h2><h2 id='mypagereadpostloginsightlistbyplaceweekly'>mypageReadPostLogInsightListByPlaceWeekly()</h2><h2 id='mypagereadpostloginsightlistbyplacemonthly'>mypageReadPostLogInsightListByPlaceMonthly()</h2><h2 id='mypagereadpostloginsightlistbyplaceyearly'>mypageReadPostLogInsightListByPlaceYearly()</h2><h2 id='mypagereadinsightlistbylike'>mypageReadInsightListByLike()</h2><h2 id='mypagereadpostlogratelistbyplace'>mypageReadPostLogRateListByPlace()</h2><h2 id='mypagereadpostlogratelistbyinflow'>mypageReadPostLogRateListByInflow()</h2><h2 id='mypagereadpostlogratelistbyage'>mypageReadPostLogRateListByAge()</h2><h2 id='mypagereadpostlogratelistbyagewithgender'>mypageReadPostLogRateListByAgeWithGender()</h2><h2 id='utilreadcodelist'>utilReadCodeList()</h2><h2 id='utilreadcommentlikelist'>utilReadCommentLikeList()</h2><h2 id='utilreadcommentlist'>utilReadCommentList()</h2><h2 id='utilreadfactionlist'>utilReadFactionList()</h2><h2 id='utilreadfollowerlist'>utilReadFollowerList()</h2><h2 id='utilreadfollowmutuallist'>utilReadFollowMutualList()</h2><h2 id='utilreadgroupjoinlist'>utilReadGroupJoinList()</h2><h2 id='utilreadgroupmanagerlist'>utilReadGroupManagerList()</h2><h2 id='utilreadinsightlist'>utilReadInsightList()</h2><h2 id='utilreadlocationlist'>utilReadLocationList()</h2><h2 id='utilreadplacelist'>utilReadPlaceList()</h2><h2 id='utilreadpostlikelist'>utilReadPostLikeList()</h2><h2 id='utilreadpostangrylist'>utilReadPostAngryList()</h2><h2 id='utilreadpostwowlist'>utilReadPostWowList()</h2><h2 id='utilreadpostlistbygroup'>utilReadPostListByGroup()</h2><h2 id='utilreadpostlistbygroupofuser'>utilReadPostListByGroupOfUser()</h2><h2 id='utilreadpostlistbyuser'>utilReadPostListByUser()</h2><h2 id='utilreadpurchaseitemlist'>utilReadPurchaseItemList()</h2><h2 id='utilreaduserlist'>utilReadUserList()</h2><h2 id='utilreadplacelistbyidx'>utilReadPlaceListByIdx()</h2><h1 id='api-proxy_read'>API (proxy_read)</h1><h2 id='mypagereadgroupmanage'>mypageReadGroupManage()</h2><h2 id='mypagereadinfo'>mypageReadInfo()</h2><h2 id='mypagereadsetting'>mypageReadSetting()</h2><h2 id='mypagereadrecommend'>mypageReadRecommend()</h2><h2 id='mypagereadtutorialurl'>mypageReadTutorialUrl()</h2><h2 id='utilreadbetweenuser'>utilReadBetweenUser()</h2><h2 id='utilreadchannel'>utilReadChannel()</h2><h2 id='utilreadchannelbyonetoone'>utilReadChannelByOneToOne()</h2><h2 id='utilreadgroup'>utilReadGroup()</h2><h2 id='utilreadplace'>utilReadPlace()</h2><h2 id='utilreadpost'>utilReadPost()</h2><h2 id='utilreadpostcnt'>utilReadPostCnt()</h2><h2 id='utilreadtranslatesupport'>utilReadTranslateSupport()</h2><h2 id='utilreaduser'>utilReadUser()</h2><h2 id='utilreaduserexist'>utilReadUserExist()</h2><h2 id='utilreadhid'>utilReadHid()</h2><h2 id='utilreadsharecnt'>utilReadShareCnt()</h2><h1 id='api-proxy_search'>API (proxy_search)</h1><h2 id='searchchatlist'>searchChatList()</h2><h2 id='searchchatlistbyhashtag'>searchChatListByHashtag()</h2><h2 id='searchgrouplist'>searchGroupList()</h2><h2 id='searchgrouplistbyhashtag'>searchGroupListByHashtag()</h2><h2 id='searchhashtaglist'>searchHashtagList()</h2><h2 id='searchkeywordlist'>searchKeywordList()</h2><h2 id='searchpostlist'>searchPostList()</h2><h2 id='searchpostlistbyhashtag'>searchPostListByHashtag()</h2><h2 id='searchpostlistbykeyword'>searchPostListByKeyword()</h2><h2 id='searchpostlistbylocation'>searchPostListByLocation()</h2><h2 id='searchstatbyworldwide'>searchStatByWorldwide()</h2><h2 id='searchstatbyworldwidetemp'>searchStatByWorldwideTemp()</h2><h2 id='searchuserlist'>searchUserList()</h2><h2 id='searchuserlistbyhashtag'>searchUserListByHashtag()</h2><h2 id='searchuserlistbyhid'>searchUserListByHid()</h2><h2 id='searchstatlistbylocation'>searchStatListByLocation()</h2><h2 id='searchstatlistbyword'>searchStatListByWord()</h2><h2 id='searchstatpostlist'>searchStatPostList()</h2><h2 id='searchstatpostlistbydate'>searchStatPostListByDate()</h2><h2 id='searchstatlistbyrankkeyword'>searchStatListByRankKeyword()</h2><h1 id='api-proxy_set'>API (proxy_set)</h1><h2 id='chatsetadduser'>chatSetAddUser()</h2><h2 id='chatsetchannel'>chatSetChannel()</h2><h2 id='chatsetchannelinvite'>chatSetChannelInvite()</h2><h2 id='chatsetchanneljoin'>chatSetChannelJoin()</h2><h2 id='chatsetchannellike'>chatSetChannelLike()</h2><h2 id='chatsetchannelmute'>chatSetChannelMute()</h2><h2 id='chatsetchannelpin'>chatSetChannelPin()</h2><h2 id='chatsetchanneltitle'>chatSetChannelTitle()</h2><h2 id='chatsetchannelwallpaper'>chatSetChannelWallpaper()</h2><h2 id='chatsetdeleteuser'>chatSetDeleteUser()</h2><h2 id='makesetpost'>makeSetPost()</h2><h2 id='mypagesetcanceldeleteinfo'>mypageSetCancelDeleteInfo()</h2><h2 id='mypagesetdeleteinfo'>mypageSetDeleteInfo()</h2><h2 id='mypagesetexchange'>mypageSetExchange()</h2><h2 id='mypagesetexpirepurchase'>mypageSetExpirePurchase()</h2><h2 id='mypagesetfinance'>mypageSetFinance()</h2><h2 id='mypagesetgroup'>mypageSetGroup()</h2><h2 id='mypagesetgroupmanagerequest'>mypageSetGroupManageRequest()</h2><h2 id='mypagesetgroupmanagechange'>mypageSetGroupManageChange()</h2><h2 id='mypagesetinfo'>mypageSetInfo()</h2><h2 id='mypagesetpaypalinfo'>mypageSetPaypalInfo()</h2><h2 id='mypagesetpwforemail'>mypageSetPwForEmail()</h2><h2 id='mypagesetsetting'>mypageSetSetting()</h2><h2 id='mypagesetrecommend'>mypageSetRecommend()</h2><h2 id='mypagesetmergeinfo'>mypageSetMergeInfo()</h2><h2 id='utilsetblock'>utilSetBlock()</h2><h2 id='utilsetcaction'>utilSetCaction()</h2><h2 id='utilsetcomment'>utilSetComment()</h2><h2 id='utilsetdeletecomment'>utilSetDeleteComment()</h2><h2 id='utilsetdeletesell'>utilSetDeleteSell()</h2><h2 id='utilsetdevice'>utilSetDevice()</h2><h2 id='utilsetfollow'>utilSetFollow()</h2><h2 id='utilsetfollowconfirmall'>utilSetFollowConfirmAll()</h2><h2 id='utilsetgroupjoin'>utilSetGroupJoin()</h2><h2 id='utilsetdeletegroupuser'>utilSetDeleteGroupUser()</h2><h2 id='utilsetgroupjoinconfirmall'>utilSetGroupJoinConfirmAll()</h2><h2 id='utilsetpaction'>utilSetPaction()</h2><h2 id='utilsetplace'>utilSetPlace()</h2><h2 id='utilsetplacelist'>utilSetPlaceList()</h2><h2 id='utilsetreport'>utilSetReport()</h2><h2 id='utilsetsell'>utilSetSell()</h2><h2 id='utilsetsubscribe'>utilSetSubscribe()</h2><h2 id='utilsetsupport'>utilSetSupport()</h2><h2 id='utilsetunblock'>utilSetUnblock()</h2><h2 id='utilsetunsubscribe'>utilSetUnsubscribe()</h2><h2 id='utilsetuseremailverification'>utilSetUserEmailVerification()</h2><h2 id='utilsetuserhide'>utilSetUserHide()</h2><h2 id='utilsetdeleteverificationtoken'>utilSetDeleteVerificationToken()</h2><h2 id='utilsetverificationtoken'>utilSetVerificationToken()</h2><h2 id='utilsetfilterage'>utilSetFilterAge()</h2><h2 id='utilsetpw'>utilSetPw()</h2><h2 id='utilsetsharecnt'>utilSetShareCnt()</h2><div class="highlight"><pre class="highlight plaintext"><code>
+</code></pre></div><h1 id='errors'>Errors</h1>
+<aside class="notice">
+This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
+</aside>
+
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>400</td>
+<td>Bad Request -- Your request is invalid.</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized -- Your API key is wrong.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found -- The specified kitten could not be found.</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
+</tr>
+<tr>
+<td>406</td>
+<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
+</tr>
+<tr>
+<td>410</td>
+<td>Gone -- The kitten requested has been removed from our servers.</td>
+</tr>
+<tr>
+<td>418</td>
+<td>I&#39;m a teapot.</td>
+</tr>
+<tr>
+<td>429</td>
+<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="shell">shell</a>
+                <a href="#" data-language-name="ruby">ruby</a>
+                <a href="#" data-language-name="python">python</a>
+                <a href="#" data-language-name="javascript">javascript</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
