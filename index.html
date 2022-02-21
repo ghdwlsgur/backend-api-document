@@ -402,9 +402,6 @@
                     <a href="#utilcreatecomment" class="toc-h2 toc-link" data-title="utilCreateComment()">utilCreateComment()</a>
                   </li>
                   <li>
-                    <a href="#utilcreatehistorybymove" class="toc-h2 toc-link" data-title="utilCreateHistoryByMove()">utilCreateHistoryByMove()</a>
-                  </li>
-                  <li>
                     <a href="#utilcreatetoken" class="toc-h2 toc-link" data-title="utilCreateToken()">utilCreateToken()</a>
                   </li>
                   <li>
@@ -452,9 +449,6 @@
                     <a href="#homereadrecommendlistbyuser" class="toc-h2 toc-link" data-title="homeReadRecommendListByUser()">homeReadRecommendListByUser()</a>
                   </li>
                   <li>
-                    <a href="#homereadrecommendsubscribelist" class="toc-h2 toc-link" data-title="homeReadRecommendSubscribeList()">homeReadRecommendSubscribeList()</a>
-                  </li>
-                  <li>
                     <a href="#marketreadfollowhashtagpostlist" class="toc-h2 toc-link" data-title="marketReadFollowHashtagPostList()">marketReadFollowHashtagPostList()</a>
                   </li>
                   <li>
@@ -464,13 +458,7 @@
                     <a href="#marketreadrecommendpostlist" class="toc-h2 toc-link" data-title="marketReadRecommendPostList()">marketReadRecommendPostList()</a>
                   </li>
                   <li>
-                    <a href="#marketreadrecommenduserlist" class="toc-h2 toc-link" data-title="marketReadRecommendUserList()">marketReadRecommendUserList()</a>
-                  </li>
-                  <li>
                     <a href="#marketreadrecommendlistbyuser" class="toc-h2 toc-link" data-title="marketReadRecommendListByUser()">marketReadRecommendListByUser()</a>
-                  </li>
-                  <li>
-                    <a href="#marketreadtophashtaglist" class="toc-h2 toc-link" data-title="marketReadTopHashtagList()">marketReadTopHashtagList()</a>
                   </li>
                   <li>
                     <a href="#mypagereadblockaccountlist" class="toc-h2 toc-link" data-title="mypageReadBlockAccountList()">mypageReadBlockAccountList()</a>
@@ -494,7 +482,7 @@
                     <a href="#mypagereadfollowinglist" class="toc-h2 toc-link" data-title="mypageReadFollowingList()">mypageReadFollowingList()</a>
                   </li>
                   <li>
-                    <a href="#mypagereadfollowinglistbyfollowing" class="toc-h2 toc-link" data-title="mypageReadFollowingListByFollowing">mypageReadFollowingListByFollowing</a>
+                    <a href="#mypagereadfollowinglistbyfollowing" class="toc-h2 toc-link" data-title="mypageReadFollowingListByFollowing()">mypageReadFollowingListByFollowing()</a>
                   </li>
                   <li>
                     <a href="#mypagereadgrouplist" class="toc-h2 toc-link" data-title="mypageReadGroupList()">mypageReadGroupList()</a>
@@ -516,9 +504,6 @@
                   </li>
                   <li>
                     <a href="#mypagereadpostlist" class="toc-h2 toc-link" data-title="mypageReadPostList()">mypageReadPostList()</a>
-                  </li>
-                  <li>
-                    <a href="#mypagereadpostlistbypage" class="toc-h2 toc-link" data-title="mypageReadPostListByPage()">mypageReadPostListByPage()</a>
                   </li>
                   <li>
                     <a href="#mypagereadpurchaselist" class="toc-h2 toc-link" data-title="mypageReadPurchaseList()">mypageReadPurchaseList()</a>
@@ -543,9 +528,6 @@
                   </li>
                   <li>
                     <a href="#mypagereadpostloginsightlistbyinflowweekly" class="toc-h2 toc-link" data-title="mypageReadPostLogInsightListByInflowWeekly()">mypageReadPostLogInsightListByInflowWeekly()</a>
-                  </li>
-                  <li>
-                    <a href="#mypagereadpostloginsightlistbyinflowmonthly" class="toc-h2 toc-link" data-title="mypageReadPostLogInsightListByInflowMonthly()">mypageReadPostLogInsightListByInflowMonthly()</a>
                   </li>
                   <li>
                     <a href="#mypagereadpostloginsightlistbyinflowyearly" class="toc-h2 toc-link" data-title="mypageReadPostLogInsightListByInflowYearly()">mypageReadPostLogInsightListByInflowYearly()</a>
@@ -926,7 +908,13 @@
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='c605454713'>배포방법</h1><div class="highlight"><pre class="highlight shell"><code>yarn <span class="nb">install
+        <h1 id='c605454713'>배포방법</h1>
+<aside class="notice">
+본 호스팅은 3월 18일까지 유지됩니다.</br>
+</aside>
+
+<p><strong>앱에서 함수 호출 방식 사용</strong> <a href="'https://firebase.google.com/docs/functions/callable?hl=ko'">Firebase 공식문서</a></p>
+<div class="highlight"><pre class="highlight shell"><code>yarn <span class="nb">install
 </span>firebase login // 파이어베이스 로그인
 firebase <span class="nb">logout</span> // 파이어베이스 로그아웃
 firebase login <span class="nt">--reauth</span> // 파이어베이스 재인증
@@ -2599,7 +2587,256 @@ u_faction
 <td>update date time</td>
 </tr>
 </tbody></table>
-<h2 id='c_channel-channelid-thread'>c_channel/{channelID}/thread</h2><h2 id='c_channel_invite'>c_channel_invite</h2><h2 id='c_channel_join'>c_channel_join</h2><h2 id='channel_participation'>channel_participation</h2><h1 id='api-proxy_create'>API (proxy_create)</h1><h2 id='chatcreatechannel'>chatCreateChannel()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+<h2 id='c_channel-channelid-thread'>c_channel/{channelID}/thread</h2>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>depth</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>channel_type</td>
+<td>1</td>
+<td>string</td>
+<td>page, group, open, community, onetoone, hello</td>
+</tr>
+<tr>
+<td>content</td>
+<td>1</td>
+<td>string</td>
+<td>내용</td>
+</tr>
+<tr>
+<td>content_en</td>
+<td>1</td>
+<td>string</td>
+<td>영어 번역</td>
+</tr>
+<tr>
+<td>content_fr</td>
+<td>1</td>
+<td>string</td>
+<td>프랑스어 번역</td>
+</tr>
+<tr>
+<td>content_ru</td>
+<td>1</td>
+<td>string</td>
+<td>러시아어 번역</td>
+</tr>
+<tr>
+<td>content_it</td>
+<td>1</td>
+<td>string</td>
+<td>이탈리아어 번역</td>
+</tr>
+<tr>
+<td>content_de</td>
+<td>1</td>
+<td>string</td>
+<td>독일어 번역</td>
+</tr>
+<tr>
+<td>content_ko</td>
+<td>1</td>
+<td>string</td>
+<td>한국어 번역</td>
+</tr>
+<tr>
+<td>content_ja</td>
+<td>1</td>
+<td>string</td>
+<td>일본어 번역</td>
+</tr>
+<tr>
+<td>content_pt</td>
+<td>1</td>
+<td>string</td>
+<td>브라질어 번역</td>
+</tr>
+<tr>
+<td>content_id</td>
+<td>1</td>
+<td>string</td>
+<td>인도네시아어 번역</td>
+</tr>
+<tr>
+<td>content_nl</td>
+<td>1</td>
+<td>string</td>
+<td>네덜란드어 번역</td>
+</tr>
+<tr>
+<td>content_pl</td>
+<td>1</td>
+<td>string</td>
+<td>폴란드어 번역</td>
+</tr>
+<tr>
+<td>content_es</td>
+<td>1</td>
+<td>string</td>
+<td>스페인어 번역</td>
+</tr>
+<tr>
+<td>content_sv</td>
+<td>1</td>
+<td>string</td>
+<td>스웨덴어 번역</td>
+</tr>
+<tr>
+<td>created</td>
+<td>1</td>
+<td>timestamp</td>
+<td>채널 생성일</td>
+</tr>
+<tr>
+<td>createdDateString</td>
+<td>1</td>
+<td>string</td>
+<td>&#39;YYYY-MM-DD&#39;</td>
+</tr>
+<tr>
+<td>createdTimeString</td>
+<td>1</td>
+<td>string</td>
+<td>&#39;YYYY-MM-DD-HH-MM&#39;</td>
+</tr>
+<tr>
+<td>filesize</td>
+<td>1</td>
+<td>number</td>
+<td>파일사이즈</td>
+</tr>
+<tr>
+<td>inReplyToItem</td>
+<td>1</td>
+<td>null</td>
+<td></td>
+</tr>
+<tr>
+<td>recipientFirstName</td>
+<td>1</td>
+<td>string</td>
+<td>수신자 이름</td>
+</tr>
+<tr>
+<td>recipientID</td>
+<td>1</td>
+<td>string</td>
+<td>수신자 아이디</td>
+</tr>
+<tr>
+<td>recipientLastName</td>
+<td>1</td>
+<td>string</td>
+<td>수신자 성</td>
+</tr>
+<tr>
+<td>recipientProfilePictureURL</td>
+<td>1</td>
+<td>string</td>
+<td>수신자 프로필 사진 URL</td>
+</tr>
+<tr>
+<td>senderCountry</td>
+<td>1</td>
+<td>string</td>
+<td>발신자 국가코드</td>
+</tr>
+<tr>
+<td>senderHid</td>
+<td>1</td>
+<td>string</td>
+<td>발신자 닉네임</td>
+</tr>
+<tr>
+<td>senderHnm</td>
+<td>1</td>
+<td>null</td>
+<td>발신자 이름</td>
+</tr>
+<tr>
+<td>senderID</td>
+<td>1</td>
+<td>string</td>
+<td>발신자 아이디</td>
+</tr>
+<tr>
+<td>senderProfileUrl</td>
+<td>1</td>
+<td>string</td>
+<td>발신자 프로필 Url</td>
+</tr>
+<tr>
+<td>type</td>
+<td>1</td>
+<td>string</td>
+<td>photo, msg, link, post, group</td>
+</tr>
+<tr>
+<td>type_data</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+</tr>
+<tr>
+<td>type_data.gmid</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>url</td>
+<td>1</td>
+<td>object</td>
+<td>첨부파일 정보</td>
+</tr>
+<tr>
+<td>url.docName</td>
+<td>2</td>
+<td>string</td>
+<td>첨부파일 이름</td>
+</tr>
+<tr>
+<td>url.docSize</td>
+<td>2</td>
+<td>number</td>
+<td>첨부파일 사이즈</td>
+</tr>
+<tr>
+<td>url.mime</td>
+<td>2</td>
+<td>string</td>
+<td>mime type</td>
+</tr>
+<tr>
+<td>url.source</td>
+<td>2</td>
+<td>string</td>
+<td>첨부파일 소스</td>
+</tr>
+<tr>
+<td>url.uri</td>
+<td>2</td>
+<td>string</td>
+<td>첨부파일 uri 주소</td>
+</tr>
+<tr>
+<td>url.url</td>
+<td>2</td>
+<td>string</td>
+<td>첨부파일 url 주소</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+mime 개별 타입 </br>
+text/plain, text/html, image/jpeg, image/png, audio/mpeg, audio/ogg, audio/*, video/mp4, application/octet-stream</br>
+</aside>
+<h2 id='c_channel_invite'>c_channel_invite</h2><h2 id='c_channel_join'>c_channel_join</h2><h2 id='channel_participation'>channel_participation</h2><h1 id='api-proxy_create'>API (proxy_create)</h1><h2 id='chatcreatechannel'>chatCreateChannel()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
  * 채널 생성
  * @param {object} data { uid_list: [] }
  * @returns {object} { id: '', is_success: {boolean}, data: {object} }
@@ -3957,7 +4194,27 @@ u_faction
 <td></td>
 </tr>
 </tbody></table>
-<h2 id='utilcreatecomment'>utilCreateComment()</h2><h3 id='request-parameters-9'>Request Parameters</h3>
+<h2 id='utilcreatecomment'>utilCreateComment()</h2><h3 id='request-parameters-9'>Request Parameters</h3><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 댓글 생성
+ * @param {object} data
+ * @returns {object} { id: '', is_success: true || false }
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (uid, pid, comment를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>Fail</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">id</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
+  <span class="nx">is_success</span><span class="p">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</code></pre></div>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3981,8 +4238,8 @@ u_faction
 <td>2</td>
 <td>string</td>
 <td>required</td>
-<td></td>
-<td></td>
+<td>utilCreateComment</td>
+<td>함수명</td>
 </tr>
 <tr>
 <td>uid</td>
@@ -3990,7 +4247,7 @@ u_faction
 <td>string</td>
 <td>required</td>
 <td></td>
-<td></td>
+<td>유저 아이디</td>
 </tr>
 <tr>
 <td>pid</td>
@@ -3998,7 +4255,7 @@ u_faction
 <td>string</td>
 <td>required</td>
 <td></td>
-<td></td>
+<td>u_post 아이디</td>
 </tr>
 <tr>
 <td>comment</td>
@@ -4006,7 +4263,7 @@ u_faction
 <td>string</td>
 <td>required</td>
 <td></td>
-<td></td>
+<td>댓글</td>
 </tr>
 <tr>
 <td>hid</td>
@@ -4014,7 +4271,7 @@ u_faction
 <td>string</td>
 <td></td>
 <td></td>
-<td></td>
+<td>유저 닉네임</td>
 </tr>
 <tr>
 <td>hnm</td>
@@ -4022,7 +4279,7 @@ u_faction
 <td>string</td>
 <td></td>
 <td></td>
-<td></td>
+<td>유저 이름</td>
 </tr>
 <tr>
 <td>country_cd</td>
@@ -4030,7 +4287,7 @@ u_faction
 <td>string</td>
 <td></td>
 <td></td>
-<td></td>
+<td>국가 코드</td>
 </tr>
 <tr>
 <td>photo_url</td>
@@ -4038,7 +4295,7 @@ u_faction
 <td>string</td>
 <td></td>
 <td></td>
-<td></td>
+<td>photo url</td>
 </tr>
 <tr>
 <td>puid</td>
@@ -4046,7 +4303,7 @@ u_faction
 <td>string</td>
 <td></td>
 <td></td>
-<td></td>
+<td>u_post 작성자</td>
 </tr>
 <tr>
 <td>ptitle</td>
@@ -4054,7 +4311,7 @@ u_faction
 <td>string</td>
 <td></td>
 <td></td>
-<td></td>
+<td>포스트 제목</td>
 </tr>
 <tr>
 <td>pdesc</td>
@@ -4062,7 +4319,7 @@ u_faction
 <td>string</td>
 <td></td>
 <td></td>
-<td></td>
+<td>포스트 내용</td>
 </tr>
 <tr>
 <td>is_delete</td>
@@ -4070,7 +4327,7 @@ u_faction
 <td>boolean</td>
 <td></td>
 <td></td>
-<td></td>
+<td>삭제 여부</td>
 </tr>
 </tbody></table>
 <h3 id='response-format-13'>Response Format</h3>
@@ -4084,28 +4341,41 @@ u_faction
 </tr>
 </thead><tbody>
 <tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
+<td>result</td>
+<td>1</td>
+<td>object</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
+<td>id</td>
+<td>2</td>
+<td>string</td>
 <td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>u_info id</td>
+</tr>
+<tr>
+<td>is_success</td>
+<td>2</td>
+<td>boolean</td>
+<td>true</td>
 <td></td>
 </tr>
 </tbody></table>
-<h2 id='utilcreatehistorybymove'>utilCreateHistoryByMove()</h2><h3 id='request-parameters-10'>Request Parameters</h3>
+<h2 id='utilcreatetoken'>utilCreateToken()</h2><h3 id='request-parameters-10'>Request Parameters</h3><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 파이어베이스 토큰 생성
+ * @param {object} data    { token: 'O-8Oy5I3sKNPFZQlOqvk5950K8T2ySI1PStImAo9dGkAAAF1JcwM9Q' }
+ * @returns {object}       { token: '', is_success: true || false }
+ * @description            1시간 후 토큰 값 만료
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (token을 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -4117,44 +4387,28 @@ u_faction
 </tr>
 </thead><tbody>
 <tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>utilCreateToken</td>
+<td>함수명</td>
 </tr>
 <tr>
+<td>token</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
 <td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>토큰값 (유효기간: 기본값(1시간))</td>
 </tr>
 </tbody></table>
 <h3 id='response-format-14'>Response Format</h3>
@@ -4168,28 +4422,48 @@ u_faction
 </tr>
 </thead><tbody>
 <tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
+<td>result</td>
+<td>1</td>
+<td>object</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
+<td>token</td>
+<td>2</td>
+<td>string</td>
 <td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>토큰값</td>
+</tr>
+<tr>
+<td>is_success</td>
+<td>2</td>
+<td>boolean</td>
+<td>true</td>
 <td></td>
 </tr>
 </tbody></table>
-<h2 id='utilcreatetoken'>utilCreateToken()</h2><h3 id='request-parameters-11'>Request Parameters</h3>
+<h2 id='utilcreateverificationtoken'>utilCreateVerificationToken()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 이메일 인증번호 발급
+ * @param {object} data { email: {string} }
+ * @returns {object} { id: {string}, is_success: {boolean}, token: {number} }
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (email을 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>Fail</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">id</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
+  <span class="nx">is_success</span><span class="p">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-11'>Request Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -4201,44 +4475,28 @@ u_faction
 </tr>
 </thead><tbody>
 <tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>utilCreateVerificationToken</td>
+<td>함수명</td>
 </tr>
 <tr>
+<td>email</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
 <td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>회원가입시 입력한 이메일</td>
 </tr>
 </tbody></table>
 <h3 id='response-format-15'>Response Format</h3>
@@ -4252,166 +4510,35 @@ u_faction
 </tr>
 </thead><tbody>
 <tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
+<td>result</td>
+<td>1</td>
+<td>object</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
+<td>id</td>
+<td>2</td>
+<td>string</td>
 <td></td>
+<td>email_verification 아이디</td>
+</tr>
+<tr>
+<td>is_success</td>
+<td>2</td>
+<td>boolean</td>
+<td>true</td>
 <td></td>
+</tr>
+<tr>
+<td>token</td>
+<td>2</td>
+<td>string</td>
 <td></td>
-<td></td>
-<td></td>
+<td>6자리 인증번호</td>
 </tr>
 </tbody></table>
-<h2 id='utilcreateverificationtoken'>utilCreateVerificationToken()</h2><h3 id='request-parameters-12'>Request Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>depth</th>
-<th>Type</th>
-<th>Required</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<h3 id='response-format-16'>Response Format</h3>
-<table><thead>
-<tr>
-<th>Element</th>
-<th>Depth</th>
-<th>Type</th>
-<th>Data</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<h1 id='api-proxy_readlist'>API (proxy_readList)</h1>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>depth</th>
-<th>Type</th>
-<th>Required</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-
-<p><strong>앱에서 함수 호출 방식 사용</strong> <a href="'https://firebase.google.com/docs/functions/callable?hl=ko'">Firebase 공식문서</a></p>
-<h2 id='chatreadchannellist'>chatReadChannelList()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+<h1 id='api-proxy_readlist'>API (proxy_readList)</h1><h2 id='chatreadchannellist'>chatReadChannelList()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
  * c_channel 도큐먼트 리스트 조회
  * @param {object} data { uid: '', f1: 'friend', f2: {'hello' || 'open' || 'group' || 'page' || 'community'}}
  * @returns {object[]}
@@ -4425,17 +4552,12 @@ u_faction
  */</span>
 </code></pre></div>
 <blockquote>
-<p>Error (파라미터에 필수 데이터를 입력받지 못했을 시)</p>
+<p>Error (파라미터에 uid, f1, f2를 입력받지 못했을 시)</p>
 </blockquote>
 <div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
   <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div>
-<blockquote>
-<p>Success</p>
-</blockquote>
-<div class="highlight"><pre class="highlight javascript tab-javascript"><code>
-</code></pre></div><h3 id='request-parameters-13'>Request Parameters</h3>
+</code></pre></div><h3 id='request-parameters-12'>Request Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -4487,12 +4609,13 @@ u_faction
 <td></td>
 </tr>
 </tbody></table>
-<h3 id='response-format-17'>Response Format</h3>
+<h3 id='response-format-16'>Response Format</h3>
 <table><thead>
 <tr>
 <th>Element</th>
 <th>Depth</th>
 <th>Type</th>
+<th>Data</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
@@ -4501,9 +4624,22 @@ u_faction
 <td>1</td>
 <td>object[]</td>
 <td></td>
+<td>c_channel 데이터 리스트 20개</td>
 </tr>
 </tbody></table>
-<h2 id='chatreadchannelinvitelist'>chatReadChannelInviteList()</h2><h3 id='request-parameters-14'>Request Parameters</h3>
+<h2 id='chatreadchannelinvitelist'>chatReadChannelInviteList()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * c_channel_invite 도큐먼트 리스트 조회
+ * @param {object} data { cid: '', status?: '' }
+ * @returns {Array&lt;object&gt;}
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 cid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-13'>Request Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -4515,48 +4651,6206 @@ u_faction
 </tr>
 </thead><tbody>
 <tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>chatReadChannelInviteList</td>
+<td>함수명</td>
 </tr>
 <tr>
+<td>cid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
 <td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>u_channel 아이디</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-<td></td>
+<td>status</td>
+<td>2</td>
+<td>string</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 </tbody></table>
-<h3 id='response-format-18'>Response Format</h3><h2 id='chatreadchanneljoinlist'>chatReadChannelJoinList()</h2><h2 id='chatreadopenchannellist'>chatReadOpenChannelList()</h2><h2 id='chatreaduserlistforinvite'>chatReadUserListForInvite()</h2><h2 id='homereadinterestlist'>homeReadInterestList()</h2><h2 id='homereadinterestlistbyfilter'>homeReadInterestListByFilter()</h2><h2 id='homereadpostlistnew'>homeReadPostListNew()</h2><h2 id='homereadrecommendlistbygroup'>homeReadRecommendListByGroup()</h2><h2 id='homereadrecommendlistbyopenchat'>homeReadRecommendListByOpenchat()</h2><h2 id='homereadrecommendlistbypost'>homeReadRecommendListByPost()</h2><h2 id='homereadrecommendlistbyuser'>homeReadRecommendListByUser()</h2><h2 id='homereadrecommendsubscribelist'>homeReadRecommendSubscribeList()</h2><h2 id='marketreadfollowhashtagpostlist'>marketReadFollowHashtagPostList()</h2><h2 id='marketreadpostlistnew'>marketReadPostListNew()</h2><h2 id='marketreadrecommendpostlist'>marketReadRecommendPostList()</h2><h2 id='marketreadrecommenduserlist'>marketReadRecommendUserList()</h2><h2 id='marketreadrecommendlistbyuser'>marketReadRecommendListByUser()</h2><h2 id='marketreadtophashtaglist'>marketReadTopHashtagList()</h2><h2 id='mypagereadblockaccountlist'>mypageReadBlockAccountList()</h2><h2 id='mypagereadcommentlist'>mypageReadCommentList()</h2><h2 id='mypagereademotionlist'>mypageReadEmotionList()</h2><h2 id='mypagereadfactionlist'>mypageReadFactionList()</h2><h2 id='mypagereadfinancelist'>mypageReadFinanceList()</h2><h2 id='mypagereadfollowerlist'>mypageReadFollowerList()</h2><h2 id='mypagereadfollowinglist'>mypageReadFollowingList()</h2><h2 id='mypagereadfollowinglistbyfollowing'>mypageReadFollowingListByFollowing</h2><h2 id='mypagereadgrouplist'>mypageReadGroupList()</h2><h2 id='mypagereadinfolist'>mypageReadInfoList()</h2><h2 id='mypagereadinsightlist'>mypageReadInsightList()</h2><h2 id='mypagereadinterestlist'>mypageReadInterestList()</h2><h2 id='mypagereadinvitelistbylocation'>mypageReadInviteListByLocation()</h2><h2 id='mypagereadpactionlist'>mypageReadPactionList()</h2><h2 id='mypagereadpostlist'>mypageReadPostList()</h2><h2 id='mypagereadpostlistbypage'>mypageReadPostListByPage()</h2><h2 id='mypagereadpurchaselist'>mypageReadPurchaseList()</h2><h2 id='mypagereadpostloginsightlistbyreach'>mypageReadPostLogInsightListByReach()</h2><h2 id='mypagereadpostloginsightlistbyage'>mypageReadPostLogInsightListByAge()</h2><h2 id='mypagereadpostloginsightlistbyagewithgender'>mypageReadPostLogInsightListByAgeWithGender()</h2><h2 id='mypagereadpostloginsightlistbygender'>mypageReadPostLogInsightListByGender()</h2><h2 id='mypagereadpostloginsightlistbyview'>mypageReadPostLogInsightListByView()</h2><h2 id='mypagereadprofileloginsightlistbyview'>mypageReadProfileLogInsightListByView()</h2><h2 id='mypagereadpostloginsightlistbyinflowweekly'>mypageReadPostLogInsightListByInflowWeekly()</h2><h2 id='mypagereadpostloginsightlistbyinflowmonthly'>mypageReadPostLogInsightListByInflowMonthly()</h2><h2 id='mypagereadpostloginsightlistbyinflowyearly'>mypageReadPostLogInsightListByInflowYearly()</h2><h2 id='mypagereadpostloginsightlistbyplaceweekly'>mypageReadPostLogInsightListByPlaceWeekly()</h2><h2 id='mypagereadpostloginsightlistbyplacemonthly'>mypageReadPostLogInsightListByPlaceMonthly()</h2><h2 id='mypagereadpostloginsightlistbyplaceyearly'>mypageReadPostLogInsightListByPlaceYearly()</h2><h2 id='mypagereadinsightlistbylike'>mypageReadInsightListByLike()</h2><h2 id='mypagereadpostlogratelistbyplace'>mypageReadPostLogRateListByPlace()</h2><h2 id='mypagereadpostlogratelistbyinflow'>mypageReadPostLogRateListByInflow()</h2><h2 id='mypagereadpostlogratelistbyage'>mypageReadPostLogRateListByAge()</h2><h2 id='mypagereadpostlogratelistbyagewithgender'>mypageReadPostLogRateListByAgeWithGender()</h2><h2 id='utilreadcodelist'>utilReadCodeList()</h2><h2 id='utilreadcommentlikelist'>utilReadCommentLikeList()</h2><h2 id='utilreadcommentlist'>utilReadCommentList()</h2><h2 id='utilreadfactionlist'>utilReadFactionList()</h2><h2 id='utilreadfollowerlist'>utilReadFollowerList()</h2><h2 id='utilreadfollowmutuallist'>utilReadFollowMutualList()</h2><h2 id='utilreadgroupjoinlist'>utilReadGroupJoinList()</h2><h2 id='utilreadgroupmanagerlist'>utilReadGroupManagerList()</h2><h2 id='utilreadinsightlist'>utilReadInsightList()</h2><h2 id='utilreadlocationlist'>utilReadLocationList()</h2><h2 id='utilreadplacelist'>utilReadPlaceList()</h2><h2 id='utilreadpostlikelist'>utilReadPostLikeList()</h2><h2 id='utilreadpostangrylist'>utilReadPostAngryList()</h2><h2 id='utilreadpostwowlist'>utilReadPostWowList()</h2><h2 id='utilreadpostlistbygroup'>utilReadPostListByGroup()</h2><h2 id='utilreadpostlistbygroupofuser'>utilReadPostListByGroupOfUser()</h2><h2 id='utilreadpostlistbyuser'>utilReadPostListByUser()</h2><h2 id='utilreadpurchaseitemlist'>utilReadPurchaseItemList()</h2><h2 id='utilreaduserlist'>utilReadUserList()</h2><h2 id='utilreadplacelistbyidx'>utilReadPlaceListByIdx()</h2><h1 id='api-proxy_read'>API (proxy_read)</h1><h2 id='mypagereadgroupmanage'>mypageReadGroupManage()</h2><h2 id='mypagereadinfo'>mypageReadInfo()</h2><h2 id='mypagereadsetting'>mypageReadSetting()</h2><h2 id='mypagereadrecommend'>mypageReadRecommend()</h2><h2 id='mypagereadtutorialurl'>mypageReadTutorialUrl()</h2><h2 id='utilreadbetweenuser'>utilReadBetweenUser()</h2><h2 id='utilreadchannel'>utilReadChannel()</h2><h2 id='utilreadchannelbyonetoone'>utilReadChannelByOneToOne()</h2><h2 id='utilreadgroup'>utilReadGroup()</h2><h2 id='utilreadplace'>utilReadPlace()</h2><h2 id='utilreadpost'>utilReadPost()</h2><h2 id='utilreadpostcnt'>utilReadPostCnt()</h2><h2 id='utilreadtranslatesupport'>utilReadTranslateSupport()</h2><h2 id='utilreaduser'>utilReadUser()</h2><h2 id='utilreaduserexist'>utilReadUserExist()</h2><h2 id='utilreadhid'>utilReadHid()</h2><h2 id='utilreadsharecnt'>utilReadShareCnt()</h2><h1 id='api-proxy_search'>API (proxy_search)</h1><h2 id='searchchatlist'>searchChatList()</h2><h2 id='searchchatlistbyhashtag'>searchChatListByHashtag()</h2><h2 id='searchgrouplist'>searchGroupList()</h2><h2 id='searchgrouplistbyhashtag'>searchGroupListByHashtag()</h2><h2 id='searchhashtaglist'>searchHashtagList()</h2><h2 id='searchkeywordlist'>searchKeywordList()</h2><h2 id='searchpostlist'>searchPostList()</h2><h2 id='searchpostlistbyhashtag'>searchPostListByHashtag()</h2><h2 id='searchpostlistbykeyword'>searchPostListByKeyword()</h2><h2 id='searchpostlistbylocation'>searchPostListByLocation()</h2><h2 id='searchstatbyworldwide'>searchStatByWorldwide()</h2><h2 id='searchstatbyworldwidetemp'>searchStatByWorldwideTemp()</h2><h2 id='searchuserlist'>searchUserList()</h2><h2 id='searchuserlistbyhashtag'>searchUserListByHashtag()</h2><h2 id='searchuserlistbyhid'>searchUserListByHid()</h2><h2 id='searchstatlistbylocation'>searchStatListByLocation()</h2><h2 id='searchstatlistbyword'>searchStatListByWord()</h2><h2 id='searchstatpostlist'>searchStatPostList()</h2><h2 id='searchstatpostlistbydate'>searchStatPostListByDate()</h2><h2 id='searchstatlistbyrankkeyword'>searchStatListByRankKeyword()</h2><h1 id='api-proxy_set'>API (proxy_set)</h1><h2 id='chatsetadduser'>chatSetAddUser()</h2><h2 id='chatsetchannel'>chatSetChannel()</h2><h2 id='chatsetchannelinvite'>chatSetChannelInvite()</h2><h2 id='chatsetchanneljoin'>chatSetChannelJoin()</h2><h2 id='chatsetchannellike'>chatSetChannelLike()</h2><h2 id='chatsetchannelmute'>chatSetChannelMute()</h2><h2 id='chatsetchannelpin'>chatSetChannelPin()</h2><h2 id='chatsetchanneltitle'>chatSetChannelTitle()</h2><h2 id='chatsetchannelwallpaper'>chatSetChannelWallpaper()</h2><h2 id='chatsetdeleteuser'>chatSetDeleteUser()</h2><h2 id='makesetpost'>makeSetPost()</h2><h2 id='mypagesetcanceldeleteinfo'>mypageSetCancelDeleteInfo()</h2><h2 id='mypagesetdeleteinfo'>mypageSetDeleteInfo()</h2><h2 id='mypagesetexchange'>mypageSetExchange()</h2><h2 id='mypagesetexpirepurchase'>mypageSetExpirePurchase()</h2><h2 id='mypagesetfinance'>mypageSetFinance()</h2><h2 id='mypagesetgroup'>mypageSetGroup()</h2><h2 id='mypagesetgroupmanagerequest'>mypageSetGroupManageRequest()</h2><h2 id='mypagesetgroupmanagechange'>mypageSetGroupManageChange()</h2><h2 id='mypagesetinfo'>mypageSetInfo()</h2><h2 id='mypagesetpaypalinfo'>mypageSetPaypalInfo()</h2><h2 id='mypagesetpwforemail'>mypageSetPwForEmail()</h2><h2 id='mypagesetsetting'>mypageSetSetting()</h2><h2 id='mypagesetrecommend'>mypageSetRecommend()</h2><h2 id='mypagesetmergeinfo'>mypageSetMergeInfo()</h2><h2 id='utilsetblock'>utilSetBlock()</h2><h2 id='utilsetcaction'>utilSetCaction()</h2><h2 id='utilsetcomment'>utilSetComment()</h2><h2 id='utilsetdeletecomment'>utilSetDeleteComment()</h2><h2 id='utilsetdeletesell'>utilSetDeleteSell()</h2><h2 id='utilsetdevice'>utilSetDevice()</h2><h2 id='utilsetfollow'>utilSetFollow()</h2><h2 id='utilsetfollowconfirmall'>utilSetFollowConfirmAll()</h2><h2 id='utilsetgroupjoin'>utilSetGroupJoin()</h2><h2 id='utilsetdeletegroupuser'>utilSetDeleteGroupUser()</h2><h2 id='utilsetgroupjoinconfirmall'>utilSetGroupJoinConfirmAll()</h2><h2 id='utilsetpaction'>utilSetPaction()</h2><h2 id='utilsetplace'>utilSetPlace()</h2><h2 id='utilsetplacelist'>utilSetPlaceList()</h2><h2 id='utilsetreport'>utilSetReport()</h2><h2 id='utilsetsell'>utilSetSell()</h2><h2 id='utilsetsubscribe'>utilSetSubscribe()</h2><h2 id='utilsetsupport'>utilSetSupport()</h2><h2 id='utilsetunblock'>utilSetUnblock()</h2><h2 id='utilsetunsubscribe'>utilSetUnsubscribe()</h2><h2 id='utilsetuseremailverification'>utilSetUserEmailVerification()</h2><h2 id='utilsetuserhide'>utilSetUserHide()</h2><h2 id='utilsetdeleteverificationtoken'>utilSetDeleteVerificationToken()</h2><h2 id='utilsetverificationtoken'>utilSetVerificationToken()</h2><h2 id='utilsetfilterage'>utilSetFilterAge()</h2><h2 id='utilsetpw'>utilSetPw()</h2><h2 id='utilsetsharecnt'>utilSetShareCnt()</h2><div class="highlight"><pre class="highlight plaintext"><code>
-</code></pre></div><h1 id='errors'>Errors</h1>
+<h3 id='response-format-17'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td>c_channel_invite 데이터 리스트 20개</td>
+</tr>
+</tbody></table>
+<h2 id='chatreadchanneljoinlist'>chatReadChannelJoinList()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * c_channel_join 도큐먼트 리스트 조회
+ * @param {object} data { cid: '' }
+ * @returns {object[]}
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 cid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-14'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>chatReadChannelJoinList</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>cid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_channel 아이디</td>
+</tr>
+<tr>
+<td>status</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='response-format-18'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td>c_channel_join 데이터 리스트 20개</td>
+</tr>
+</tbody></table>
+<h2 id='chatreadopenchannellist'>chatReadOpenChannelList()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 채널 리스트 조회
+ * @param {object} data { uid: '', f1: {'suggest' || 'invite'}, cc: ''}
+ * @returns {Array&lt;object&gt;}
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 uid, f1, cc를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-15'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>chatReadOpenChannelList</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_channel 아이디</td>
+</tr>
+<tr>
+<td>f1</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>suggest or invite</td>
+<td></td>
+</tr>
+<tr>
+<td>cc</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='response-format-19'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='chatreaduserlistforinvite'>chatReadUserListForInvite()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * cid(c_channel_invite)로 유저 리스트 조회
+ * @param {object} data { f1: 'following' || 'follower' || 'suggest', cid: '', uid: '' }
+ * @returns {Array&lt;object&gt;}
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 uid, f1, cc를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-16'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>chatReadUserListForInvite</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_channel 아이디</td>
+</tr>
+<tr>
+<td>f1</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>following or follower or suggest</td>
+<td></td>
+</tr>
+<tr>
+<td>cid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>c_channel 아이디</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-20'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='homereadinterestlist'>homeReadInterestList()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * suid가 팔로잉 하는 유저들의 해쉬태그 또는 키워드 리스트 조회
+ * @param {object} data { suid: '' }
+ * @returns {object[]}
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 suid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-17'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>homeReadInterestList</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>suid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_follow suid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-21'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='homereadinterestlistbyfilter'>homeReadInterestListByFilter()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * f1, f2, f3별 해쉬태그 및 키워드 리스트 조회
+ * @param {object} data { uid: '', f1: '', f2: '', f3: '' }
+ * @returns {object[]}
+ * @description
+ *
+ * f1: openchat(c_channel) | user(u_follow) | group(u_group)
+ * f2: hot (cnt 내림차순 정렬) | recent (최신순 정렬)
+ * f3: '@all' | '#hashtag' | 'keyword'
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 uid, f1, f2, f3를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-18'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>homeReadInterestListByFilter</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_info 아이디</td>
+</tr>
+<tr>
+<td>f1</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>f2</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>f3</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='response-format-22'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='homereadpostlistnew'>homeReadPostListNew()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 포스트 리스트 조회
+ * @param {object} data { uid: '', f1: '', f2?: '', f3?: '', page_cnt?: {number}, last_id?: {string} }
+ * @returns {object[]}
+ * @description
+ *
+ * data.f1 =&gt; library, interest, (‘cc값’ | ‘world’ | ‘around’)
+ * data.f2 =&gt; (purchased | subscribed), (hot | recent), (people | following | my groups)
+ * data.f3 =&gt; (my groups인 경우) gid,  (subscribed 인 경우) uid, ‘keyword’ | ‘#hashtag’
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 uid, f1, f2, f3를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-19'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>homeReadPostListNew</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_info 아이디</td>
+</tr>
+<tr>
+<td>f1</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>f2</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>f3</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='response-format-23'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='homereadrecommendlistbygroup'>homeReadRecommendListByGroup()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 그룹 추천 리스트 조회
+ * @param {object} data { uid: '', cc: '', page_cnt: {number}, last_id?: {string} }
+ * @returns {object[]}
+ * @description
+ * u_group 도큐먼트의 group_privacy 필드값은 Public | Permit
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 uid, cc, page_cnt를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-20'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>homeReadRecommendListByGroup</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_info 아이디</td>
+</tr>
+<tr>
+<td>cc</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>page_cnt</td>
+<td>2</td>
+<td>number</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>last_id</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='response-format-24'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='homereadrecommendlistbyopenchat'>homeReadRecommendListByOpenchat()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 오픈 채널 추천 리스트 조회
+ * @param {object} data { uid: '', cc: '', page_cnt: {number}, f1?: {'#hashtag' || 'keyword'}, last_id?: '{string} }
+ * @returns {object[]}
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 uid, cc, page_cnt를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-21'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>homeReadRecommendListByOpenchat</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_info 아이디</td>
+</tr>
+<tr>
+<td>cc</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>page_cnt</td>
+<td>2</td>
+<td>number</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>f1</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td>#hashtag or keyword</td>
+<td></td>
+</tr>
+<tr>
+<td>last_id</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='response-format-25'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='homereadrecommendlistbypost'>homeReadRecommendListByPost()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 포스트 추천 리스트 조회
+ * @param {object} data { uid: '', cc: '', page_cnt: {number}, last_id?: '' }
+ * @returns {object[]}
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 uid, cc, page_cnt를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-22'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>homeReadRecommendListByPost</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_info 아이디</td>
+</tr>
+<tr>
+<td>cc</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>page_cnt</td>
+<td>2</td>
+<td>number</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>last_id</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='response-format-26'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='homereadrecommendlistbyuser'>homeReadRecommendListByUser()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 유저 추천 리스트 조회
+ * @param {object} data { uid: '', cc: '', page_cnt: {number}, last_id?: '', f1?: '' }
+ * @returns {object[]}
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 uid, cc, page_cnt를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-23'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>homeReadRecommendListByUser</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_info 아이디</td>
+</tr>
+<tr>
+<td>cc</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>page_cnt</td>
+<td>2</td>
+<td>number</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>f1</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>last_id</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='response-format-27'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='marketreadfollowhashtagpostlist'>marketReadFollowHashtagPostList()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 팔로우한 Hashtag의 새로운 게시물 조회
+ * @param {object} data { uid: '' }
+ * @returns {object[]}
+ * @description
+ * 해당 해시태그가 포함된 최신 게시물이 생성되는 시점을 기준으로 다른 helloUP(SELLpost)와 함께 시간순으로 정렬된다.
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 uid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-24'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>marketReadFollowHashtagPostList</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_info 아이디</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-28'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='marketreadpostlistnew'>marketReadPostListNew()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 포스트 리스트 조회
+ * @param {object} data { uid: '', f1?: '', f2?: '', f3?: '', last_id?: '' }
+ * @returns {object[]}
+ * @description
+ *
+ * data.f1 =&gt; ‘cc값’ | ‘world’ | ‘around’
+ * data.f2 =&gt; hot | recent
+ * data.f3 =&gt; '@category' | ‘keyword’ | ‘#hashtag’
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 uid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-25'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>marketReadPostListNew</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_info 아이디</td>
+</tr>
+<tr>
+<td>f1</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>f2</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>f3</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>last_id</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='response-format-29'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='marketreadrecommendpostlist'>marketReadRecommendPostList()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 마켓 추천 포스트 리스트 조회
+ * @param {object} data { uid: '', cc: '' }
+ * @returns {object[]}
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 uid, cc를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-26'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>marketReadRecommendPostList</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_info 아이디</td>
+</tr>
+<tr>
+<td>cc</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='response-format-30'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='marketreadrecommendlistbyuser'>marketReadRecommendListByUser()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * subscribe_cnt가 많은 유저순으로 조회
+ * @param {object} data { uid: '', cc: '', page_cnt: {number} last_id?: '' }
+ * @returns {object[]}
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 uid, cc, page_cnt를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-27'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>marketReadRecommendListByUser</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_info 아이디</td>
+</tr>
+<tr>
+<td>cc</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>page_cnt</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>last_id</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='response-format-31'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='mypagereadblockaccountlist'>mypageReadBlockAccountList()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 사용자가 차단한 유저정보 리스트 조회
+ * @param {object} data { uid: '' }
+ * @returns {Array&lt;object&gt;}
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 uid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-28'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageReadBlockAccountList</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_info 아이디</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-32'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='mypagereadcommentlist'>mypageReadCommentList()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 포스트를 작성한 유저의 아이디로 유저가 작성한 포스트에 달린 모든 댓글 리스트 조회
+ * @param {object} data { puid: '' }
+ * @returns {object[]}
+ * @description
+ * u_comment 도큐먼트는 포스트에 달린 댓글 정보를 담고 있는 도큐먼트이다.
+ * 해당 도큐먼트의
+ * 필드 uid에는 코멘트를 작성한 유저의 아이디 정보를 값으로
+ * 필드 pid에는 포스트의 아이디 정보를 값으로
+ * 필드 puid에는 포스트를 작성한 유저의 아이디 정보를 값으로 가지고 있다.
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 puid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-29'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageReadCommentList</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>puid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_comment puid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-33'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='mypagereademotionlist'>mypageReadEmotionList()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 좋아요 누른 댓글의 u_caction 리스트 조회
+ * @param {object} data { uid: '' }
+ * @returns {Array&lt;object&gt;}
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 uid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-30'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageReadEmotionList</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_paction puid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-34'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='mypagereadfactionlist'>mypageReadFactionList()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * u_faction 도큐먼트 리스트 조회
+ * @param {object} data { uid: '', start_dt: {Date}, end_dt: {Date}, type_list?: {Array} }
+ * @returns {Array&lt;object&gt;}
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 uid, start_dt, end_dt를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-31'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageReadFactionList</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_faction suid</td>
+</tr>
+<tr>
+<td>start_dt</td>
+<td>2</td>
+<td>timestamp</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>end_dt</td>
+<td>2</td>
+<td>timestamp</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>type_list</td>
+<td>2</td>
+<td>array</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='response-format-35'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='mypagereadfinancelist'>mypageReadFinanceList()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * u_finance 도큐먼트 리스트 조회
+ * @param {object} data { uid: '' }
+ * @returns {Array&lt;object&gt;}
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 uid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-32'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageReadFinanceList</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_finance uid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-36'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td>u_finance 데이터 리스트</td>
+</tr>
+</tbody></table>
+<h2 id='mypagereadfollowerlist'>mypageReadFollowerList()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 유저의 팔로워 리스트 조회
+ * @param {object} data { tuid: '' }
+ * @returns {Array&lt;object&gt;}
+ * @description u_follow 컬렉션에서 suid는 팔로잉 필드, tuid는 팔로워 필드
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 tuid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-33'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageReadFollowerList</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>tuid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_follow tuid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-37'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td>u_follow 데이터 리스트</td>
+</tr>
+</tbody></table>
+<h2 id='mypagereadfollowinglist'>mypageReadFollowingList()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 유저의 팔로잉 리스트 조회
+ * @param {object} data { suid: '' }
+ * @returns {Array&lt;object&gt;}
+ * @description u_follow 컬렉션에서 suid는 팔로잉 필드, tuid는 팔로워 필드
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 suid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-34'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageReadFollowingList</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>suid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_follow suid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-38'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td>u_follow 데이터 리스트</td>
+</tr>
+</tbody></table>
+<h2 id='mypagereadfollowinglistbyfollowing'>mypageReadFollowingListByFollowing()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 유저가 팔로잉 하는 사람들의 팔로잉 리스트 조회
+ * @param {object} data { uid: '' }
+ * @returns {object[]}
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 uid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-35'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageReadFollowingListByFollowing</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_follow suid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-39'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='mypagereadgrouplist'>mypageReadGroupList()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * u_group 도큐먼트 리스트 조회
+ * @param {object} data { uid: '' }
+ * @returns {Array&lt;object&gt;}
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 uid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-36'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageReadGroupList</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_group uid_list</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-40'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td>u_group 데이터 리스트</td>
+</tr>
+</tbody></table>
+<h2 id='mypagereadinfolist'>mypageReadInfoList()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * uuid로 해당하는 모든 u_info 도큐먼트 리스트 조회
+ * @param {object} data { uuid: '' }
+ * @returns {Array&lt;object&gt;}
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 uuid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-37'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageReadInfoList</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uuid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_info uuid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-41'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td>u_info 데이터 리스트</td>
+</tr>
+</tbody></table>
+<h2 id='mypagereadinsightlist'>mypageReadInsightList()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 주, 월, 년 기준으로 통계 추출 데이터 조회
+ * @param {object} data { uid: '', type: { 'view' || 'reach' || 'earn' || 'follow' || 'support'} }
+ * @returns {object}
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 uid, type를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-38'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageReadInsightList</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_info uid</td>
+</tr>
+<tr>
+<td>type</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>view / reach / earn / follow / support</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='response-format-42'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>week</td>
+<td>2</td>
+<td>object</td>
+<td></td>
+<td>주를 기준으로 통계</td>
+</tr>
+<tr>
+<td>month</td>
+<td>2</td>
+<td>object</td>
+<td></td>
+<td>월을 기준으로 통계</td>
+</tr>
+<tr>
+<td>year</td>
+<td>2</td>
+<td>object</td>
+<td></td>
+<td>년(연)을 기준으로 통계</td>
+</tr>
+</tbody></table>
+<h2 id='mypagereadinterestlist'>mypageReadInterestList()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 유저의 팔로잉 리스트 중 u_follow의 type 필드가 keyword || hashtag인 경우만 조회
+ * @param {object} data { suid: '' }
+ * @returns {Array&lt;object&gt;}
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 suid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-39'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageReadInterestList</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>suid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_follow suid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-43'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td>u_follow 데이터 리스트</td>
+</tr>
+</tbody></table>
+<h2 id='mypagereadinvitelistbylocation'>mypageReadInviteListByLocation()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 유저의 반경 50km 이내 유저들 중에서 유저가 이미 팔로잉하고 있는
+ * 유저를 제외한 유저들의 정보와 각각의 해당 유저들이 게시한 포스트 최대 3개씩 조회
+ * @param {object} data { uid: '', latitude: '', longitude: '' }
+ * @returns {Array&lt;object&gt;}
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 uid, latitude, longitude를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-40'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageReadInviteListByLocation</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_follow uid</td>
+</tr>
+<tr>
+<td>latitude</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>longitude</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='response-format-44'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='mypagereadpactionlist'>mypageReadPactionList()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * u_paction 리스트 조회
+ * @param {object} data { puid: '' }
+ * @returns {Array&lt;object&gt;}
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 puid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-41'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageReadPactionList</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_paction puid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-45'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='mypagereadpostlist'>mypageReadPostList()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 포스트 리스트 조회
+ * @param {object} data { suid: '', tuid: '', is_save?: {boolean}, page_cnt?: {number} exclude_pid?: '', last_id?: '' }
+ * @returns {Array&lt;object&gt;}
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 suid, tuid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-42'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageReadPostList</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>suid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_paction suid</td>
+</tr>
+<tr>
+<td>tuid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_paction tuid</td>
+</tr>
+<tr>
+<td>is_save</td>
+<td>2</td>
+<td>boolean</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>exclude_pid</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>page_cnt</td>
+<td>2</td>
+<td>number</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>last_id</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='response-format-46'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='mypagereadpurchaselist'>mypageReadPurchaseList()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * u_purchase 리스트 조회
+ * @param {object} data { uid: '', type?: {'account' || 'storage_basic' || 'storage_pro' || 'translate' || 'character' }}
+ * @returns {Array&lt;object&gt;}
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 uid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-43'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageReadPurchaseList</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_purchase uid</td>
+</tr>
+<tr>
+<td>type</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td>account / storage_basic / storage_basic / storage_pro / translate / character</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='response-format-47'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td>u_purchase 데이터 리스트</td>
+</tr>
+</tbody></table>
+<h2 id='mypagereadpostloginsightlistbyreach'>mypageReadPostLogInsightListByReach()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 포스트 로그 통계 (중복 x)
+ * @param {object} data { pid: {string} }
+ * @returns {object} { week: [], month: [], year: [] }
+ * @description
+ * 해당 포스트를 조회한 사용자의 수를 중복을 제외하여 통계 추출
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 pid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-44'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageReadPostLogInsightListByReach</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>pid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>h_post_log pid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-48'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>week</td>
+<td>2</td>
+<td>number[]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>month</td>
+<td>2</td>
+<td>number[]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>year</td>
+<td>2</td>
+<td>number[]</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='mypagereadpostloginsightlistbyage'>mypageReadPostLogInsightListByAge()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 포스트를 조회한 사용자의 연령그룹 통계 추출
+ * @param {object} data { pid: {string} }
+ * @returns {object}
+ * {
+ *    ByAge_10: {number}
+ *    ByAge_20: {number}
+ *    ByAge_30: {number}
+ *    ByAge_40: {number}
+ *    ByAge_50: {number}
+ *    ByAge_60: {number}
+ * }
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 pid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-45'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageReadPostLogInsightListByAge</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>pid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>h_post_log pid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-49'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ByAge_10</td>
+<td>2</td>
+<td>number</td>
+<td></td>
+<td>10대 통계</td>
+</tr>
+<tr>
+<td>ByAge_20</td>
+<td>2</td>
+<td>number</td>
+<td></td>
+<td>20대 통계</td>
+</tr>
+<tr>
+<td>ByAge_30</td>
+<td>2</td>
+<td>number</td>
+<td></td>
+<td>30대 통계</td>
+</tr>
+<tr>
+<td>ByAge_40</td>
+<td>2</td>
+<td>number</td>
+<td></td>
+<td>40대 통계</td>
+</tr>
+<tr>
+<td>ByAge_50</td>
+<td>2</td>
+<td>number</td>
+<td></td>
+<td>50대 통계</td>
+</tr>
+<tr>
+<td>ByAge_60</td>
+<td>2</td>
+<td>number</td>
+<td></td>
+<td>60대 통계</td>
+</tr>
+</tbody></table>
+<h2 id='mypagereadpostloginsightlistbyagewithgender'>mypageReadPostLogInsightListByAgeWithGender()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * male, female, unspecified 그룹으로 나눈 포스트 로그 통계 추출
+ * @param {object} data { pid: {string} }
+ * @returns
+ * {
+ *  male: {
+ *    ByAge_10: {number}
+ *    ByAge_20: {number}
+ *    ByAge_30: {number}
+ *    ByAge_40: {number}
+ *    ByAge_50: {number}
+ *    ByAge_60: {number}
+ *  },
+ *  female: {
+ *    ByAge_10: {number}
+ *    ByAge_20: {number}
+ *    ByAge_30: {number}
+ *    ByAge_40: {number}
+ *    ByAge_50: {number}
+ *    ByAge_60: {number}
+ *  },
+ *  unspecified: {
+ *    ByAge_10: {number}
+ *    ByAge_20: {number}
+ *    ByAge_30: {number}
+ *    ByAge_40: {number}
+ *    ByAge_50: {number}
+ *    ByAge_60: {number}
+ *  }
+ * }
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 pid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-46'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageReadPostLogInsightListByAgeWithGender</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>pid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>h_post_log pid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-50'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>male</td>
+<td>2</td>
+<td>object</td>
+<td></td>
+<td>남성 통계</td>
+</tr>
+<tr>
+<td>female</td>
+<td>2</td>
+<td>object</td>
+<td></td>
+<td>여성 통계</td>
+</tr>
+<tr>
+<td>unspecified</td>
+<td>2</td>
+<td>object</td>
+<td></td>
+<td>gender값 미입력 유저 통계</td>
+</tr>
+</tbody></table>
+<h2 id='mypagereadpostloginsightlistbygender'>mypageReadPostLogInsightListByGender()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * male, female, unspecified 통계 추출
+ * @param {object} data { pid: {string} }
+ * @returns { female: {number}, male: {number}, unspecified: {number} }
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 pid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-47'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageReadPostLogInsightListByGender</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>pid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>h_post_log pid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-51'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>male</td>
+<td>2</td>
+<td>number</td>
+<td></td>
+<td>남성 통계</td>
+</tr>
+<tr>
+<td>female</td>
+<td>2</td>
+<td>number</td>
+<td></td>
+<td>여성 통계</td>
+</tr>
+<tr>
+<td>unspecified</td>
+<td>2</td>
+<td>number</td>
+<td></td>
+<td>gender값 미입력 유저 통계</td>
+</tr>
+</tbody></table>
+<h2 id='mypagereadpostloginsightlistbyview'>mypageReadPostLogInsightListByView()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 포스트 로그 통계 (중복 o)
+ * @param {object} data { pid: {string} }
+ * @returns {object} { week: [], month: [], year: [] }
+ * @description
+ * 해당 포스트를 조회한 사용자의 수를 중복을 포함하여 통계 추출
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 pid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-48'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageReadPostLogInsightListByView</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>pid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>h_post_log pid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-52'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>week</td>
+<td>2</td>
+<td>number[]</td>
+<td></td>
+<td>주를 기준으로 통계</td>
+</tr>
+<tr>
+<td>month</td>
+<td>2</td>
+<td>number[]</td>
+<td></td>
+<td>월을 기준으로 통계</td>
+</tr>
+<tr>
+<td>year</td>
+<td>2</td>
+<td>number[]</td>
+<td></td>
+<td>년(연)을 기준으로 통계</td>
+</tr>
+</tbody></table>
+<h2 id='mypagereadprofileloginsightlistbyview'>mypageReadProfileLogInsightListByView()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 프로필 로그 통계 (중복 o)
+ * @param {object} data { uid: {string} }
+ * @returns {object} { week: [], month: [], year: [] }
+ * @description
+ * 해당 프로필을 조회한 사용자의 수를 중복을 포함하여 통계 추출
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 uid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-49'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageReadProfileLogInsightListByView</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>h_post_log uid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-53'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>week</td>
+<td>2</td>
+<td>number[]</td>
+<td></td>
+<td>주를 기준으로 통계</td>
+</tr>
+<tr>
+<td>month</td>
+<td>2</td>
+<td>number[]</td>
+<td></td>
+<td>월을 기준으로 통계</td>
+</tr>
+<tr>
+<td>year</td>
+<td>2</td>
+<td>number[]</td>
+<td></td>
+<td>년(연)을 기준으로 통계</td>
+</tr>
+</tbody></table>
+<h2 id='mypagereadpostloginsightlistbyinflowweekly'>mypageReadPostLogInsightListByInflowWeekly()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 일주일을 기준으로 포스트 유입 경로 통계 추출
+ * @param {object} data { pid: {string} }
+ * @returns {object} { place: [], front: [], share_internal: [], share_external: [] }
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 pid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-50'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageReadPostLogInsightListByInflowWeekly</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>pid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>h_post_log pid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-54'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>place</td>
+<td>2</td>
+<td>number[]</td>
+<td></td>
+<td>유입 경로: place</td>
+</tr>
+<tr>
+<td>front</td>
+<td>2</td>
+<td>number[]</td>
+<td></td>
+<td>유입 경로: front</td>
+</tr>
+<tr>
+<td>share_external</td>
+<td>2</td>
+<td>number[]</td>
+<td></td>
+<td>유입 경로: share_external</td>
+</tr>
+<tr>
+<td>share_internal</td>
+<td>2</td>
+<td>number[]</td>
+<td></td>
+<td>유입 경로: share_internal</td>
+</tr>
+</tbody></table>
+<h2 id='mypagereadpostloginsightlistbyinflowyearly'>mypageReadPostLogInsightListByInflowYearly()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 연(년)을 기준으로 포스트 유입 경로 통계 추출
+ * @param {object} data { pid: {string} }
+ * @returns {object} { place: [], front: [], share_internal: [], share_external: [] }
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 pid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-51'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageReadPostLogInsightListByInflowYearly</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>pid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>h_post_log pid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-55'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>place</td>
+<td>2</td>
+<td>number[]</td>
+<td></td>
+<td>유입 경로: place</td>
+</tr>
+<tr>
+<td>front</td>
+<td>2</td>
+<td>number[]</td>
+<td></td>
+<td>유입 경로: front</td>
+</tr>
+<tr>
+<td>share_external</td>
+<td>2</td>
+<td>number[]</td>
+<td></td>
+<td>유입 경로: share_external</td>
+</tr>
+<tr>
+<td>share_internal</td>
+<td>2</td>
+<td>number[]</td>
+<td></td>
+<td>유입 경로: share_internal</td>
+</tr>
+</tbody></table>
+<h2 id='mypagereadpostloginsightlistbyplaceweekly'>mypageReadPostLogInsightListByPlaceWeekly()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 일주일을 기준으로 포스트 조회 유저들의 국가 통계 리스트 추출
+ * @param {object} data { pid: {string} }
+ * @returns {object} { '국가명1': [], '국가명2': [], '국가명3': [], '국가명4': [], '국가명5': [] }
+ * @description
+ *
+ * 정렬 기준의 우선순위 (1. 카운트 / 2. 최근 조회순)
+ * top5 이내 동점이 발생할 경우 동점이 발생한 이후의 인덱스 랭크는 최근 조회를 기준으로 한다.
+ *
+ * 만약 countryList의 길이가 0일 경우
+ * { success: true, message: 'countryList.length is zero' }
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 pid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-52'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageReadPostLogInsightListByPlaceWeekly</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>pid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>h_post_log pid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-56'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&#39;국가명1&#39;</td>
+<td>2</td>
+<td>number[]</td>
+<td></td>
+<td>유입 경로: place</td>
+</tr>
+<tr>
+<td>&#39;국가명2&#39;</td>
+<td>2</td>
+<td>number[]</td>
+<td></td>
+<td>유입 경로: front</td>
+</tr>
+<tr>
+<td>&#39;국가명3&#39;</td>
+<td>2</td>
+<td>number[]</td>
+<td></td>
+<td>유입 경로: share_external</td>
+</tr>
+<tr>
+<td>&#39;국가명4&#39;</td>
+<td>2</td>
+<td>number[]</td>
+<td></td>
+<td>유입 경로: share_internal</td>
+</tr>
+<tr>
+<td>&#39;국가명5&#39;</td>
+<td>2</td>
+<td>number[]</td>
+<td></td>
+<td>유입 경로: share_internal</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-countrylist-0'>Response Format (countryList의 길이가 0일 경우)</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>success</td>
+<td>2</td>
+<td>boolean</td>
+<td>true</td>
+<td></td>
+</tr>
+<tr>
+<td>message</td>
+<td>2</td>
+<td>string</td>
+<td>countryList.length is zero</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='mypagereadpostloginsightlistbyplacemonthly'>mypageReadPostLogInsightListByPlaceMonthly()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 월을 기준으로 포스트 조회 유저들의 국가 통계 리스트 추출
+ * @param {object} data { pid: {string} }
+ * @returns {object} { '국가명1': [], '국가명2': [], '국가명3': [], '국가명4': [], '국가명5': [] }
+ * @description
+ *
+ * 정렬 기준의 우선순위 (1. 카운트 / 2. 최근 조회순)
+ * top5 이내 동점이 발생할 경우 동점이 발생한 이후의 인덱스 랭크는 최근 조회를 기준으로 한다.
+ *
+ * 만약 countryList의 길이가 0일 경우
+ * { success: true, message: 'countryList.length is zero' }
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 pid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-53'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageReadPostLogInsightListByPlaceMonthly</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>pid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>h_post_log pid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-57'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&#39;국가명1&#39;</td>
+<td>2</td>
+<td>number[]</td>
+<td></td>
+<td>유입 경로: place</td>
+</tr>
+<tr>
+<td>&#39;국가명2&#39;</td>
+<td>2</td>
+<td>number[]</td>
+<td></td>
+<td>유입 경로: front</td>
+</tr>
+<tr>
+<td>&#39;국가명3&#39;</td>
+<td>2</td>
+<td>number[]</td>
+<td></td>
+<td>유입 경로: share_external</td>
+</tr>
+<tr>
+<td>&#39;국가명4&#39;</td>
+<td>2</td>
+<td>number[]</td>
+<td></td>
+<td>유입 경로: share_internal</td>
+</tr>
+<tr>
+<td>&#39;국가명5&#39;</td>
+<td>2</td>
+<td>number[]</td>
+<td></td>
+<td>유입 경로: share_internal</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-countrylist-0-2'>Response Format (countryList의 길이가 0일 경우)</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>success</td>
+<td>2</td>
+<td>boolean</td>
+<td>true</td>
+<td></td>
+</tr>
+<tr>
+<td>message</td>
+<td>2</td>
+<td>string</td>
+<td>countryList.length is zero</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='mypagereadpostloginsightlistbyplaceyearly'>mypageReadPostLogInsightListByPlaceYearly()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 연(년)을 기준으로 포스트 조회 유저들의 국가 통계 리스트 추출
+ * @param {object} data { pid: {string} }
+ * @returns {object} { '국가명1': [], '국가명2': [], '국가명3': [], '국가명4': [], '국가명5': [] }
+ * @description
+ *
+ * 정렬 기준의 우선순위 (1. 카운트 / 2. 최근 조회순)
+ * top5 이내 동점이 발생할 경우 동점이 발생한 이후의 인덱스 랭크는 최근 조회를 기준으로 한다.
+ *
+ * 만약 countryList의 길이가 0일 경우
+ * { success: true, message: 'countryList.length is zero' }
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 pid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-54'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageReadPostLogInsightListByPlaceYearly</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>pid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>h_post_log pid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-58'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&#39;국가명1&#39;</td>
+<td>2</td>
+<td>number[]</td>
+<td></td>
+<td>유입 경로: place</td>
+</tr>
+<tr>
+<td>&#39;국가명2&#39;</td>
+<td>2</td>
+<td>number[]</td>
+<td></td>
+<td>유입 경로: front</td>
+</tr>
+<tr>
+<td>&#39;국가명3&#39;</td>
+<td>2</td>
+<td>number[]</td>
+<td></td>
+<td>유입 경로: share_external</td>
+</tr>
+<tr>
+<td>&#39;국가명4&#39;</td>
+<td>2</td>
+<td>number[]</td>
+<td></td>
+<td>유입 경로: share_internal</td>
+</tr>
+<tr>
+<td>&#39;국가명5&#39;</td>
+<td>2</td>
+<td>number[]</td>
+<td></td>
+<td>유입 경로: share_internal</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-countrylist-0-3'>Response Format (countryList의 길이가 0일 경우)</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>success</td>
+<td>2</td>
+<td>boolean</td>
+<td>true</td>
+<td></td>
+</tr>
+<tr>
+<td>message</td>
+<td>2</td>
+<td>string</td>
+<td>countryList.length is zero</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='mypagereadinsightlistbylike'>mypageReadInsightListByLike()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * is_like, is_wow, is_angry 통계 추출(주, 월, 년도 기준)
+ * @param {object} data { uid: {string}, pid: {string}, type: ['is_like', 'is_wow', 'is_angry']}
+ * @returns {object}
+ * {
+ *  is_like: {
+ *    week: [],
+ *    month: [],
+ *    year: []
+ *  },
+ * is_wow: {
+ *    week: [],
+ *    month: [],
+ *    year: []
+ *  },
+ * is_angry: {
+ *    week: [],
+ *    month: [],
+ *    year: []
+ *  },
+ * }
+ * @description uid: u_paction 컬렉션의 uid 필드값 / pid: u_paction 컬렉션의 puid 필드값
+ * type: ['is_like'] =&gt; { is_like: { } }
+ * type: ['is_like', 'is_wow'] =&gt; { is_like: {}, is_wow: {} }
+ * type: ['is_like', 'is_wow', 'is_angry'] =&gt; { is_like: {}, is_wow: {}, is_angry: {} }
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 uid, pid, type를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-55'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageReadInsightListByLike</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_info id</td>
+</tr>
+<tr>
+<td>pid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>h_paction pid</td>
+</tr>
+<tr>
+<td>type</td>
+<td>2</td>
+<td>string[]</td>
+<td>required</td>
+<td>is_like / is_wow / is_angry</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='response-format-59'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>is_like</td>
+<td>2</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>is_like.week</td>
+<td>3</td>
+<td>number[]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>is_like.month</td>
+<td>3</td>
+<td>number[]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>is_like.year</td>
+<td>3</td>
+<td>number[]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>is_wow</td>
+<td>2</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>is_wow.week</td>
+<td>3</td>
+<td>number[]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>is_wow.month</td>
+<td>3</td>
+<td>number[]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>is_wow.year</td>
+<td>3</td>
+<td>number[]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>is_angry</td>
+<td>2</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>is_angry.week</td>
+<td>3</td>
+<td>number[]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>is_angry.month</td>
+<td>3</td>
+<td>number[]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>is_angry.year</td>
+<td>3</td>
+<td>number[]</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='mypagereadpostlogratelistbyplace'>mypageReadPostLogRateListByPlace()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 포스트 조회 유저들의 국가 통계 리스트(비율 %) 추출
+ * @param {object} data { pid: {string}, range: 'week' || 'month' || 'year' }
+ * @returns {object} { '국가명/도시명1': {number},  '국가명/도시명2': {number}, '국가명/도시명3': {number}, '국가명/도시명4': {number}, '국가명/도시명5': {number},}
+ * @description
+ *
+ * 정렬 기준의 우선순위 (1. 카운트 / 2. 최근 조회순)
+ * top5 이내 동점이 발생할 경우 동점이 발생한 이후의 인덱스 랭크는 최근 조회를 기준으로 한다.
+ *
+ * 만약 countryList의 길이가 0일 경우
+ * { success: true, message: 'countryList.length is zero' }
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 pid, range를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-56'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageReadPostLogRateListByPlace</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>pid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>h_post_log pid</td>
+</tr>
+<tr>
+<td>range</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='response-format-60'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&#39;국가명/도시명1&#39;</td>
+<td>2</td>
+<td>number</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&#39;국가명/도시명2&#39;</td>
+<td>2</td>
+<td>number</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&#39;국가명/도시명3&#39;</td>
+<td>2</td>
+<td>number</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&#39;국가명/도시명4&#39;</td>
+<td>2</td>
+<td>number</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&#39;국가명/도시명5&#39;</td>
+<td>2</td>
+<td>number</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='response-format-countrylist-0-4'>Response Format (countryList의 길이가 0일 경우)</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>success</td>
+<td>2</td>
+<td>boolean</td>
+<td>true</td>
+<td></td>
+</tr>
+<tr>
+<td>message</td>
+<td>2</td>
+<td>string</td>
+<td>countryList.length is zero</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='mypagereadpostlogratelistbyinflow'>mypageReadPostLogRateListByInflow()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 포스트 유입 경로 통계(비율 %) 추출
+ * @param {object[]} data { pid: {string}, range: 'week' || 'month' || 'year' }
+ * @returns {object} { 'front' : {number}, 'share_internal: {number}, 'share_external: {number}, 'place': {number} }
+ * @description
+ *
+ * 유입 경로는 front, share_internal, share_external, place로 4가지 유형으로 분류하며
+ * 중복 조회 또한 유입 경로를 추적하여 통계 결과에 반영됨을 유의.
+ * ex)
+ * 해당 포스트를 조회한 유저의 유입 경로가 front, share_internal로
+ * 위 경로를 통해서 1회씩 포스트를 조회했다면 { front: 50, share_internal: 50 } 결과 반환
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 pid, range를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-57'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageReadPostLogRateListByInflow</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>pid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>h_post_log pid</td>
+</tr>
+<tr>
+<td>range</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>week / month / year</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='response-format-61'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>front</td>
+<td>2</td>
+<td>number</td>
+<td></td>
+<td>유입 경로: front 통계비율</td>
+</tr>
+<tr>
+<td>share_internal</td>
+<td>2</td>
+<td>number</td>
+<td></td>
+<td>유입 경로: share_internal 통계비율</td>
+</tr>
+<tr>
+<td>share_external</td>
+<td>2</td>
+<td>number</td>
+<td></td>
+<td>유입 경로: share_external 통계비율</td>
+</tr>
+<tr>
+<td>place</td>
+<td>2</td>
+<td>number</td>
+<td></td>
+<td>유입 경로: place 통계비율</td>
+</tr>
+</tbody></table>
+<h2 id='mypagereadpostlogratelistbyage'>mypageReadPostLogRateListByAge()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 포스트를 조회한 유저들의 전체 연령대 통계 추출
+ * @param {object} data { pid: {string} }
+ * @returns {object}
+ * {
+ *   ByAge_10: {number},
+ *   ByAge_20: {number},
+ *   ByAge_30: {number},
+ *   ByAge_40: {number},
+ *   ByAge_50: {number},
+ *   ByAge_60: {number},
+ * }
+ * @description 포스트를 조회한 유저들의 연령대를 비율로 통계
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 pid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-58'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageReadPostLogRateListByAge</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>pid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>h_post_log pid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-62'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ByAge_10</td>
+<td>2</td>
+<td>number</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ByAge_20</td>
+<td>2</td>
+<td>number</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ByAge_30</td>
+<td>2</td>
+<td>number</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ByAge_40</td>
+<td>2</td>
+<td>number</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ByAge_50</td>
+<td>2</td>
+<td>number</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ByAge_60</td>
+<td>2</td>
+<td>number</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='mypagereadpostlogratelistbyagewithgender'>mypageReadPostLogRateListByAgeWithGender()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 성별을 기준으로 한 연령대 통계 추출
+ * @param {object} data { pid: {string} }
+ * @returns {object[]}
+ * {
+ *  "male": [ 0, 0, 50, 0, 50, 0 ],
+ *  "female": [ 0, 0, 0, 0, 0, 100 ],
+ *  "unspecified": [ 0, 0, 0, 0, 0, 0 ]
+ * }
+ * @description
+ * [ 10대, 20대, 30대, 40대, 50대, 60대 ]
+ * 해당 포스트를 조회한 유저 중 10대 남자 1명, 20대 남자 1명이라고 가정하면,
+ * '[ 50, 50, 0, 0, 0, 0 ]'와 같은 결과를 추출할 수 있다.
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 pid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-59'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageReadPostLogRateListByAge</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>pid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>h_post_log pid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-63'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>male</td>
+<td>2</td>
+<td>number[]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>female</td>
+<td>2</td>
+<td>number[]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>unspecified</td>
+<td>2</td>
+<td>number[]</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='utilreadcodelist'>utilReadCodeList()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * m_code 컬렉션 배열 order 기준 오름차순 조회
+ * @param {object} data
+ * @returns {Array&lt;object&gt;} [{ code: '', group: '', id: '', is_visible: {boolean}, no: {number}, order: {number}, udt: {timestamp}, cdt: {timestamp}, value: '' }]
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 group을 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-60'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>utilReadCodeList</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>group</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>m_code group</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-64'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>code</td>
+<td>3</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>group</td>
+<td>3</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>id</td>
+<td>3</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>no</td>
+<td>3</td>
+<td>number</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>order</td>
+<td>3</td>
+<td>number</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>value</td>
+<td>3</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>is_visible</td>
+<td>3</td>
+<td>boolean</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>udt</td>
+<td>3</td>
+<td>timestamp</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>cdt</td>
+<td>3</td>
+<td>timestamp</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='utilreadcommentlikelist'>utilReadCommentLikeList()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 해당 댓글에 좋아요 누른 사람들의 정보 리스트[u_caction] 조회
+ * @param {object} data
+ * @returns {Array&lt;object&gt;} [u_caction]
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 cid, uid을 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-61'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>utilReadCommentLikeList</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>cid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_caction id</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_follow uid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-65'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='utilreadcommentlist'>utilReadCommentList()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 해당 포스트에 달린 댓글 리스트[u_comment] 조회
+ * @param {object} data
+ * @returns {Array&lt;object&gt;} [u_comment]
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 pid, uid을 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-62'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>utilReadCommentLikeList</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>pid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_comment pid</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_info uid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-66'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='utilreadfactionlist'>utilReadFactionList()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 타입에 따른 u_faction 리스트 가져오기
+ * @param {object} data { type: '', suid?: '' , tuid?: '' }
+ * @returns {Array&lt;object&gt;}
+ * @description type: subscribe_to / subscribe_from / sell_to / sell_from / ...
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 type을 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-63'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>utilReadFactionList</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>type</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>subscribe_to / subscribe_from / sell_to / sell_from</td>
+<td></td>
+</tr>
+<tr>
+<td>tuid</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td>u_faction tuid</td>
+</tr>
+<tr>
+<td>suid</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td>u_faction suid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-67'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='utilreadfollowerlist'>utilReadFollowerList()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 나의 팔로우 리스트 조회
+ * @param {object} data
+ * @returns {Array&lt;object&gt;}
+ * @description
+ * u_follow의 아이디 [A 아이디_B 아이디]일 경우, A가 B를 팔로잉
+ * u_follow의 아이디 [B 아이디_A 아이디]일 경우, B가 A를 팔로잉
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 uid, page_uid을 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-64'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>utilReadFollowerList</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_follow uid</td>
+</tr>
+<tr>
+<td>page_uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_follow tuid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-68'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='utilreadfollowmutuallist'>utilReadFollowMutualList()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ *
+ * @param {object} data
+ * @returns {Array&lt;object&gt;}
+ * @description data.uid 와 data.page_uid를 비교
+ * 1. page_uid의 팔로잉 리스트를 가져온다. ({ field: 'suid', compare: '==', value: page_uid })
+ * 2. page_uid로부터 팔로잉 당하는 대상을 uid도 팔로잉 한다.
+ * 이것이 어떻게 상호 팔로우 리스트인지?
+ * page_uid와 uid가 서로 다른 유저라면, 각각의 이 다른 유저가 팔로잉 하는 유저가 동일할 경우의 결과를 가져오지 않나 ?
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 uid, page_uid을 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-65'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>utilReadFollowMutualList</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_follow uid</td>
+</tr>
+<tr>
+<td>page_uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_follow suid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-69'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='utilreadgroupjoinlist'>utilReadGroupJoinList()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * u_group_join 조회
+ * u_group_join uid와 uid의 팔로잉 / 팔로우 관계를 포함
+ * @param {object} data
+ * @returns {Array&lt;object&gt;}
+ * @description
+ * u_group_join ID는 groupID_userID
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 uid, gid을 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-66'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>utilReadGroupJoinList</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>gid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_group id / u_group_join gid</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_follow uid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-70'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='utilreadgroupmanagerlist'>utilReadGroupManagerList()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 해당 그룹의 관리자 조회
+ * manager.uid와 uid의 팔로잉 / 팔로우 관계를 포함
+ * 다시 말해, 파리미터에 uid와 gid의 관리자 관계 포함
+ * @param {object} data
+ * @returns {Array&lt;object&gt;}
+ * @description
+ * 관리자란 ?
+ * u_group 컬렉션의 admin_uid {string} 필드값 / manager_uid_list {Array&lt;string&gt;} 필드값
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 uid, gid을 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-67'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>utilReadGroupManagerList</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>gid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_group id</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_info uid / u_follow uid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-71'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='utilreadinsightlist'>utilReadInsightList()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 주, 월, 년 기준으로 통계 추출 데이터 조회
+ * @param {object} data { uid: '', type: { 'view' || 'reach' || 'like' || 'purchase' }, pid: '' }
+ * @returns {object}
+ * @description
+ * type: 'like'===============================
+ * {
+ *  week: {
+ *   "is_like":[0,0,0,0,0,0,0,0,2,0,0,0],
+ *   "is_angry":[0,0,0,0,0,0,0,0,0,0,0,0],
+ *   "is_wow":[0,0,0,0,0,0,0,0,0,0,0,0]
+ *  }
+ *  month: {
+ *   "is_like":[0,0,0,0,0,0,0,0,2,0,0,0],
+ *   "is_angry":[0,0,0,0,0,0,0,0,0,0,0,0],
+ *   "is_wow":[0,0,0,0,0,0,0,0,0,0,0,0]
+ *  }
+ *  year: {
+ *   "is_like":[0,0,0,0,0,0,0,0,2,0,0,0],
+ *   "is_angry":[0,0,0,0,0,0,0,0,0,0,0,0],
+ *   "is_wow":[0,0,0,0,0,0,0,0,0,0,0,0]
+ *  }
+ * }
+ *
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 uid, type, pid을 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-68'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>utilReadInsightList</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>h_pcation uid</td>
+</tr>
+<tr>
+<td>pid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>h_pcation pid</td>
+</tr>
+<tr>
+<td>type</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>view / reach / like / purchase</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='response-format-72'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>week</td>
+<td>2</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>week.is_like</td>
+<td>3</td>
+<td>number[]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>week.is_angry</td>
+<td>3</td>
+<td>number[]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>week.is_wow</td>
+<td>3</td>
+<td>number[]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>month</td>
+<td>2</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>month.is_like</td>
+<td>3</td>
+<td>number[]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>month.is_angry</td>
+<td>3</td>
+<td>number[]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>month.is_wow</td>
+<td>3</td>
+<td>number[]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>year</td>
+<td>2</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>year.is_like</td>
+<td>3</td>
+<td>number[]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>year.is_angry</td>
+<td>3</td>
+<td>number[]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>year.is_wow</td>
+<td>3</td>
+<td>number[]</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='utilreadlocationlist'>utilReadLocationList()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * type('gps', 'code', 'keyword')에 따른 위치 정보 조회
+ * @param {object} data 
+ { 
+   type: 'gps' || 'code' || 'keyword', 
+   latitude?: 37.52631414593684, 
+   longitude?: 127.19757685437799, 
+   value?: 'kr', 
+   is_support?: {boolean} 
+ }
+ * @returns {object[]}
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 type을 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-69'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>utilReadLocationList</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>type</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>gps / code / keyword</td>
+<td></td>
+</tr>
+<tr>
+<td>value</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td></td>
+<td>type === &#39;code&#39; country_cd</td>
+</tr>
+<tr>
+<td>latitude</td>
+<td>2</td>
+<td>number</td>
+<td></td>
+<td></td>
+<td>type === &#39;gps&#39;</td>
+</tr>
+<tr>
+<td>longitude</td>
+<td>2</td>
+<td>number</td>
+<td></td>
+<td></td>
+<td>type === &#39;gps&#39;</td>
+</tr>
+<tr>
+<td>is_support</td>
+<td>2</td>
+<td>boolean</td>
+<td></td>
+<td></td>
+<td>type === &#39;keyword&#39;</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-type-39-code-39'>Response Format (type === &#39;code&#39;)</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>type</td>
+<td>3</td>
+<td>string</td>
+<td>country</td>
+<td></td>
+</tr>
+<tr>
+<td>country_cd</td>
+<td>3</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>country_nm</td>
+<td>3</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>latitude</td>
+<td>3</td>
+<td>number</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>longitude</td>
+<td>3</td>
+<td>number</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='response-format-type-39-gps-39'>Response Format (type === &#39;gps&#39;)</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>type</td>
+<td>3</td>
+<td>string</td>
+<td>city</td>
+<td></td>
+</tr>
+<tr>
+<td>country_cd</td>
+<td>3</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>country_nm</td>
+<td>3</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>city</td>
+<td>3</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='response-format-type-39-keyword-39'>Response Format (type === &#39;keyword&#39;)</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>type</td>
+<td>3</td>
+<td>string</td>
+<td>country, city</td>
+<td></td>
+</tr>
+<tr>
+<td>country_cd</td>
+<td>3</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>country_nm</td>
+<td>3</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>latitude</td>
+<td>3</td>
+<td>number</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>longitude</td>
+<td>3</td>
+<td>number</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='utilreadplacelist'>utilReadPlaceList()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * uid의 모든 u_place 도큐먼트 조회
+ * @param {object} data
+ * @returns {Array&lt;object&gt;}
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 uid을 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-70'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>utilReadPlaceList</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_place uid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-73'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td>u_place 데이터 리스트</td>
+</tr>
+</tbody></table>
+<h2 id='utilreadpostlikelist'>utilReadPostLikeList()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 좋아요 버튼 u_paction 리스트 조회
+ * @param {object} data { uid: '', pid: '' }
+ * @returns {Array&lt;object&gt;}
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 uid, pid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-71'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>utilReadPostLikeList</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_follow uid</td>
+</tr>
+<tr>
+<td>pid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_paction pid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-74'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='utilreadpostangrylist'>utilReadPostAngryList()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 화나요 버튼 누른 u_paction 리스트 조회
+ * @param {object} data { pid: '', uid: '' }
+ * @returns {Array&lt;object&gt;}
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 uid, pid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-72'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>utilReadPostAngryList</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_follow uid</td>
+</tr>
+<tr>
+<td>pid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_paction pid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-75'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='utilreadpostwowlist'>utilReadPostWowList()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 놀라요 버튼 누른 u_paction 리스트 조회
+ * @param {object} data { pid: '', uid: '' }
+ * @returns {Array&lt;object&gt;}
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 uid, pid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-73'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>utilReadPostWowList</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_follow uid</td>
+</tr>
+<tr>
+<td>pid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_paction pid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-76'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='utilreadpostlistbygroup'>utilReadPostListByGroup()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * gid 필드로 u_post 도큐먼트 리스트 조회
+ * @param {object} data { gid: '', uid: '' }
+ * @returns {Array&lt;object&gt;}
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 uid, gid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-74'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>utilReadPostListByGroup</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>gid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_post gid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-77'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='utilreadpostlistbygroupofuser'>utilReadPostListByGroupOfUser()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * u_group의 uid_list {array} 필드에 존재하는 uid로 post 조회
+ * @param {object} data
+ * @returns {Array&lt;object&gt;}
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 uid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-75'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>utilReadPostListByGroupOfUser</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_group uid_list</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-78'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='utilreadpostlistbyuser'>utilReadPostListByUser()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * u_post 리스트 조회
+ * @param {object} data { uid: '' }
+ * @returns {Arrau&lt;object&gt;}
+ * @description  is_sale 디폴트값 셋팅 및 u_post 조회
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 uid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-76'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>utilReadPostListByUser</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_post uid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-79'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td>u_post 데이터 리스트 최대 1000</td>
+</tr>
+</tbody></table>
+<h2 id='utilreadpurchaseitemlist'>utilReadPurchaseItemList()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 구매한 아이템 리스트 조회 (m_purchase_item)
+ * @param {object} data { type: '' }
+ * @returns {Array&lt;object&gt;}
+ * @description type = translate || storage_basic || storage_pro || account || dia || character
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 type를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-77'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>utilReadPurchaseItemList</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>type</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>m_purchase_item의 type</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-80'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td>m_purchase_item 데이터 리스트 최대 1000</td>
+</tr>
+</tbody></table>
+<h2 id='utilreaduserlist'>utilReadUserList()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 유저 리스트 알파벳 오름차순 정렬
+ * @param {object} data       { type: '', f1: '' }
+ * @returns {Array&lt;object&gt;}
+ * @description data.f1 = 'a' -&gt; hnm &gt;= a &amp;&amp; hnm &lt; b
+ * 해당 api는 언제 사용하는지 가늠조차 안된다. 필요할까 ?
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 type, f1를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-78'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>utilReadUserList</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>type</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>name</td>
+<td></td>
+</tr>
+<tr>
+<td>f1</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_info의 hnm</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-81'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object[]</td>
+<td></td>
+<td>u_info 데이터 리스트 최대 100</td>
+</tr>
+</tbody></table>
+<h2 id='utilreadplacelistbyidx'>utilReadPlaceListByIdx()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 해당 uid의 u_place를 idx순으로 오름차순 정렬
+ * @param {object} data { uid: '' }
+ * @returns {object} { is_success: {boolean}, message: '', place_list: [] }
+ * @description
+ *
+ * uid로 검색하여 u_place 도큐먼트를 가져올 때
+ * idx 필드가 있는 문서의 개수와 idx 필드가 없는 문서의 개수가 일치할 경우,
+ * { is_success: false, message: 'u-place/check idx field', place_list: [] }
+ *
+ * idx 필드가 있는 문서의 개수가 idx 필드가 없는 문서의 개수보다 많을 경우(idx순 오름차순 정렬),
+ * { is_success: true, message: 'u-place/return place_list by sort', place_list: [] }
+ *
+ * idx 필드가 없는 문서의 개수가 idx 필드가 있는 문서의 개수보다 많을 경우,
+ * { is_success: true, message: 'u-place/return place_list', place_list: []}
+ *
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 uid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-79'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>utilReadPlaceListByIdx</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_place uid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-idx-idx'>Response Format (idx 필드가 있는 문서의 개수와 idx 필드가 없는 문서의 개수가 일치할 경우)</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>is_success</td>
+<td>2</td>
+<td>boolean</td>
+<td>false</td>
+<td></td>
+</tr>
+<tr>
+<td>message</td>
+<td>2</td>
+<td>string</td>
+<td>u-place/check idx field</td>
+<td></td>
+</tr>
+<tr>
+<td>place_list</td>
+<td>2</td>
+<td>object[]</td>
+<td></td>
+<td>u_place 데이터 리스트 최대 100개</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-idx-idx-2'>Response Format (idx 필드가 있는 문서의 개수가 idx 필드가 없는 문서의 개수보다 많을 경우)</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>is_success</td>
+<td>2</td>
+<td>boolean</td>
+<td>true</td>
+<td></td>
+</tr>
+<tr>
+<td>message</td>
+<td>2</td>
+<td>string</td>
+<td>u-place/return place_list by sort</td>
+<td></td>
+</tr>
+<tr>
+<td>place_list</td>
+<td>2</td>
+<td>object[]</td>
+<td></td>
+<td>u_place 데이터 리스트 최대 100개</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-idx-idx-3'>Response Format (idx 필드가 있는 문서의 개수와 idx 필드가 없는 문서의 개수가 일치할 경우)</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>is_success</td>
+<td>2</td>
+<td>boolean</td>
+<td>true</td>
+<td></td>
+</tr>
+<tr>
+<td>message</td>
+<td>2</td>
+<td>string</td>
+<td>u-place/return place_list</td>
+<td></td>
+</tr>
+<tr>
+<td>place_list</td>
+<td>2</td>
+<td>object[]</td>
+<td></td>
+<td>u_place 데이터 리스트 최대 100개</td>
+</tr>
+</tbody></table>
+<h1 id='api-proxy_read'>API (proxy_read)</h1><h2 id='mypagereadgroupmanage'>mypageReadGroupManage()</h2><h2 id='mypagereadinfo'>mypageReadInfo()</h2><h2 id='mypagereadsetting'>mypageReadSetting()</h2><h2 id='mypagereadrecommend'>mypageReadRecommend()</h2><h2 id='mypagereadtutorialurl'>mypageReadTutorialUrl()</h2><h2 id='utilreadbetweenuser'>utilReadBetweenUser()</h2><h2 id='utilreadchannel'>utilReadChannel()</h2><h2 id='utilreadchannelbyonetoone'>utilReadChannelByOneToOne()</h2><h2 id='utilreadgroup'>utilReadGroup()</h2><h2 id='utilreadplace'>utilReadPlace()</h2><h2 id='utilreadpost'>utilReadPost()</h2><h2 id='utilreadpostcnt'>utilReadPostCnt()</h2><h2 id='utilreadtranslatesupport'>utilReadTranslateSupport()</h2><h2 id='utilreaduser'>utilReadUser()</h2><h2 id='utilreaduserexist'>utilReadUserExist()</h2><h2 id='utilreadhid'>utilReadHid()</h2><h2 id='utilreadsharecnt'>utilReadShareCnt()</h2><h1 id='api-proxy_search'>API (proxy_search)</h1><h2 id='searchchatlist'>searchChatList()</h2><h2 id='searchchatlistbyhashtag'>searchChatListByHashtag()</h2><h2 id='searchgrouplist'>searchGroupList()</h2><h2 id='searchgrouplistbyhashtag'>searchGroupListByHashtag()</h2><h2 id='searchhashtaglist'>searchHashtagList()</h2><h2 id='searchkeywordlist'>searchKeywordList()</h2><h2 id='searchpostlist'>searchPostList()</h2><h2 id='searchpostlistbyhashtag'>searchPostListByHashtag()</h2><h2 id='searchpostlistbykeyword'>searchPostListByKeyword()</h2><h2 id='searchpostlistbylocation'>searchPostListByLocation()</h2><h2 id='searchstatbyworldwide'>searchStatByWorldwide()</h2><h2 id='searchstatbyworldwidetemp'>searchStatByWorldwideTemp()</h2><h2 id='searchuserlist'>searchUserList()</h2><h2 id='searchuserlistbyhashtag'>searchUserListByHashtag()</h2><h2 id='searchuserlistbyhid'>searchUserListByHid()</h2><h2 id='searchstatlistbylocation'>searchStatListByLocation()</h2><h2 id='searchstatlistbyword'>searchStatListByWord()</h2><h2 id='searchstatpostlist'>searchStatPostList()</h2><h2 id='searchstatpostlistbydate'>searchStatPostListByDate()</h2><h2 id='searchstatlistbyrankkeyword'>searchStatListByRankKeyword()</h2><h1 id='api-proxy_set'>API (proxy_set)</h1><h2 id='chatsetadduser'>chatSetAddUser()</h2><h2 id='chatsetchannel'>chatSetChannel()</h2><h2 id='chatsetchannelinvite'>chatSetChannelInvite()</h2><h2 id='chatsetchanneljoin'>chatSetChannelJoin()</h2><h2 id='chatsetchannellike'>chatSetChannelLike()</h2><h2 id='chatsetchannelmute'>chatSetChannelMute()</h2><h2 id='chatsetchannelpin'>chatSetChannelPin()</h2><h2 id='chatsetchanneltitle'>chatSetChannelTitle()</h2><h2 id='chatsetchannelwallpaper'>chatSetChannelWallpaper()</h2><h2 id='chatsetdeleteuser'>chatSetDeleteUser()</h2><h2 id='makesetpost'>makeSetPost()</h2><h2 id='mypagesetcanceldeleteinfo'>mypageSetCancelDeleteInfo()</h2><h2 id='mypagesetdeleteinfo'>mypageSetDeleteInfo()</h2><h2 id='mypagesetexchange'>mypageSetExchange()</h2><h2 id='mypagesetexpirepurchase'>mypageSetExpirePurchase()</h2><h2 id='mypagesetfinance'>mypageSetFinance()</h2><h2 id='mypagesetgroup'>mypageSetGroup()</h2><h2 id='mypagesetgroupmanagerequest'>mypageSetGroupManageRequest()</h2><h2 id='mypagesetgroupmanagechange'>mypageSetGroupManageChange()</h2><h2 id='mypagesetinfo'>mypageSetInfo()</h2><h2 id='mypagesetpaypalinfo'>mypageSetPaypalInfo()</h2><h2 id='mypagesetpwforemail'>mypageSetPwForEmail()</h2><h2 id='mypagesetsetting'>mypageSetSetting()</h2><h2 id='mypagesetrecommend'>mypageSetRecommend()</h2><h2 id='mypagesetmergeinfo'>mypageSetMergeInfo()</h2><h2 id='utilsetblock'>utilSetBlock()</h2><h2 id='utilsetcaction'>utilSetCaction()</h2><h2 id='utilsetcomment'>utilSetComment()</h2><h2 id='utilsetdeletecomment'>utilSetDeleteComment()</h2><h2 id='utilsetdeletesell'>utilSetDeleteSell()</h2><h2 id='utilsetdevice'>utilSetDevice()</h2><h2 id='utilsetfollow'>utilSetFollow()</h2><h2 id='utilsetfollowconfirmall'>utilSetFollowConfirmAll()</h2><h2 id='utilsetgroupjoin'>utilSetGroupJoin()</h2><h2 id='utilsetdeletegroupuser'>utilSetDeleteGroupUser()</h2><h2 id='utilsetgroupjoinconfirmall'>utilSetGroupJoinConfirmAll()</h2><h2 id='utilsetpaction'>utilSetPaction()</h2><h2 id='utilsetplace'>utilSetPlace()</h2><h2 id='utilsetplacelist'>utilSetPlaceList()</h2><h2 id='utilsetreport'>utilSetReport()</h2><h2 id='utilsetsell'>utilSetSell()</h2><h2 id='utilsetsubscribe'>utilSetSubscribe()</h2><h2 id='utilsetsupport'>utilSetSupport()</h2><h2 id='utilsetunblock'>utilSetUnblock()</h2><h2 id='utilsetunsubscribe'>utilSetUnsubscribe()</h2><h2 id='utilsetuseremailverification'>utilSetUserEmailVerification()</h2><h2 id='utilsetuserhide'>utilSetUserHide()</h2><h2 id='utilsetdeleteverificationtoken'>utilSetDeleteVerificationToken()</h2><h2 id='utilsetverificationtoken'>utilSetVerificationToken()</h2><h2 id='utilsetfilterage'>utilSetFilterAge()</h2><h2 id='utilsetpw'>utilSetPw()</h2><h2 id='utilsetsharecnt'>utilSetShareCnt()</h2><h1 id='errors'>Errors</h1>
 <aside class="notice">
 This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
 </aside>
