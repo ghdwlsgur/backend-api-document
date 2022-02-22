@@ -340,6 +340,18 @@
                     <a href="#h_profile_log" class="toc-h2 toc-link" data-title="h_profile_log">h_profile_log</a>
                   </li>
                   <li>
+                    <a href="#h_lastcall" class="toc-h2 toc-link" data-title="h_lastcall">h_lastcall</a>
+                  </li>
+                  <li>
+                    <a href="#h_block" class="toc-h2 toc-link" data-title="h_block">h_block</a>
+                  </li>
+                  <li>
+                    <a href="#h_post_delete" class="toc-h2 toc-link" data-title="h_post_delete">h_post_delete</a>
+                  </li>
+                  <li>
+                    <a href="#h_paction" class="toc-h2 toc-link" data-title="h_paction">h_paction</a>
+                  </li>
+                  <li>
                     <a href="#s_stat_word_-day-month-week" class="toc-h2 toc-link" data-title="s_stat_word_** (** = day / month / week)">s_stat_word_** (** = day / month / week)</a>
                   </li>
                   <li>
@@ -1903,7 +1915,139 @@ u_faction
 <td>update date time</td>
 </tr>
 </tbody></table>
-<h2 id='s_stat_word_-day-month-week'>s_stat_word_** (** = day / month / week)</h2>
+<h2 id='h_lastcall'>h_lastcall</h2>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>depth</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>1</td>
+<td></td>
+<td>유저 아이디_마지막으로 호출한 함수명</td>
+</tr>
+<tr>
+<td>ts</td>
+<td>1</td>
+<td>number</td>
+<td>마지막으로 호출한 시간</td>
+</tr>
+<tr>
+<td>is_visible</td>
+<td>1</td>
+<td>boolean</td>
+<td>soft delete field</td>
+</tr>
+<tr>
+<td>cdt</td>
+<td>1</td>
+<td>timestamp</td>
+<td>create date time</td>
+</tr>
+<tr>
+<td>udt</td>
+<td>1</td>
+<td>timestamp</td>
+<td>update date time</td>
+</tr>
+</tbody></table>
+<h2 id='h_block'>h_block</h2>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>depth</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>suid</td>
+<td>1</td>
+<td>string</td>
+<td>차단한 유저</td>
+</tr>
+<tr>
+<td>tuid</td>
+<td>1</td>
+<td>string</td>
+<td>차단 당한 유저</td>
+</tr>
+<tr>
+<td>is_visible</td>
+<td>1</td>
+<td>boolean</td>
+<td>soft delete field</td>
+</tr>
+<tr>
+<td>cdt</td>
+<td>1</td>
+<td>timestamp</td>
+<td>create date time</td>
+</tr>
+<tr>
+<td>udt</td>
+<td>1</td>
+<td>timestamp</td>
+<td>update date time</td>
+</tr>
+</tbody></table>
+<h2 id='h_post_delete'>h_post_delete</h2>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>depth</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>pid</td>
+<td>1</td>
+<td>string</td>
+<td>u_post 아이디</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>1</td>
+<td>string</td>
+<td>해당 포스트를 작성한 유저 아이디</td>
+</tr>
+<tr>
+<td>is_visible</td>
+<td>1</td>
+<td>boolean</td>
+<td>soft delete field</td>
+</tr>
+<tr>
+<td>cdt</td>
+<td>1</td>
+<td>timestamp</td>
+<td>create date time</td>
+</tr>
+<tr>
+<td>udt</td>
+<td>1</td>
+<td>timestamp</td>
+<td>update date time</td>
+</tr>
+</tbody></table>
+<h2 id='h_paction'>h_paction</h2><h2 id='s_stat_word_-day-month-week'>s_stat_word_** (** = day / month / week)</h2>
 <table><thead>
 <tr>
 <th>Field</th>
@@ -2854,7 +2998,7 @@ text/plain, text/html, image/jpeg, image/png, audio/mpeg, audio/ogg, audio/*, vi
 </blockquote>
 <div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
   <span class="nl">id</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
-  <span class="nx">is</span><span class="p">:</span> <span class="nx">success</span><span class="p">:</span> <span class="kc">false</span>
+  <span class="nx">is_success</span><span class="p">:</span> <span class="kc">false</span>
 <span class="p">}</span>
 </code></pre></div>
 <blockquote>
@@ -2951,7 +3095,7 @@ text/plain, text/html, image/jpeg, image/png, audio/mpeg, audio/ogg, audio/*, vi
 </blockquote>
 <div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
   <span class="nl">id</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
-  <span class="nx">is</span><span class="p">:</span> <span class="nx">success</span><span class="p">:</span> <span class="kc">false</span>
+  <span class="nx">is_success</span><span class="p">:</span> <span class="kc">false</span>
 <span class="p">}</span>
 </code></pre></div>
 <blockquote>
@@ -3065,7 +3209,7 @@ text/plain, text/html, image/jpeg, image/png, audio/mpeg, audio/ogg, audio/*, vi
 </blockquote>
 <div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
   <span class="nl">id</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
-  <span class="nx">is</span><span class="p">:</span> <span class="nx">success</span><span class="p">:</span> <span class="kc">false</span>
+  <span class="nx">is_success</span><span class="p">:</span> <span class="kc">false</span>
 <span class="p">}</span>
 </code></pre></div><h3 id='request-parameters-3'>Request Parameters</h3>
 <table><thead>
@@ -10850,7 +10994,400 @@ text/plain, text/html, image/jpeg, image/png, audio/mpeg, audio/ogg, audio/*, vi
 <td>u_place 데이터 리스트 최대 100개</td>
 </tr>
 </tbody></table>
-<h1 id='api-proxy_read'>API (proxy_read)</h1><h2 id='mypagereadgroupmanage'>mypageReadGroupManage()</h2><h2 id='mypagereadinfo'>mypageReadInfo()</h2><h2 id='mypagereadsetting'>mypageReadSetting()</h2><h2 id='mypagereadrecommend'>mypageReadRecommend()</h2><h2 id='mypagereadtutorialurl'>mypageReadTutorialUrl()</h2><h2 id='utilreadbetweenuser'>utilReadBetweenUser()</h2><h2 id='utilreadchannel'>utilReadChannel()</h2><h2 id='utilreadchannelbyonetoone'>utilReadChannelByOneToOne()</h2><h2 id='utilreadgroup'>utilReadGroup()</h2><h2 id='utilreadplace'>utilReadPlace()</h2><h2 id='utilreadpost'>utilReadPost()</h2><h2 id='utilreadpostcnt'>utilReadPostCnt()</h2><h2 id='utilreadtranslatesupport'>utilReadTranslateSupport()</h2><h2 id='utilreaduser'>utilReadUser()</h2><h2 id='utilreaduserexist'>utilReadUserExist()</h2><h2 id='utilreadhid'>utilReadHid()</h2><h2 id='utilreadsharecnt'>utilReadShareCnt()</h2><h1 id='api-proxy_search'>API (proxy_search)</h1><h2 id='searchchatlist'>searchChatList()</h2><h2 id='searchchatlistbyhashtag'>searchChatListByHashtag()</h2><h2 id='searchgrouplist'>searchGroupList()</h2><h2 id='searchgrouplistbyhashtag'>searchGroupListByHashtag()</h2><h2 id='searchhashtaglist'>searchHashtagList()</h2><h2 id='searchkeywordlist'>searchKeywordList()</h2><h2 id='searchpostlist'>searchPostList()</h2><h2 id='searchpostlistbyhashtag'>searchPostListByHashtag()</h2><h2 id='searchpostlistbykeyword'>searchPostListByKeyword()</h2><h2 id='searchpostlistbylocation'>searchPostListByLocation()</h2><h2 id='searchstatbyworldwide'>searchStatByWorldwide()</h2><h2 id='searchstatbyworldwidetemp'>searchStatByWorldwideTemp()</h2><h2 id='searchuserlist'>searchUserList()</h2><h2 id='searchuserlistbyhashtag'>searchUserListByHashtag()</h2><h2 id='searchuserlistbyhid'>searchUserListByHid()</h2><h2 id='searchstatlistbylocation'>searchStatListByLocation()</h2><h2 id='searchstatlistbyword'>searchStatListByWord()</h2><h2 id='searchstatpostlist'>searchStatPostList()</h2><h2 id='searchstatpostlistbydate'>searchStatPostListByDate()</h2><h2 id='searchstatlistbyrankkeyword'>searchStatListByRankKeyword()</h2><h1 id='api-proxy_set'>API (proxy_set)</h1><h2 id='chatsetadduser'>chatSetAddUser()</h2><h2 id='chatsetchannel'>chatSetChannel()</h2><h2 id='chatsetchannelinvite'>chatSetChannelInvite()</h2><h2 id='chatsetchanneljoin'>chatSetChannelJoin()</h2><h2 id='chatsetchannellike'>chatSetChannelLike()</h2><h2 id='chatsetchannelmute'>chatSetChannelMute()</h2><h2 id='chatsetchannelpin'>chatSetChannelPin()</h2><h2 id='chatsetchanneltitle'>chatSetChannelTitle()</h2><h2 id='chatsetchannelwallpaper'>chatSetChannelWallpaper()</h2><h2 id='chatsetdeleteuser'>chatSetDeleteUser()</h2><h2 id='makesetpost'>makeSetPost()</h2><h2 id='mypagesetcanceldeleteinfo'>mypageSetCancelDeleteInfo()</h2><h2 id='mypagesetdeleteinfo'>mypageSetDeleteInfo()</h2><h2 id='mypagesetexchange'>mypageSetExchange()</h2><h2 id='mypagesetexpirepurchase'>mypageSetExpirePurchase()</h2><h2 id='mypagesetfinance'>mypageSetFinance()</h2><h2 id='mypagesetgroup'>mypageSetGroup()</h2><h2 id='mypagesetgroupmanagerequest'>mypageSetGroupManageRequest()</h2><h2 id='mypagesetgroupmanagechange'>mypageSetGroupManageChange()</h2><h2 id='mypagesetinfo'>mypageSetInfo()</h2><h2 id='mypagesetpaypalinfo'>mypageSetPaypalInfo()</h2><h2 id='mypagesetpwforemail'>mypageSetPwForEmail()</h2><h2 id='mypagesetsetting'>mypageSetSetting()</h2><h2 id='mypagesetrecommend'>mypageSetRecommend()</h2><h2 id='mypagesetmergeinfo'>mypageSetMergeInfo()</h2><h2 id='utilsetblock'>utilSetBlock()</h2><h2 id='utilsetcaction'>utilSetCaction()</h2><h2 id='utilsetcomment'>utilSetComment()</h2><h2 id='utilsetdeletecomment'>utilSetDeleteComment()</h2><h2 id='utilsetdeletesell'>utilSetDeleteSell()</h2><h2 id='utilsetdevice'>utilSetDevice()</h2><h2 id='utilsetfollow'>utilSetFollow()</h2><h2 id='utilsetfollowconfirmall'>utilSetFollowConfirmAll()</h2><h2 id='utilsetgroupjoin'>utilSetGroupJoin()</h2><h2 id='utilsetdeletegroupuser'>utilSetDeleteGroupUser()</h2><h2 id='utilsetgroupjoinconfirmall'>utilSetGroupJoinConfirmAll()</h2><h2 id='utilsetpaction'>utilSetPaction()</h2><h2 id='utilsetplace'>utilSetPlace()</h2><h2 id='utilsetplacelist'>utilSetPlaceList()</h2><h2 id='utilsetreport'>utilSetReport()</h2><h2 id='utilsetsell'>utilSetSell()</h2><h2 id='utilsetsubscribe'>utilSetSubscribe()</h2><h2 id='utilsetsupport'>utilSetSupport()</h2><h2 id='utilsetunblock'>utilSetUnblock()</h2><h2 id='utilsetunsubscribe'>utilSetUnsubscribe()</h2><h2 id='utilsetuseremailverification'>utilSetUserEmailVerification()</h2><h2 id='utilsetuserhide'>utilSetUserHide()</h2><h2 id='utilsetdeleteverificationtoken'>utilSetDeleteVerificationToken()</h2><h2 id='utilsetverificationtoken'>utilSetVerificationToken()</h2><h2 id='utilsetfilterage'>utilSetFilterAge()</h2><h2 id='utilsetpw'>utilSetPw()</h2><h2 id='utilsetsharecnt'>utilSetShareCnt()</h2><h1 id='errors'>Errors</h1>
+<h1 id='api-proxy_read'>API (proxy_read)</h1><h2 id='mypagereadgroupmanage'>mypageReadGroupManage()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * u_group_manage 도큐먼트 아이디로 u_group_manage 도큐먼트의
+ * suid의 유저 정보와 tuid의 유저 정보 조회, 해당 그룹 정보 조회
+ * @param {object} data { gmid: '' }
+ * @returns {object} { gnm: '', photo_url: '', detail: '', shid: '', thid: '' }
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 gmid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-80'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageReadGroupManage</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>gmid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_group_manage gmid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-82'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>gnm</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td>그룹명</td>
+</tr>
+<tr>
+<td>photo_url</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td>사진 url</td>
+</tr>
+<tr>
+<td>detail</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td>세부사항</td>
+</tr>
+<tr>
+<td>shid</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td>u_group_manage의 suid필드 유저의 닉네임</td>
+</tr>
+<tr>
+<td>thid</td>
+<td>2</td>
+<td>string</td>
+<td></td>
+<td>u_group_manage의 tuid필드 유저의 닉네임</td>
+</tr>
+</tbody></table>
+<h2 id='mypagereadinfo'>mypageReadInfo()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 나를 누군가 팔로잉 했을 때 증가하는 필드값, requested_cnt과
+ * uid_cnt 필드값을 포함하고 있는 나의 유저 정보 조회
+ * @param {object} data { id: '' }
+ * @returns {object}
+ * @description
+ * u_info 컬렉션에서 각 도큐먼트들의 uuid 필드값이 일치하는 도큐먼트들의 개수만큼
+ * uid_cnt가 증가하는데 uuid와 uid_cnt가 무엇을 의미하는지 / uuid의 의미 ?
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 id를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>Fail</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_success</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-81'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageReadInfo</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>id</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_info uid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-83'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+<td>u_info 데이터</td>
+</tr>
+</tbody></table>
+<h2 id='mypagereadsetting'>mypageReadSetting()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * u_setting 도큐먼트 조회
+ * @param {object} data { id: '' }
+ * @returns {object}
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 id를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>Fail (u_setting 컬렉션 정보가 존재하지 않을 때)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_success</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="nx">message</span><span class="p">:</span> <span class="dl">"</span><span class="s2">u_setting 정보가 존재하지 않습니다.</span><span class="dl">"</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-82'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageReadSetting</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>id</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_setting uid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-84'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+<td>u_setting 데이터</td>
+</tr>
+</tbody></table>
+<h2 id='mypagereadrecommend'>mypageReadRecommend()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * u_recommend 도큐먼트 조회
+ * @param {object} data { uid: '' }
+ * @returns {object}
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 uid를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>Fail (u_recommend 컬렉션 정보가 존재하지 않을 때)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_success</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="nx">message</span><span class="p">:</span> <span class="dl">"</span><span class="s2">u_recommend 정보가 존재하지 않습니다.</span><span class="dl">"</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-83'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageReadRecommend</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td></td>
+<td>u_recommend uid</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-85'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>1</td>
+<td>object</td>
+<td></td>
+<td>u_recommend 데이터</td>
+</tr>
+</tbody></table>
+<h2 id='mypagereadtutorialurl'>mypageReadTutorialUrl()</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="cm">/**===========================================
+ * 튜토리얼 동영상 링크 반환 (AWS)
+ * @param {object} data { lang: 'english' || 'korean' }
+ * @returns {string} object.url
+ */</span>
+</code></pre></div>
+<blockquote>
+<p>Error (파라미터에 lang를 입력받지 못했을 시)</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="nl">is_valid</span><span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id='request-parameters-84'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>depth</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>1</td>
+<td>object</td>
+<td>required</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fn</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>mypageReadTutorialUrl</td>
+<td>함수명</td>
+</tr>
+<tr>
+<td>lang</td>
+<td>2</td>
+<td>string</td>
+<td>required</td>
+<td>english / korean</td>
+<td>튜토리얼 동영상 언어 버전 선택</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-86'>Response Format</h3>
+<table><thead>
+<tr>
+<th>Element</th>
+<th>Depth</th>
+<th>Type</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>object.url</td>
+<td>1</td>
+<td>string</td>
+<td></td>
+<td>AWS S3 링크 주소</td>
+</tr>
+</tbody></table>
+<h2 id='utilreadbetweenuser'>utilReadBetweenUser()</h2><h2 id='utilreadchannel'>utilReadChannel()</h2><h2 id='utilreadchannelbyonetoone'>utilReadChannelByOneToOne()</h2><h2 id='utilreadgroup'>utilReadGroup()</h2><h2 id='utilreadplace'>utilReadPlace()</h2><h2 id='utilreadpost'>utilReadPost()</h2><h2 id='utilreadpostcnt'>utilReadPostCnt()</h2><h2 id='utilreadtranslatesupport'>utilReadTranslateSupport()</h2><h2 id='utilreaduser'>utilReadUser()</h2><h2 id='utilreaduserexist'>utilReadUserExist()</h2><h2 id='utilreadhid'>utilReadHid()</h2><h2 id='utilreadsharecnt'>utilReadShareCnt()</h2><h1 id='api-proxy_search'>API (proxy_search)</h1><h2 id='searchchatlist'>searchChatList()</h2><h2 id='searchchatlistbyhashtag'>searchChatListByHashtag()</h2><h2 id='searchgrouplist'>searchGroupList()</h2><h2 id='searchgrouplistbyhashtag'>searchGroupListByHashtag()</h2><h2 id='searchhashtaglist'>searchHashtagList()</h2><h2 id='searchkeywordlist'>searchKeywordList()</h2><h2 id='searchpostlist'>searchPostList()</h2><h2 id='searchpostlistbyhashtag'>searchPostListByHashtag()</h2><h2 id='searchpostlistbykeyword'>searchPostListByKeyword()</h2><h2 id='searchpostlistbylocation'>searchPostListByLocation()</h2><h2 id='searchstatbyworldwide'>searchStatByWorldwide()</h2><h2 id='searchstatbyworldwidetemp'>searchStatByWorldwideTemp()</h2><h2 id='searchuserlist'>searchUserList()</h2><h2 id='searchuserlistbyhashtag'>searchUserListByHashtag()</h2><h2 id='searchuserlistbyhid'>searchUserListByHid()</h2><h2 id='searchstatlistbylocation'>searchStatListByLocation()</h2><h2 id='searchstatlistbyword'>searchStatListByWord()</h2><h2 id='searchstatpostlist'>searchStatPostList()</h2><h2 id='searchstatpostlistbydate'>searchStatPostListByDate()</h2><h2 id='searchstatlistbyrankkeyword'>searchStatListByRankKeyword()</h2><h1 id='api-proxy_set'>API (proxy_set)</h1><h2 id='chatsetadduser'>chatSetAddUser()</h2><h2 id='chatsetchannel'>chatSetChannel()</h2><h2 id='chatsetchannelinvite'>chatSetChannelInvite()</h2><h2 id='chatsetchanneljoin'>chatSetChannelJoin()</h2><h2 id='chatsetchannellike'>chatSetChannelLike()</h2><h2 id='chatsetchannelmute'>chatSetChannelMute()</h2><h2 id='chatsetchannelpin'>chatSetChannelPin()</h2><h2 id='chatsetchanneltitle'>chatSetChannelTitle()</h2><h2 id='chatsetchannelwallpaper'>chatSetChannelWallpaper()</h2><h2 id='chatsetdeleteuser'>chatSetDeleteUser()</h2><h2 id='makesetpost'>makeSetPost()</h2><h2 id='mypagesetcanceldeleteinfo'>mypageSetCancelDeleteInfo()</h2><h2 id='mypagesetdeleteinfo'>mypageSetDeleteInfo()</h2><h2 id='mypagesetexchange'>mypageSetExchange()</h2><h2 id='mypagesetexpirepurchase'>mypageSetExpirePurchase()</h2><h2 id='mypagesetfinance'>mypageSetFinance()</h2><h2 id='mypagesetgroup'>mypageSetGroup()</h2><h2 id='mypagesetgroupmanagerequest'>mypageSetGroupManageRequest()</h2><h2 id='mypagesetgroupmanagechange'>mypageSetGroupManageChange()</h2><h2 id='mypagesetinfo'>mypageSetInfo()</h2><h2 id='mypagesetpaypalinfo'>mypageSetPaypalInfo()</h2><h2 id='mypagesetpwforemail'>mypageSetPwForEmail()</h2><h2 id='mypagesetsetting'>mypageSetSetting()</h2><h2 id='mypagesetrecommend'>mypageSetRecommend()</h2><h2 id='mypagesetmergeinfo'>mypageSetMergeInfo()</h2><h2 id='utilsetblock'>utilSetBlock()</h2><h2 id='utilsetcaction'>utilSetCaction()</h2><h2 id='utilsetcomment'>utilSetComment()</h2><h2 id='utilsetdeletecomment'>utilSetDeleteComment()</h2><h2 id='utilsetdeletesell'>utilSetDeleteSell()</h2><h2 id='utilsetdevice'>utilSetDevice()</h2><h2 id='utilsetfollow'>utilSetFollow()</h2><h2 id='utilsetfollowconfirmall'>utilSetFollowConfirmAll()</h2><h2 id='utilsetgroupjoin'>utilSetGroupJoin()</h2><h2 id='utilsetdeletegroupuser'>utilSetDeleteGroupUser()</h2><h2 id='utilsetgroupjoinconfirmall'>utilSetGroupJoinConfirmAll()</h2><h2 id='utilsetpaction'>utilSetPaction()</h2><h2 id='utilsetplace'>utilSetPlace()</h2><h2 id='utilsetplacelist'>utilSetPlaceList()</h2><h2 id='utilsetreport'>utilSetReport()</h2><h2 id='utilsetsell'>utilSetSell()</h2><h2 id='utilsetsubscribe'>utilSetSubscribe()</h2><h2 id='utilsetsupport'>utilSetSupport()</h2><h2 id='utilsetunblock'>utilSetUnblock()</h2><h2 id='utilsetunsubscribe'>utilSetUnsubscribe()</h2><h2 id='utilsetuseremailverification'>utilSetUserEmailVerification()</h2><h2 id='utilsetuserhide'>utilSetUserHide()</h2><h2 id='utilsetdeleteverificationtoken'>utilSetDeleteVerificationToken()</h2><h2 id='utilsetverificationtoken'>utilSetVerificationToken()</h2><h2 id='utilsetfilterage'>utilSetFilterAge()</h2><h2 id='utilsetpw'>utilSetPw()</h2><h2 id='utilsetsharecnt'>utilSetShareCnt()</h2><h1 id='errors'>Errors</h1>
 <aside class="notice">
 This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
 </aside>
